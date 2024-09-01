@@ -1,0 +1,33 @@
+#productos{
+    
+}
+.catProducto {
+  border-radius: 10px;
+    transition: all 0.3s ease-in-out; 
+  }
+.catProducto:hover{
+  cursor: pointer;
+  transform: scale(1.01); 
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .max-size {
+    max-width: 200px;
+    max-height: 200px; 
+}
+
+@media (min-width: 992px) {
+  .lg-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
