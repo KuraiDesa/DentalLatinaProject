@@ -26,3 +26,4 @@ C:\Users\Soto\source\repos\Dental_Latina_MVC\Dental_Latina_MVC\obj\Debug\net8.0\
 C:\Users\Soto\source\repos\Dental_Latina_MVC\Dental_Latina_MVC\obj\Debug\net8.0\Dental_Latina_MVC.pdb
 C:\Users\Soto\source\repos\Dental_Latina_MVC\Dental_Latina_MVC\obj\Debug\net8.0\Dental_Latina_MVC.genruntimeconfig.cache
 C:\Users\Soto\source\repos\Dental_Latina_MVC\Dental_Latina_MVC\obj\Debug\net8.0\ref\Dental_Latina_MVC.dll
+C:\Users\Soto\source\repos\Dental_Latina_MVC\Dental_Latina_MVC\obj\Debug\net8.0\Dental_Latina_MVC.sourcelink.json

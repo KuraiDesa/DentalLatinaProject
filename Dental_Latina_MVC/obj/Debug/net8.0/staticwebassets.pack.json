@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\css\\styleAdm.css",
+      "PackagePath": "staticwebassets\\css\\styleAdm.css"
+    },
+    {
       "Id": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\css\\styleCarrusel.css",
       "PackagePath": "staticwebassets\\css\\styleCarrusel.css"
     },
@@ -83,6 +87,14 @@
     {
       "Id": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\js\\functionNavbar.js",
       "PackagePath": "staticwebassets\\js\\functionNavbar.js"
+    },
+    {
+      "Id": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\js\\graficas.js",
+      "PackagePath": "staticwebassets\\js\\graficas.js"
+    },
+    {
+      "Id": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\js\\scriptAdm.js",
+      "PackagePath": "staticwebassets\\js\\scriptAdm.js"
     },
     {
       "Id": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\js\\site.js",

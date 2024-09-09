@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gY+oK3JOoY65hddEM+yC29fIBbtBB5AB61NqqrJvu60=",
+  "Hash": "fbOIWsIOCr4mwdsJECocEJ3mwlwbL94RuSllo7kBvCI=",
   "Source": "Dental_Latina_MVC",
   "BasePath": "_content/Dental_Latina_MVC",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\css\\styleAdm.css",
+      "SourceId": "Dental_Latina_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\",
+      "BasePath": "_content/Dental_Latina_MVC",
+      "RelativePath": "css/styleAdm.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styleAdm.css"
+    },
     {
       "Identity": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\css\\styleCarrusel.css",
       "SourceId": "Dental_Latina_MVC",
@@ -414,6 +433,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\General.js"
+    },
+    {
+      "Identity": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\js\\graficas.js",
+      "SourceId": "Dental_Latina_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\",
+      "BasePath": "_content/Dental_Latina_MVC",
+      "RelativePath": "js/graficas.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\graficas.js"
+    },
+    {
+      "Identity": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\js\\scriptAdm.js",
+      "SourceId": "Dental_Latina_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\",
+      "BasePath": "_content/Dental_Latina_MVC",
+      "RelativePath": "js/scriptAdm.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\scriptAdm.js"
     },
     {
       "Identity": "C:\\Users\\Soto\\source\\repos\\Dental_Latina_MVC\\Dental_Latina_MVC\\wwwroot\\js\\site.js",
