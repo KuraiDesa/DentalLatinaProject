@@ -1,0 +1,11 @@
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\bin\Debug\net8.0\DTOs.deps.json
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\bin\Debug\net8.0\DTOs.dll
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\bin\Debug\net8.0\DTOs.pdb
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\obj\Debug\net8.0\DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\obj\Debug\net8.0\DTOs.AssemblyInfoInputs.cache
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\obj\Debug\net8.0\DTOs.AssemblyInfo.cs
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\obj\Debug\net8.0\DTOs.csproj.CoreCompileInputs.cache
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\obj\Debug\net8.0\DTOs.dll
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\obj\Debug\net8.0\refint\DTOs.dll
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\obj\Debug\net8.0\DTOs.pdb
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\DTOs\obj\Debug\net8.0\ref\DTOs.dll

@@ -1,0 +1,14 @@
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.deps.json
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.runtimeconfig.json
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.dll
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.csproj.AssemblyReference.cache
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.AssemblyInfoInputs.cache
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.AssemblyInfo.cs
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.dll
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\obj\Debug\net8.0\refint\LogicaNegocio.dll
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.genruntimeconfig.cache
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaNegocio\obj\Debug\net8.0\ref\LogicaNegocio.dll

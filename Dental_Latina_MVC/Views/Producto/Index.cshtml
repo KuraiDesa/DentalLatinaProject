@@ -1,0 +1,207 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleHeader.css">
+    <link rel="stylesheet" href="/css/styleGeneral.css">
+    <link rel="stylesheet" href="/css/styleProfesional.css">
+    <link rel="icon" href="~/img/logo.png" type="image/x-icon">
+    <style>
+        .container-flex {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-img-top {
+            object-fit: cover; /* Asegura que la imagen cubra el espacio disponible */
+            height: 200px; /* Fija una altura para todas las imágenes */
+        }
+
+        .card-body {
+            flex: 1; /* Asegura que el contenido del cuerpo de la tarjeta ocupe el espacio restante */
+        }
+
+        .product-card-img {
+            height: 200px; /* Fija una altura uniforme para las imágenes */
+            width: 100%; /* Asegura que las imágenes llenen el ancho del contenedor */
+            object-fit: cover; /* Mantiene la proporción de la imagen */
+        }
+    </style>
+</head>
+<body>
+
+    <header id="navbar" class="prods">
+
+        <div id="menu">
+            <figure><img src="/img/logopng.png" alt="Logo"></figure>
+            <div class="menu-icon" id="menu-icon" style="font-size:2.5vh" onclick="despliegoMenuCelular()">&#9776;</div>
+            <div>
+                <nav class="navbar">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#Empresa">
+                                    <i class="fas fa-building"></i>
+                                    Empresa
+                                </a>
+                            </li>
+
+                            <li>
+                                <a asp-page="/Productos/Index">
+                                    <i class="fas fa-box-open"></i> Productos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#Contacto" id="liContacto">
+                                    <i class="fas fa-envelope" id="cambiopaulauwu"></i>
+                                    Contacto
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#Envios" class="envios-link">
+                                    <i class="fas fa-shipping-fast"></i>
+                                    Envios
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#Ingresar" onclick="openModal()">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Ingresar
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </nav>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <div class="container-flex mt-4">
+        <div class="row">
+            <!-- Filtros -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Filtros</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="categorySelect">Categorías</label>
+                                <select class="form-control" id="categorySelect">
+                                    <option value="">Todas</option>
+                                    <option value="clinica">Clínica</option>
+                                    <option value="laboratorio">Laboratorio</option>
+                                    <option value="implantologia">Implantología</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Marcas</label><br>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand1">
+                                    <label class="form-check-label" for="brand1">
+                                        Marca 1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand2">
+                                    <label class="form-check-label" for="brand2">
+                                        Marca 2
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buscador y Productos -->
+            <div class="col-md-9">
+                <!-- Buscador -->
+                <div class="mb-4">
+                    <input type="text" class="form-control" placeholder="Buscar productos...">
+                </div>
+
+                <!-- Productos -->
+                
+                <div class="row p-3">
+                    @for (int i = 0; i < 5; i++)
+                    {
+                        <div class="col-md-4 mb-4 d-flex">
+                            <div class="card product-card flex-fill">
+                                <img src="https://via.placeholder.com/300x300" class="card-img-top product-card-img" alt="Producto 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Producto @(i+1)</h5>
+                                    <p class="card-text">$@((i+1)*10).00</p>
+                                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="container-flex align-items-center col-sm-4">
+            <ul class="pagination">
+             @for (int i = 0; i < 10; i++)
+             {
+                    <li class="height-fit-content pt-2 pb-2 pl-3 pr-3 m-1 align-items-center paginaButton"><a href="#">@(i + 1)</a></li>
+             }   
+            </ul>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <footer class="footerProd container-fluid text-light py-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>Sobre Nosotros</h5>
+                <p class="small">
+                    Somos una empresa comprometida con ofrecer los mejores servicios de envíos a nivel nacional Nuestra prioridad es la satisfacción del cliente.
+                </p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Contacto</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Calle Principal, Ciudad, País</li>
+                    <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                    <li><i class="fas fa-envelope"></i> contacto@tusitio.com</li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4 text-center">
+                <h5>Síguenos</h5>
+                <ul class="list-unstyled d-flex justify-content-center">
+                    <li class="mx-2"><a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center pt-3 border-top border-secondary">
+            <p class="small mb-0">&copy; 2024 Dental Latina Ltda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

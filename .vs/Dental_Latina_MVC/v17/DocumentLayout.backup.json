@@ -1,0 +1,409 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\dental_latina_mvc\\views\\evento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\evento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\dental_latina_mvc\\wwwroot\\css\\styleevento.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\wwwroot\\css\\styleevento.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\dental_latina_mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\dental_latina_mvc\\wwwroot\\css\\styleprofesional.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\wwwroot\\css\\styleprofesional.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\dental_latina_mvc\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\dental_latina_mvc\\wwwroot\\css\\stylegeneral.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\wwwroot\\css\\stylegeneral.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\dental_latina_mvc\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\dental_latina_mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\dental_latina_mvc\\controllers\\eventocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\controllers\\eventocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\dental_latina_mvc\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicadatos\\repositorios\\repositorioproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|solutionrelative:logicadatos\\repositorios\\repositorioproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\logicanegocio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\logicanegocio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\interfacesrepositorios\\irepositoriozona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\interfacesrepositorios\\irepositoriozona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\interfacesrepositorios\\irepositoriousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\interfacesrepositorios\\irepositoriousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicadatos\\repositorios\\repositoriousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|solutionrelative:logicadatos\\repositorios\\repositoriousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\interfacesrepositorios\\irepositorioproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\interfacesrepositorios\\irepositorioproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\interfacesrepositorios\\irepositorioevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\interfacesrepositorios\\irepositorioevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\interfacesrepositorios\\irepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\interfacesrepositorios\\irepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\entidades\\zona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\entidades\\zona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\entidades\\promocion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\entidades\\promocion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\entidades\\oportunidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\entidades\\oportunidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\rafar\\desktop\\dentallatinahtml\\logicanegocio\\entidades\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\entidades\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAANkAAAAAAAAAAAAUwDoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-26T18:03:16.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "Dental_Latina_MVC\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-26T18:00:20.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
+              "RelativeToolTip": "Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-26T18:00:06.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IRepositorioUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioUsuario.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioUsuario.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioUsuario.cs",
+              "RelativeToolTip": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioUsuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T23:01:44.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IRepositorioEvento.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioEvento.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioEvento.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioEvento.cs",
+              "RelativeToolTip": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioEvento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T22:59:55.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\InterfacesRepositorios\\IRepositorio.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\InterfacesRepositorios\\IRepositorio.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\InterfacesRepositorios\\IRepositorio.cs",
+              "RelativeToolTip": "LogicaNegocio\\InterfacesRepositorios\\IRepositorio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T22:59:54.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Usuario.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\Entidades\\Usuario.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Usuario.cs",
+              "RelativeToolTip": "LogicaNegocio\\Entidades\\Usuario.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAA4wCkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T22:44:26.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Promocion.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Promocion.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\Entidades\\Promocion.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Promocion.cs",
+              "RelativeToolTip": "LogicaNegocio\\Entidades\\Promocion.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAowBYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T22:43:29.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Evento.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Evento.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\Entidades\\Evento.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Evento.cs",
+              "RelativeToolTip": "LogicaNegocio\\Entidades\\Evento.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAwwBcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T22:39:33.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Views\\Producto\\Index.cshtml",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\Producto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Views\\Producto\\Index.cshtml",
+              "RelativeToolTip": "Dental_Latina_MVC\\Views\\Producto\\Index.cshtml",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAAAKUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T22:59:30.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "styleProfesional.css",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\wwwroot\\css\\styleProfesional.css",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\wwwroot\\css\\styleProfesional.css",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\wwwroot\\css\\styleProfesional.css",
+              "RelativeToolTip": "Dental_Latina_MVC\\wwwroot\\css\\styleProfesional.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-19T21:57:18.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "styleEvento.css",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\wwwroot\\css\\styleEvento.css",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\wwwroot\\css\\styleEvento.css",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\wwwroot\\css\\styleEvento.css",
+              "RelativeToolTip": "Dental_Latina_MVC\\wwwroot\\css\\styleEvento.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-26T18:18:34.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Program.cs",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Program.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Program.cs",
+              "RelativeToolTip": "Dental_Latina_MVC\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T18:06:28.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "styleGeneral.css",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\wwwroot\\css\\styleGeneral.css",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\wwwroot\\css\\styleGeneral.css",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\wwwroot\\css\\styleGeneral.css",
+              "RelativeToolTip": "Dental_Latina_MVC\\wwwroot\\css\\styleGeneral.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-26T18:48:28.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductoController.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Controllers\\ProductoController.cs",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Controllers\\ProductoController.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Controllers\\ProductoController.cs",
+              "RelativeToolTip": "Dental_Latina_MVC\\Controllers\\ProductoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T18:05:57.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventoController.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Controllers\\EventoController.cs",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Controllers\\EventoController.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\Dental_Latina_MVC\\Controllers\\EventoController.cs",
+              "RelativeToolTip": "Dental_Latina_MVC\\Controllers\\EventoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T18:05:45.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Oportunidades.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Oportunidades.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\Entidades\\Oportunidades.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Oportunidades.cs",
+              "RelativeToolTip": "LogicaNegocio\\Entidades\\Oportunidades.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T22:39:31.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "repositorioUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaDatos\\Repositorios\\repositorioUsuario.cs",
+              "RelativeDocumentMoniker": "LogicaDatos\\Repositorios\\repositorioUsuario.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaDatos\\Repositorios\\repositorioUsuario.cs",
+              "RelativeToolTip": "LogicaDatos\\Repositorios\\repositorioUsuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T23:01:55.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IRepositorioZona.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioZona.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioZona.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioZona.cs",
+              "RelativeToolTip": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioZona.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T23:03:05.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "repositorioProducto.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaDatos\\Repositorios\\repositorioProducto.cs",
+              "RelativeDocumentMoniker": "LogicaDatos\\Repositorios\\repositorioProducto.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaDatos\\Repositorios\\repositorioProducto.cs",
+              "RelativeToolTip": "LogicaDatos\\Repositorios\\repositorioProducto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T22:24:30.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LogicaNegocio.csproj",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\LogicaNegocio.csproj",
+              "RelativeDocumentMoniker": "LogicaNegocio\\LogicaNegocio.csproj",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\LogicaNegocio.csproj",
+              "RelativeToolTip": "LogicaNegocio\\LogicaNegocio.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-23T23:35:10.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Zona.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Zona.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\Entidades\\Zona.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Zona.cs",
+              "RelativeToolTip": "LogicaNegocio\\Entidades\\Zona.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T22:23:38.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IRepositorioProducto.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioProducto.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioProducto.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioProducto.cs",
+              "RelativeToolTip": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioProducto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T22:22:09.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Producto.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\Entidades\\Producto.cs",
+              "ToolTip": "C:\\Users\\rafar\\Desktop\\DentalLatinaHtml\\LogicaNegocio\\Entidades\\Producto.cs",
+              "RelativeToolTip": "LogicaNegocio\\Entidades\\Producto.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAwDYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T22:21:46.58Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaAplicacion\\LogicaAplicacion.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\DTOs\\DTOs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\DTOs\\DTOs.csproj",
+        "projectName": "DTOs",
+        "projectPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\DTOs\\DTOs.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\DTOs\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaAplicacion\\LogicaAplicacion.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaAplicacion\\LogicaAplicacion.csproj",
+        "projectName": "LogicaAplicacion",
+        "projectPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaAplicacion\\LogicaAplicacion.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaAplicacion\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\DTOs\\DTOs.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\DTOs\\DTOs.csproj"
+              },
+              "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaNegocio\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaNegocio\\LogicaNegocio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaNegocio\\LogicaNegocio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaNegocio\\LogicaNegocio.csproj",
+        "projectName": "LogicaNegocio",
+        "projectPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaNegocio\\LogicaNegocio.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaNegocio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

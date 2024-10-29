@@ -77,6 +77,12 @@
 #menu nav ul li:nth-child(5) a:hover > i:first-child {
   animation: scaleUp 0.7s ease-in-out;
 }
+
+header.prods {
+    position: relative !important;
+    top: 0;
+}
+
 #navbar {
   display: flex;
   flex-direction: column;

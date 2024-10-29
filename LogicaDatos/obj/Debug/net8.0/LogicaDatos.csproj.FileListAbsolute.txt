@@ -1,0 +1,17 @@
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\bin\Debug\net8.0\LogicaDatos.deps.json
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\bin\Debug\net8.0\LogicaDatos.runtimeconfig.json
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\bin\Debug\net8.0\LogicaDatos.dll
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\bin\Debug\net8.0\LogicaDatos.pdb
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\bin\Debug\net8.0\LogicaNegocio.dll
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\bin\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\LogicaDatos.csproj.AssemblyReference.cache
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\LogicaDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\LogicaDatos.AssemblyInfoInputs.cache
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\LogicaDatos.AssemblyInfo.cs
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\LogicaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\LogicaDa.B8F08538.Up2Date
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\LogicaDatos.dll
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\refint\LogicaDatos.dll
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\LogicaDatos.pdb
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\LogicaDatos.genruntimeconfig.cache
+C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\LogicaDatos\obj\Debug\net8.0\ref\LogicaDatos.dll

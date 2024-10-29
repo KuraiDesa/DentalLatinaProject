@@ -32,4 +32,17 @@
     <None Include="wwwroot\utils\bootstrap-5.3.3\.github\workflows\release-notes.yml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LogicaAplicacion\LogicaAplicacion.csproj" />
+    <ProjectReference Include="..\LogicaDatos\LogicaDatos.csproj" />
+    <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj" />
+  </ItemGroup>
+
 </Project>
