@@ -23,7 +23,8 @@ namespace LogicaDatos.Repositorios
 
         public IEnumerable<Subcategoria> FindAll()
         {
-            throw new NotImplementedException();
+            return Context.Set<Subcategoria>()
+              .ToList();
         }
 
         public Subcategoria FindById(int id)

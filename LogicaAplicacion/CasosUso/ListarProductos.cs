@@ -23,11 +23,11 @@ namespace LogicaAplicacion.CasosUso
         {
             try
             {
-                IEnumerable<Producto> ListaUsuarios = repoProductos.FindAll();
+                IEnumerable<Producto> ListaProductos = repoProductos.FindAll();
 
-                IEnumerable<ProductoDTO> listaUsuarioDTO = ProductoMapper.ToListaProductoDTO(ListaUsuarios);
+                IEnumerable<ProductoDTO> listaProductosDTO = ProductoMapper.ToListaProductoDTO(ListaProductos);
 
-                return listaUsuarioDTO;
+                return listaProductosDTO;
             }
             catch (Exception ex)
             {

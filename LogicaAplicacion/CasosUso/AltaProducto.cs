@@ -18,17 +18,5 @@ namespace LogicaAplicacion.CasosUso
         {
             repoProd = repo;
         }
- /*       public void AltaProd(ProductoDTO prodDto)
-        {
-            try
-            {
-                Producto prod = ProductoMapper.ToProducto(prodDto);
-                repoProd.Add(prod);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("No se pudo dar de alta el producto");
-            }
-        }*/
     }
 }

@@ -21,6 +21,7 @@ namespace DTOs.DTOs
             this.photoUrl = photoUrl;
             this.descripcion = descripcion;
             this.documentacion = documentacion;
+            this.precio = precio;
         }
     }
 }
