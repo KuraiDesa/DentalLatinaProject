@@ -1,4 +1,5 @@
-﻿using LogicaNegocio.Interfaces;
+﻿using LogicaNegocio.Entidades;
+using LogicaNegocio.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,13 +17,13 @@ namespace DentalLatina
         public string nombre { get; set; }
         public string photoUrl { get; set; }
         public string descripcion { get; set; }
-        public string categoria { get; set; }
-        public string subcategoria { get; set; }
+        public Categoria categoria { get; set; }
+        public  Subcategoria subcategoria { get; set; }
         public string documentacion { get; set; }
         public int precio { get; set; }
         
 
-        public Producto(string nombre, string photoUrl, string categoria, string subcategoria,string documentacion, string descripcion, int precio)
+        public Producto(string nombre, string photoUrl, Categoria categoria, Subcategoria subcategoria,string documentacion, string descripcion, int precio)
         {
             this.nombre = nombre;
             this.photoUrl = photoUrl;
@@ -44,6 +45,7 @@ namespace DentalLatina
 
             }
         }
+        public Producto() { }
 
         public void Validar()
         {

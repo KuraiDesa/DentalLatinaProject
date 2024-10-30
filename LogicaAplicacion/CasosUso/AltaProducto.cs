@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 
 namespace LogicaAplicacion.CasosUso
 {
-    public class AltaProducto : IAltaProducto
+    public class AltaProducto
     {
         public IRepositorioProducto repoProd { get; set; }
         public AltaProducto(IRepositorioProducto repo)
         {
             repoProd = repo;
         }
-        public void AltaProd(ProductoDTO prodDto)
+ /*       public void AltaProd(ProductoDTO prodDto)
         {
             try
             {
@@ -29,6 +29,6 @@ namespace LogicaAplicacion.CasosUso
             {
                 throw new Exception("No se pudo dar de alta el producto");
             }
-        }
+        }*/
     }
 }

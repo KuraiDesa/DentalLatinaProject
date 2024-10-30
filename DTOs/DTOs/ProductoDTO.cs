@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicaNegocio.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,18 +12,14 @@ namespace DTOs.DTOs
         public string nombre { get; set; }
         public string photoUrl { get; set; }
         public string descripcion { get; set; }
-        public string categoria { get; set; }
-        public string subcategoria { get; set; }
         public string documentacion { get; set; }
         public int precio { get; set; }
 
-        public ProductoDTO(string nombre, string photoUrl, string categoria, string subcategoria, string documentacion, string descripcion, int precio)
+        public ProductoDTO(string nombre, string photoUrl, string documentacion, string descripcion, int precio)
         {
             this.nombre = nombre;
             this.photoUrl = photoUrl;
             this.descripcion = descripcion;
-            this.categoria = categoria;
-            this.subcategoria = subcategoria;
             this.documentacion = documentacion;
         }
     }

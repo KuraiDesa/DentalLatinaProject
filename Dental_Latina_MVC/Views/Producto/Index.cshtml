@@ -3,6 +3,7 @@
 *@
 @{
 }
+@model IEnumerable<DTOs.DTOs.ProductoDTO>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -141,14 +142,15 @@
                 <!-- Productos -->
                 
                 <div class="row p-3">
-                    @for (int i = 0; i < 5; i++)
+
+                    @foreach(var producto in Model)
                     {
                         <div class="col-md-4 mb-4 d-flex">
                             <div class="card product-card flex-fill">
                                 <img src="https://via.placeholder.com/300x300" class="card-img-top product-card-img" alt="Producto 1">
                                 <div class="card-body">
-                                    <h5 class="card-title">Producto @(i+1)</h5>
-                                    <p class="card-text">$@((i+1)*10).00</p>
+                                    <h5 class="card-title">@producto.nombre</h5>
+                                    <p class="card-text">$@producto.precio</p>
                                     <a href="#" class="btn btn-primary">Ver detalles</a>
                                 </div>
                             </div>

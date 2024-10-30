@@ -1,5 +1,5 @@
 ﻿using LogicaNegocio.InterfacesRepositorios;
-using LogicaAplicacion.InterfacesCasoUso;
+using LogicaAplicacion.InterfacesCasosUso;
 using DTOs;
 using System;
 using System.Collections.Generic;
@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using LogicaNegocio;
 using DentalLatina;
 using DTOs.DTOs.UsuarioDTOs;
+using LogicaAplicacion.InterfacesCasoUso;
 
 
 namespace LogicaAplicacion.CasosUso

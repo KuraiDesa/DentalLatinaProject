@@ -54,9 +54,8 @@ namespace LogicaDatos.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("categoria")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("categoriaId")
+                        .HasColumnType("int");
 
                     b.Property<string>("descripcion")
                         .IsRequired()
@@ -77,11 +76,14 @@ namespace LogicaDatos.Migrations
                     b.Property<int>("precio")
                         .HasColumnType("int");
 
-                    b.Property<string>("subcategoria")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("subcategoriaId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("categoriaId");
+
+                    b.HasIndex("subcategoriaId");
 
                     b.ToTable("Productos");
                 });
@@ -164,6 +166,59 @@ namespace LogicaDatos.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Zonas");
+                });
+
+            modelBuilder.Entity("LogicaNegocio.Entidades.Categoria", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categorias");
+                });
+
+            modelBuilder.Entity("LogicaNegocio.Entidades.Subcategoria", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subcategorias");
+                });
+
+            modelBuilder.Entity("DentalLatina.Producto", b =>
+                {
+                    b.HasOne("LogicaNegocio.Entidades.Categoria", "categoria")
+                        .WithMany()
+                        .HasForeignKey("categoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LogicaNegocio.Entidades.Subcategoria", "subcategoria")
+                        .WithMany()
+                        .HasForeignKey("subcategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("categoria");
+
+                    b.Navigation("subcategoria");
                 });
 #pragma warning restore 612, 618
         }

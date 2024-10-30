@@ -4,12 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DentalLatina;
+using LogicaDatos.EntityFramework;
 using LogicaNegocio.InterfacesRepositorios;
 
 namespace LogicaDatos.Repositorios
 {
     public class repositorioProducto : IRepositorioProducto
     {
+        public LibreriaContext Context { get; set; }
+        public repositorioProducto(LibreriaContext context)
+        {
+            Context = context;
+        }
         public void Add(Producto obj)
         {
             throw new NotImplementedException();
@@ -27,7 +33,8 @@ namespace LogicaDatos.Repositorios
 
         public IEnumerable<Producto> FindAll()
         {
-            throw new NotImplementedException();
+            return Context.Set<Producto>()
+              .ToList();
         }
 
         public Producto FindById(int id)

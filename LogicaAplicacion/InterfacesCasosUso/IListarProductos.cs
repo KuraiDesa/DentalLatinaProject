@@ -9,6 +9,6 @@ namespace LogicaAplicacion.InterfacesCasosUso
 {
     public interface IListarProductos
     {
-        IEnumerable<ProductoDTO> GetProductos();
+        public IEnumerable<ProductoDTO> GetProductos();
     }
 }

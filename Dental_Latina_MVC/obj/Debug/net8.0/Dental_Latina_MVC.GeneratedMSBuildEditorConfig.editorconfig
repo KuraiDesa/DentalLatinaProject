@@ -17,23 +17,27 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Dental_Latina_MVC
 build_property.RootNamespace = Dental_Latina_MVC
-build_property.ProjectDir = C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\Dental_Latina_MVC\
+build_property.ProjectDir = C:\Users\rafar\OneDrive\Escritorio\DentalLatina fronty\Dental_Latina_Repo\Dental_Latina_MVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Soto\Downloads\Dental_Latina_Repo-Hola (1)\Dental_Latina_Repo-Hola\Dental_Latina_MVC
+build_property.MSBuildProjectDirectory = C:\Users\rafar\OneDrive\Escritorio\DentalLatina fronty\Dental_Latina_Repo\Dental_Latina_MVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Soto/Downloads/Dental_Latina_Repo-Hola (1)/Dental_Latina_Repo-Hola/Dental_Latina_MVC/Views/Admin/Index.cshtml]
+[C:/Users/rafar/OneDrive/Escritorio/DentalLatina fronty/Dental_Latina_Repo/Dental_Latina_MVC/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Soto/Downloads/Dental_Latina_Repo-Hola (1)/Dental_Latina_Repo-Hola/Dental_Latina_MVC/Views/Home/Index.cshtml]
+[C:/Users/rafar/OneDrive/Escritorio/DentalLatina fronty/Dental_Latina_Repo/Dental_Latina_MVC/Views/Evento/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rafar/OneDrive/Escritorio/DentalLatina fronty/Dental_Latina_Repo/Dental_Latina_MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Soto/Downloads/Dental_Latina_Repo-Hola (1)/Dental_Latina_Repo-Hola/Dental_Latina_MVC/Views/Producto/Index.cshtml]
+[C:/Users/rafar/OneDrive/Escritorio/DentalLatina fronty/Dental_Latina_Repo/Dental_Latina_MVC/Views/Producto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

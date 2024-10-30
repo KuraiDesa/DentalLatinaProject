@@ -1,4 +1,4 @@
-
+using LogicaAplicacion.InterfacesCasosUso;
 using LogicaDatos.EntityFramework;
 using LogicaDatos.Repositorios;
 using LogicaNegocio.InterfacesRepositorios;
@@ -13,7 +13,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ILoginUser, LoginUser>();
+builder.Services.AddScoped<IListarProductos, ListarProductos>();
 builder.Services.AddScoped<IRepositorioUsuario, repositorioUsuario>();
+builder.Services.AddScoped<IRepositorioProducto, repositorioProducto>();
 builder.Services.AddDbContext<LibreriaContext>();
 var app = builder.Build();
 

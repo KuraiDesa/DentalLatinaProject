@@ -7734,19 +7734,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Soto\\.nuget\\packages\\": {}
+    "C:\\Users\\rafar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaDatos\\LogicaDatos.csproj",
+      "projectUniqueName": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina fronty\\Dental_Latina_Repo\\LogicaDatos\\LogicaDatos.csproj",
       "projectName": "LogicaDatos",
-      "projectPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaDatos\\LogicaDatos.csproj",
-      "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaDatos\\obj\\",
+      "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina fronty\\Dental_Latina_Repo\\LogicaDatos\\LogicaDatos.csproj",
+      "packagesPath": "C:\\Users\\rafar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina fronty\\Dental_Latina_Repo\\LogicaDatos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7754,15 +7754,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaNegocio\\LogicaNegocio.csproj": {
-              "projectPath": "C:\\Users\\Soto\\Downloads\\Dental_Latina_Repo-Hola (1)\\Dental_Latina_Repo-Hola\\LogicaNegocio\\LogicaNegocio.csproj"
+            "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina fronty\\Dental_Latina_Repo\\LogicaNegocio\\LogicaNegocio.csproj": {
+              "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina fronty\\Dental_Latina_Repo\\LogicaNegocio\\LogicaNegocio.csproj"
             }
           }
         }
@@ -7819,7 +7818,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

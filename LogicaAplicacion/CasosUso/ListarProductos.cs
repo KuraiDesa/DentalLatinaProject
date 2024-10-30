@@ -1,6 +1,7 @@
 ﻿using DentalLatina;
 using DTOs.DTOs;
 using DTOs.Mappers;
+using LogicaAplicacion.InterfacesCasosUso;
 using LogicaNegocio.InterfacesRepositorios;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace LogicaAplicacion.CasosUso
 {
-    public class ListarProductos
+    public class ListarProductos : IListarProductos
     {
         public IRepositorioProducto repoProductos {  get; set; }
         public ListarProductos(IRepositorioProducto repo) 

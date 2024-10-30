@@ -1,6 +1,6 @@
 ﻿using DentalLatina;
 using LogicaNegocio;
-
+using LogicaNegocio.Entidades;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
@@ -13,11 +13,13 @@ namespace LogicaDatos.EntityFramework
         public DbSet<Promocion> Promociones { get; set; }
         public DbSet<Evento> Eventos { get; set; }
         public DbSet<Zona> Zonas { get; set; }
-  
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Subcategoria> Subcategorias { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string strCon = "Data Source=DESKTOP-TF5UE3O\\SQLEXPRESS; Initial Catalog=DentalLatina; Integrated Security=True; TrustServerCertificate=True";
+            string strCon = "Data Source=KURAI\\SQLEXPRESS; Initial Catalog=DentalLatina; Integrated Security=True; TrustServerCertificate=True";
             optionsBuilder.UseSqlServer(strCon);
             base.OnConfiguring(optionsBuilder);
         }
