@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dental_Latina_MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4d7134424d60ab6843a17daf1ac98641580f365")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2341ace17fff94142271bd5ef596c8a5db00bdf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dental_Latina_MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dental_Latina_MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

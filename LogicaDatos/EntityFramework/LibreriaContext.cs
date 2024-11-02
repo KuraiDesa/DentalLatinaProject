@@ -19,7 +19,7 @@ namespace LogicaDatos.EntityFramework
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string strCon = "Data Source=KURAI\\SQLEXPRESS; Initial Catalog=DentalLatina; Integrated Security=True; TrustServerCertificate=True";
+            string strCon = "Data Source=DESKTOP-TF5UE3O\\SQLEXPRESS; Initial Catalog=DentalLatina; Integrated Security=True; TrustServerCertificate=True";
             optionsBuilder.UseSqlServer(strCon);
             base.OnConfiguring(optionsBuilder);
         }

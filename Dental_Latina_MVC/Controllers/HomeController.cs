@@ -17,5 +17,13 @@ namespace Dental_Latina_MVC.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Login(string email, string password)
+        {
+           
+            throw new NotImplementedException();
+            return View();
+        }
     }
 }

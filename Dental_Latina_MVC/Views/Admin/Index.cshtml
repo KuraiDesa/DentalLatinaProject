@@ -23,11 +23,11 @@
         <nav class="nav" id="nav">
             <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
             <ul class="nav-list" style="margin:0">
-                <li><a href="#">Estadisticas</a></li>
-                <li><a href="#">Gestion de productos</a></li>
-                <li><a href="#">Clientes</a></li>
-                <li><a href="#">Cambio de banner</a></li>
-                <li><a href="#">Envios</a></li>
+                <li><a href="#" onclick="mostrarSeccion('estadisticas')">Estadísticas</a></li>
+                <li><a href="#" onclick="mostrarSeccion('gestionProductos')">Gestión de productos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('clientes')">Clientes</a></li>
+                <li><a href="#" onclick="mostrarSeccion('cambioBanner')">Cambio de banner</a></li>
+                <li><a href="#" onclick="mostrarSeccion('envios')">Envíos</a></li>
             </ul>
         </nav>
     </header>
@@ -105,13 +105,13 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Crear Producto</a>
+                                <a class="nav-link" href="#" id="crearProductoB">Crear Producto</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Modificar Producto</a>
+                                <a class="nav-link" href="#" id="modificarProductoB">Modificar Producto</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Eliminar Producto</a>
+                                <a class="nav-link" href="#" id="eliminarProductoB">Eliminar Producto</a>
                             </li>
                         </ul>
                     </div>
@@ -254,7 +254,7 @@
                     </form>
                 </div>         
             </div>
-            <div id="elimianarProducto" class="container"style="display: none;">
+            <div id="eliminarProducto" class="container" style="display: none;">
                 <div id="BusquedaDeProductosEliminar">
                     <div class="mb-3">
                         <label for="barraBusqueda" class="form-label">Buscar Producto</label>

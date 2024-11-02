@@ -1,3 +1,24 @@
+
+function prueba() {
+    console.log('entree')
+}
+
+function mostrarSeccion(seccionID) {
+    // Array con los IDs de las secciones
+    const secciones = ['estadisticas', 'gestionProductos', 'clientes', 'cambioBanner', 'envios'];
+
+    // Itera sobre las secciones
+    secciones.forEach(id => {
+        const seccion = document.getElementById(id);
+        // Si el ID coincide con el seleccionado, se muestra; si no, se oculta
+        if (id === seccionID) {
+            seccion.style.display = 'block';
+        } else {
+            seccion.style.display = 'none';
+        }
+    });
+}
+
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
@@ -9,6 +30,32 @@ abrir.addEventListener("click", () => {
 cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
 })
+
+const crearProductoB = document.getElementById("crearProductoB");
+const modificarProductoB = document.querySelector("#modificarProductoB");
+const eliminarProductoB = document.querySelector("#eliminarProductoB");
+
+const crearProducto = document.getElementById("crearProducto");
+const modificarProducto = document.querySelector("#modificarProducto");
+const eliminarProducto = document.querySelector("#eliminarProducto");
+
+crearProductoB.addEventListener("click", () => {
+    crearProducto.style.display = "block";
+    modificarProducto.style.display = "none";
+    eliminarProducto.style.display = "none";
+});
+
+modificarProductoB.addEventListener("click", () => {
+    crearProducto.style.display = "none";
+    modificarProducto.style.display = "block";
+    eliminarProducto.style.display = "none";
+});
+
+eliminarProductoB.addEventListener("click", () => {
+    crearProducto.style.display = "none";
+    modificarProducto.style.display = "none";
+    eliminarProducto.style.display = "block";
+});
 
 //Alta de imagenes
 function vistaPreviaImagen(event) {
