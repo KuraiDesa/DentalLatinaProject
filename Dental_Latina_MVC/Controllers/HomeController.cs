@@ -1,16 +1,21 @@
 using Dental_Latina_MVC.Models;
+using DTOs.DTOs.UsuarioDTOs;
+using LogicaAplicacion.InterfacesCasoUso;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using System.Diagnostics;
 
 namespace Dental_Latina_MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public ILoginUser CULoginUser { get; set; }
+        public HomeController(ILoginUser CULoginUser)
         {
-            _logger = logger;
+            this.CULoginUser = CULoginUser;
+        
         }
 
         public IActionResult Index()
@@ -21,9 +26,38 @@ namespace Dental_Latina_MVC.Controllers
         [HttpPost]
         public IActionResult Login(string email, string password)
         {
-           
-            throw new NotImplementedException();
-            return View();
+            if(email != "" || password != "")
+            {
+                try
+                {
+                    LoguinUsuarioDTO loguinUsuarioDTO = new LoguinUsuarioDTO();
+                    loguinUsuarioDTO.mail = email;
+                    loguinUsuarioDTO.contraseña = password;
+                   
+                    if (CULoginUser.Login(loguinUsuarioDTO) != null)
+                    {
+                        return RedirectToAction("Index", "Admin");
+                    }
+                    else
+                    {
+                        ViewBag.error = "Credenciales invalidas";
+                        return View();
+                    }
+                }
+                catch (Exception ex)
+                {
+                   ViewBag.error = ex.Message;
+                    return View();
+                }
+
+            }
+            else
+            {
+                ViewBag.error = "Credenciales invalidas";
+                return View();
+            }
+            
+
         }
     }
 }
