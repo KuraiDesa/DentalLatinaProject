@@ -86,3 +86,4 @@ C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\ref
 C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.pdb
 C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.genruntimeconfig.cache
 C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\ref\LogicaDatos.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.sourcelink.json

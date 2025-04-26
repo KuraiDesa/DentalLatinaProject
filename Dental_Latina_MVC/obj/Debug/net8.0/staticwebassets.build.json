@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9rkKPA4Lj17MeCnyEtiOwYpcDfkSCk1mTnRsoHb0BXo=",
+  "Hash": "RJkoETHiqtW9CvUty84Yoq93TCdIlcHi3CrmagUNJss=",
   "Source": "Dental_Latina_MVC",
   "BasePath": "_content/Dental_Latina_MVC",
   "Mode": "Default",
@@ -376,6 +376,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagenes\\productos\\OIP.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\Dental_Latina_MVC\\wwwroot\\imagenes\\productos\\R.png",
+      "SourceId": "Dental_Latina_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\Dental_Latina_MVC\\wwwroot\\",
+      "BasePath": "_content/Dental_Latina_MVC",
+      "RelativePath": "imagenes/productos/R.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\productos\\R.png"
     },
     {
       "Identity": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\Dental_Latina_MVC\\wwwroot\\img\\banner.jpeg",

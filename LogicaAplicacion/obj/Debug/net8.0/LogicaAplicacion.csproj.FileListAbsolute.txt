@@ -94,3 +94,4 @@ C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.
 C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\refint\LogicaAplicacion.dll
 C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.pdb
 C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\ref\LogicaAplicacion.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.sourcelink.json

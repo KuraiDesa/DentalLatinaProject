@@ -19,12 +19,12 @@ namespace LogicaAplicacion.CasosUso
         {
             this.rep = rep;
         }   
-        public void Alta(CategoriaDTO pr)
+        public void Alta(string cat)
         {
             try
             {
-                Categoria cat = CategoriaMapper.ToCategoria(pr);
-                rep.Add(cat);
+                Categoria cate = new Categoria(cat);
+                rep.Add(cate);
             }
             catch (Exception ex)
             {
