@@ -12,9 +12,8 @@ namespace DentalLatina
     {
         public string nombre {  get; set; }
         public string apellido { get; set;}
-        public string mail { get; set;}
         [Key]
-        public int Id { get; set; }
+        public string mail { get; set;}
         public string contraseña {  get; set; }
         public bool estudiante {  get; set; }
 

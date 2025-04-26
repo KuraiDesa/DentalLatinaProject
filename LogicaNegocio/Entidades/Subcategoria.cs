@@ -12,6 +12,7 @@ namespace LogicaNegocio.Entidades
         [Key]
         public int Id { get; set; }
         public string Nombre { get; set; }
+        public Categoria categoria { get; set; }
         public Subcategoria(string nombre)
         {
             this.Nombre = nombre;

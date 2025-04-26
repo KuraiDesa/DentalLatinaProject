@@ -27,3 +27,33 @@ C:\Users\rafar\OneDrive\Escritorio\DentalLatina fronty\Dental_Latina_Repo\Logica
 C:\Users\rafar\OneDrive\Escritorio\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.pdb
 C:\Users\rafar\OneDrive\Escritorio\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.genruntimeconfig.cache
 C:\Users\rafar\OneDrive\Escritorio\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\ref\LogicaNegocio.dll
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.deps.json
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.runtimeconfig.json
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.dll
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.csproj.AssemblyReference.cache
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.AssemblyInfoInputs.cache
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.AssemblyInfo.cs
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.sourcelink.json
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.dll
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\refint\LogicaNegocio.dll
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.genruntimeconfig.cache
+C:\Users\rafar\OneDrive\Escritorio\Programacion\Dental Latina\DentalLatina fronty\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\ref\LogicaNegocio.dll
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.deps.json
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.runtimeconfig.json
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.dll
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\bin\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.csproj.AssemblyReference.cache
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.AssemblyInfoInputs.cache
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.AssemblyInfo.cs
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.sourcelink.json
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.dll
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\refint\LogicaNegocio.dll
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\LogicaNegocio.genruntimeconfig.cache
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaNegocio\obj\Debug\net8.0\ref\LogicaNegocio.dll

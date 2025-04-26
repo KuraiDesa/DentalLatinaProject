@@ -1,0 +1,42 @@
+/* reset.css */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html, body {
+  height: 100%;
+  font-size: 100%; /* Resetea el tamaño de fuente base */
+  line-height: 1;
+  background: none;
+  color: inherit;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Puedes añadir más reglas específicas de reset si es necesario */

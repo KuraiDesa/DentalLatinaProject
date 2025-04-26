@@ -10,5 +10,8 @@ namespace LogicaAplicacion.InterfacesCasosUso
     public interface IListarProductos
     {
         public IEnumerable<ProductoDTO> GetProductos();
+        IEnumerable<ProductoDTO> ListarProductosCategoria(int id);
+        IEnumerable<ProductoDTO> ListarProductosNombre(string nombre);
+        IEnumerable<ProductoDTO> ListarPorCateNombre(int id, string nombre);
     }
 }

@@ -1,6 +1,8 @@
-﻿using LogicaDatos.EntityFramework;
+﻿using DentalLatina;
+using LogicaDatos.EntityFramework;
 using LogicaNegocio.Entidades;
 using LogicaNegocio.InterfacesRepositorios;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,14 +25,21 @@ namespace LogicaDatos.Repositorios
 
         public IEnumerable<Categoria> FindAll()
         {
-            throw new NotImplementedException();
+            return Context.Set<Categoria>()
+              .ToList();
         }
 
         public Categoria FindById(int id)
         {
-            throw new NotImplementedException();
-        }
+            Categoria entity = Context.Categorias.Local.FirstOrDefault(c => c.Id == id);
 
+            if (entity == null)
+            {
+                entity = Context.Categorias.AsNoTracking().FirstOrDefault(c => c.Id == id);
+            }
+
+            return entity;
+        }
         public void Remove(int id)
         {
             throw new NotImplementedException();

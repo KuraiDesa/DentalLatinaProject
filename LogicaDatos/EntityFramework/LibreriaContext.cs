@@ -1,8 +1,13 @@
 ﻿using DentalLatina;
-using LogicaNegocio;
 using LogicaNegocio.Entidades;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
+using System.IO;
 using System.Collections.Generic;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using System.Threading.Tasks;
+using System;
 
 namespace LogicaDatos.EntityFramework
 {
@@ -17,22 +22,31 @@ namespace LogicaDatos.EntityFramework
         public DbSet<Subcategoria> Subcategorias { get; set; }
 
 
+        public LibreriaContext(DbContextOptions<LibreriaContext> options) : base(options) { }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string strCon = "Data Source=KURAI\\SQLEXPRESS; Initial Catalog=DentalLatina; Integrated Security=True; TrustServerCertificate=True";
-            optionsBuilder.UseSqlServer(strCon);
-            base.OnConfiguring(optionsBuilder);
+            if (!optionsBuilder.IsConfigured)
+            {
+                var configuration = new ConfigurationBuilder()
+                    .SetBasePath(Directory.GetCurrentDirectory()) // <-- Ahora funciona
+                    .AddJsonFile("appsettings.json")
+                    .Build();
+
+                string strCon = configuration.GetConnectionString("DefaultConnection");
+                var serverVersion = new MySqlServerVersion(new Version(8, 0, 26));
+                optionsBuilder.UseMySql(strCon, serverVersion, b => b.MigrationsAssembly("LogicaDatos"));
+            }
         }
 
-        public LibreriaContext() { }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Evento>()
-        .HasKey(e => e.id); // Configura 'id' como clave primaria
+                .HasKey(e => e.id); 
 
             base.OnModelCreating(modelBuilder);
-
         }
     }
 }

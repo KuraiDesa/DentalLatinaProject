@@ -15,7 +15,7 @@ namespace DTOs.Mappers
 
         public static ProductoDTO ToDTOProducto(Producto prod)
         {
-            ProductoDTO productoDTO = new ProductoDTO(prod.nombre, prod.photoUrl, prod.documentacion, prod.descripcion, prod.precio);
+            ProductoDTO productoDTO = new ProductoDTO(prod.Id,prod.nombre, prod.photoUrl, prod.documentacion, prod.descripcion, prod.precio);
             return productoDTO;
         }
 

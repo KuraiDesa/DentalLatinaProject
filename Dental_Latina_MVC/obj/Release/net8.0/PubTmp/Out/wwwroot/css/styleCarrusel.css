@@ -1,0 +1,35 @@
+main.container-fluid, 
+#carruselSec.row, 
+.carousel.slide {
+    width: 100%;
+    height: auto;
+    
+}
+/* Asegura que las imágenes del carrusel ocupen el 100% */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+}
+.carousel-item {
+    transition: transform 4s ease, opacity .4s ease-out; /* Duración personalizada */
+}
+
+@media screen and (max-width: 680px) {
+    main.container-fluid, 
+    #carruselSec.row, 
+    .carousel.slide {
+        width: 100%;
+        height: auto;
+        
+    }
+    .carousel-item img {
+        width: 100%;
+    min-height: 100%;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+      
+    }
+}
