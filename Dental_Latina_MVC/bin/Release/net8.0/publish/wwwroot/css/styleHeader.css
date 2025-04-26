@@ -1,0 +1,344 @@
+/* Animación para el ícono del camión (Envíos) */
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+  100% {
+    transform: translateX(1px);
+  }
+}
+/* Animación para el ícono del edificio (Empresa) */
+@keyframes scaleUp {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Animación para el ícono de la caja (Productos) */
+@keyframes moveUpDown {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+@keyframes dance {
+  0%, 100% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(10deg);
+  }
+  50% {
+      transform: rotate(-10deg);
+  }
+  75% {
+      transform: rotate(10deg);
+  }
+}
+/* Estilos generales y animaciones aplicadas */
+#menu nav ul li a.envios-link:hover > i:first-child {
+  animation: moveRight 0.6s ease-in-out;
+}
+
+/* Empresa */
+#menu nav ul li:nth-child(1) a:hover > i:first-child {
+  animation: scaleUp 0.6s ease-in-out;
+}
+/*carta*/
+.carta-oculta {
+  display: none;
+  transition: all 0.5s ease; /* Agregamos una transición para suavizar la apertura */
+}
+
+.carta-visible {
+  display: block;
+}
+/* Productos */
+#menu nav ul li:nth-child(2) a:hover > i:first-child {
+  animation: moveUpDown 0.6s ease-in-out;
+}
+#menu nav ul li:nth-child(3) a:hover > i:first-child {
+  animation: dance 0.6s ease-in-out;
+}
+#menu nav ul li:nth-child(5) a:hover > i:first-child {
+  animation: scaleUp 0.7s ease-in-out;
+}
+
+header.prods {
+    position: relative !important;
+    top: 0;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 10;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-shadow: -1px 8px 9px -4px rgba(0,0,0,0.49);
+  -moz-box-shadow: -1px 8px 9px -4px rgba(0,0,0,0.49);
+  box-shadow: -1px 8px 9px -4px rgba(0,0,0,0.49);
+}
+
+#contenido {
+  width: 100%;
+  height: 0px;
+  transition: opacity 1s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra hacia abajo */
+}
+
+#contenido2 {
+  width: 100%;
+  height: auto;
+  display: none;
+  justify-content: space-around;
+  opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1s; 
+  
+  align-items: center;
+}
+#contenido2.oculto {
+  opacity: 0; /* Mantener opacidad en 0 al ocultar */
+  transition: opacity 0.5s; /* Transición de opacidad durante 0.5 segundos al desaparecer */
+}
+.nav-dropdown-icon {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown-icon.rotate-down {
+  transform: rotate(90deg);
+}
+
+.NavbarDesplegado {
+  width: 200px;
+}
+
+
+.menu-icon{
+ display: none;
+ cursor: pointer;
+}
+
+
+.imagen-con-texto {
+  text-align: center;
+  cursor:pointer;
+}
+.imagen-con-texto img {
+  max-width: 240px;
+  width: 22vh;
+  height: auto;
+  border-radius: 10px;
+}
+.imagen-con-texto p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+#menu {
+  height: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media (max-width: 1150px) { /* Ajusta el valor según tus necesidades */
+  #menu {
+      justify-content: center;
+  }
+  #menu div {
+    margin-bottom: 10px;
+  }
+  
+}
+#menu div {
+  display: flex;
+  width: auto;
+  justify-content: flex-end;
+  align-items: center;
+}
+#menu .menu-icon{
+  display: none;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+}
+
+#liProductos, #liContacto {
+  transition: color 0.5s ease;
+}
+
+nav ul li a i {
+  margin-right: 10px; 
+}
+
+nav ul li {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+#menu figure {
+  width: 30vh; /* Tamaño fijo del contenedor */
+  height: 100%; /* Tamaño fijo del contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ocultar cualquier desbordamiento de la imagen */
+  z-index: 22;
+  margin: 0;
+  cursor: pointer;
+}
+
+#menu figure img {
+  max-width: 100%; /* Ajustar la imagen al ancho del contenedor */
+  max-height: 100%; /* Ajustar la imagen a la altura del contenedor */
+  width: auto;
+  height: auto;
+  max-height: 97px;
+}
+
+#menu nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+#menu nav ul a {
+  color: black;
+}
+
+nav ul li {
+  margin-right: 20px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.7s ease;
+}
+
+nav ul li:hover {
+  border-bottom: 2px solid #2b12cd;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  #navbar{
+    display: flex;
+
+    z-index: 10;
+    background-color: rgb(230, 239, 248);
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  #menu {
+    flex-wrap: nowrap;
+    padding: 0;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  #menu div:nth-child(3) {
+    display: none;
+}
+  #menu .menu-icon{
+    display: flex;
+   padding-right: 20px;
+    margin: 0;
+  }
+  #menu figure img{
+    max-height: 60px;
+  }
+  .visible ul li a{
+    color:black;
+  }
+  nav ul li:hover {
+    border-bottom: 0;
+  }
+  nav ul li {
+    margin-right: 0;
+    border-bottom: 0;
+    transition: 0;
+}
+  #contenido nav {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    opacity: 0;
+    transition: opacity 2s; /* Transición de 2 segundos */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+  #contenido nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #contenido nav ul li{
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  #contenido nav ul li i{
+    margin-right: 20px;
+    
+  }
+  .fa-caret-right:before {
+    content: "\f0da";
+    color: #5e5e5e;
+}
+  #contenido nav.visible {
+    opacity: 1;
+  }
+  .nav-dropdown-icon {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+  
+
+  
+
+
