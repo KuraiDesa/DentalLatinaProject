@@ -2,6 +2,7 @@
 using DTOs.DTOs;
 using DTOs.Mappers;
 using LogicaAplicacion.InterfacesCasosUso;
+using LogicaDatos.Repositorios;
 using LogicaNegocio.InterfacesRepositorios;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,20 @@ namespace LogicaAplicacion.CasosUso
             {
                 throw new Exception("Error al traer productos");
             }
+        }
+
+        public IEnumerable<ProductoDTO> ListarProductosCategoria(int id)
+        {
+            return ProductoMapper.ToListaProductoDTO(repoProductos.BuscarPorCategoria(id));
+        }
+
+        public IEnumerable<ProductoDTO> ListarProductosNombre(string nombre)
+        {
+            return ProductoMapper.ToListaProductoDTO(repoProductos.BuscarPorNombre(nombre)).OrderBy(p => p.nombre);
+        }
+        public IEnumerable<ProductoDTO> ListarPorCateNombre(int id, string nombre)
+        {
+            return ProductoMapper.ToListaProductoDTO(repoProductos.BuscarPorNombreCategoria(id, nombre)).OrderBy(p => p.nombre);
         }
     }
 }

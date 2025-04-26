@@ -31,12 +31,6 @@
             "projectReferences": {
               "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\LogicaAplicacion.csproj": {
                 "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\LogicaAplicacion.csproj"
-              },
-              "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\LogicaDatos.csproj": {
-                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\LogicaDatos.csproj"
-              },
-              "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\LogicaNegocio.csproj": {
-                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\LogicaNegocio.csproj"
               }
             }
           }
@@ -56,11 +50,19 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.12.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             }
           },
           "imports": [
@@ -179,6 +181,9 @@
               "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs.csproj": {
                 "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs.csproj"
               },
+              "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\LogicaDatos.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\LogicaDatos.csproj"
+              },
               "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\LogicaNegocio.csproj": {
                 "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\LogicaNegocio.csproj"
               }
@@ -267,7 +272,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[8.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -275,15 +280,31 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[8.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.69.1, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.6.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             }
           },
           "imports": [

@@ -1,6 +1,7 @@
 ﻿using LogicaDatos.EntityFramework;
 using LogicaNegocio.Entidades;
 using LogicaNegocio.InterfacesRepositorios;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,13 @@ namespace LogicaDatos.Repositorios
 
         public Subcategoria FindById(int id)
         {
-            throw new NotImplementedException();
+            Subcategoria entity = Context.Subcategorias.Local.FirstOrDefault(c => c.Id == id);
+            if (entity == null)
+            {
+                entity = Context.Subcategorias.AsNoTracking().FirstOrDefault(c => c.Id == id);
+            }
+
+            return entity;
         }
 
         public void Remove(int id)

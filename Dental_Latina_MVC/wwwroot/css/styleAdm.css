@@ -183,4 +183,33 @@ header {
     .nav-list li a {
         color: #ecececec;
     }
+
+}
+
+.add_cat_btn {
+    border: 1px;
+    width: 5%;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: #dee2e6;
+}
+
+.c_add_cat_btn {
+    border: 1px;
+    width: 5%;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: #dee2e6;
+    background-color: #0d6efd;
+    
+
+}
+
+.c_add_cat_btn_inactive {
+    border: 1px;
+    width: 5%;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: #dee2e6;
+    background-color: #c1c1c1;
 }

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/utils/bootstrap-5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/css/styleGeneral.css">
-    <link rel="stylesheet" href="/css/stylePrueba.css">
     <link rel="stylesheet" href="/css/styleHeader.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,53 +16,26 @@
 </head>
 
 <header id="navbar">
-
     <div id="menu">
         <figure><img src="/img/logopng.png" alt="Logo"></figure>
+
         <div class="menu-icon" id="menu-icon" style="font-size:2.5vh" onclick="despliegoMenuCelular()">&#9776;</div>
-        <div>
+
+        <div id="contenido" class="menu-colapsable">
+            <!-- este es el contenedor que faltaba -->
             <nav class="navbar">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#Empresa">
-                                <i class="fas fa-building"></i>
-                                Empresa
-                            </a>
-                        </li>
-
-                        <li>
-                            <a asp-page="/Productos/Index">
-                                <i class="fas fa-box-open"></i> Productos
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#Contacto" id="liContacto">
-                                <i class="fas fa-envelope" id="cambiopaulauwu"></i>
-                                Contacto
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#Envios" class="envios-link">
-                                <i class="fas fa-shipping-fast"></i>
-                                Envios
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#Ingresar" onclick="openModal()">
-                                <i class="fas fa-sign-in-alt"></i>
-                                Ingresar
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <ul>
+                    <li><a href="#Empresa"><i class="fas fa-building"></i> Empresa</a></li>
+                    <li><a href="@Url.Action("Index", "Producto")"><i class="fas fa-box-open"></i> Productos</a></li>
+                    <li><a href="#Contacto" id="liContacto"><i class="fas fa-envelope" id="cambiopaulauwu"></i> Contacto</a></li>
+                    <li><a href="#Envios" class="envios-link"><i class="fas fa-shipping-fast"></i> Envios</a></li>
+                    <li><a href="#Ingresar" onclick="openModal()"><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>
+                </ul>
             </nav>
         </div>
     </div>
-    </div>
 </header>
+
 <body>
     <style>
         /* Fondo oscuro */
@@ -112,45 +84,65 @@
     </style>
     <main>
         <section id="carruselSec">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="true">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="/img/banner.jpeg" class="d-block w-100" data-bs-interval="1000" alt="..." style="max-height:85vh;">
+                        <!-- Imagen para PC -->
+                        <img src="/img/banner.jpeg" class="d-none d-md-block w-100" alt="..." style="max-height:85vh;">
+                        <!-- Imagen para celular -->
+                        <img src="/img/bannerCelular.jpg" class="d-block d-md-none w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="/img/bannerCelular.jpg" class="d-block w-100" data-bs-interval="1000" alt="...">
+                        <img src="/img/banner.jpeg" class="d-none d-md-block w-100" alt="..." style="max-height:85vh;">
+                        <img src="/img/bannerCelular.jpg" class="d-block d-md-none w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="/img/banner.jpeg" class="d-block w-100" data-bs-interval="1000" alt="..." style="max-height:85vh;">
+                        <img src="/img/banner.jpeg" class="d-none d-md-block w-100" alt="..." style="max-height:85vh;">
+                        <img src="/img/bannerCelular.jpg" class="d-block d-md-none w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="visually-hidden">Anterior</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
         </section>
+
         <br>
         <br>
+        <style>
+            /* Añadir transición suave para la rotación */
+           /* Definir la animación de giro horizontal */
+
+        </style>
+        <script>
+            // Seleccionamos la imagen
+            const img = document.querySelector('.img-fluid');
+
+            // Agregar la clase de animación solo cuando el mouse pasa sobre la imagen
+            img.addEventListener('mouseenter', () => {
+                img.style.animation = 'giroCompleto 1s forwards';
+            });
+            </script>
         <section id="productos" class="container">
             <div class="row justify-content-center align-items-center">
 
                 <article class="col-12 col-md-12 d-md-flex flex-md-row justify-content-md-start align-items-md-center catProducto col-lg-4 hidden">
                     <div class="col-12 d-flex flex-column flex-md-row flex-lg-column align-items-md-center align-items-lg-center justify-content-center align-items-center">
-                        <img src="/img/logoClini.png" alt="" class="img-fluid agrando order-1 order-lg-1 col-md-4 col-lg-12 max-size lg-center" style="max-width:30vh">
+                        <img src="/img/logoClini.png" alt="" class="flip-vertical-right agrando order-1 order-lg-1 col-md-4 col-lg-12 max-size lg-center" style="max-width:30vh">
                         <div class="order-2 col-md-8 col-lg-12 text-md-left text-lg-center">
-                            <h3 class="text-center text-md-start text-lg-center col-12 p-0">Clinica</h3>
+                            <h3 class="text-center text-md-start text-lg-center col-12 p-0">Clínica</h3>
                             <p class="d-none d-md-block text-md-left text-lg-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore quisquam modi asperiores facilis maiores enim necessitatibus odit.</p>
                         </div>
                     </div>
                 </article>
                 <article class="col-12 col-md-12 d-md-flex flex-md-row justify-content-md-start align-items-md-center catProducto col-lg-4 hidden">
                     <div class="col-12 d-flex flex-column flex-md-row flex-lg-column align-items-md-center align-items-lg-center justify-content-center align-items-center">
-                        <img src="/img/logoLab.png" alt="" class="img-fluid agrando order-1 order-lg-1 col-md-4 col-lg-12 max-size lg-center" style="max-width:30vh">
+                        <img src="/img/logoLab.png" alt="" class="flip-vertical-right agrando order-1 order-lg-1 col-md-4 col-lg-12 max-size lg-center" style="max-width:30vh">
                         <div class="order-2 col-md-8 col-lg-12 text-md-left text-lg-center">
                             <h3 class="text-center text-md-start text-lg-center col-12 p-0">Laboratorio</h3>
                             <p class="d-none d-md-block text-md-left text-lg-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore quisquam modi asperiores facilis maiores enim necessitatibus odit.</p>
@@ -159,7 +151,7 @@
                 </article>
                 <article class="col-12 col-md-12 d-md-flex flex-md-row justify-content-md-start align-items-md-center catProducto col-lg-4 hidden">
                     <div class="col-12 d-flex flex-column flex-md-row flex-lg-column align-items-md-center align-items-lg-center justify-content-center align-items-center">
-                        <img src="/img/logoImpla.png" alt="" class="img-fluid agrando order-1 order-lg-1 col-md-4 col-lg-12 max-size lg-center" style="max-width:30vh;">
+                        <img src="/img/logoImpla.png" alt="" class="flip-vertical-right agrando order-1 order-lg-1 col-md-4 col-lg-12 max-size lg-center" style="max-width:30vh;">
                         <div class="order-2 col-md-8 col-lg-12 text-md-left text-lg-center">
                             <h3 class="text-center text-md-start text-lg-center col-12 p-0">Implantologia</h3>
                             <p class="d-none d-md-block text-md-left text-lg-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore quisquam modi asperiores facilis maiores enim necessitatibus odit.</p>
@@ -206,65 +198,133 @@
 
         <br>
         <br>
-        <!--<div class="row">
-            <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
-              <h3 class="text-start">Visítenos</h3>
-              <p class="text-start">Nos encantaría que conociera nuestro nuevo local. Estamos ubicados en una zona de fácil acceso y contamos con todo lo necesario para ofrecerle el mejor servicio.</p>
-              <ul class="text-start">
-                <li>Amplios espacios</li>
-                <li>Servicios de alta calidad</li>
-                <li>Ambiente seguro y confortable</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-5">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.577096262977!2d-56.15178082338143!3d-34.891964472779755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80fd67aa5b1f%3A0x550e28c812c926a6!2sDental%20Latina!5e0!3m2!1ses-419!2suy!4v1721706004300!5m2!1ses-419!2suy"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>-->
-        <!--<div class="row col-12 p-5" style="background-color: rgba(148, 191, 255, 0.336);">
-          <div class="row col-12 col-md-8" >
-            <h3>Central</h3>
-            <p>Este local no solo representa el inicio de nuestra trayectoria, sino que también es el núcleo de nuestra identidad. Desde sus primeras puertas abiertas, ha sido testigo de nuestro crecimiento y evolución, y continúa siendo el centro neurálgico de nuestras operaciones. Aquí es donde cada idea se convierte en realidad y donde nuestro equipo trabaja con pasión y dedicación para ofrecerles lo mejor.<br><br>El Local Central es mucho más que un simple espacio; es un símbolo de nuestro compromiso con la excelencia y la calidad. Cada rincón refleja nuestra historia, desde los momentos de inspiración hasta los logros alcanzados. Nos sentimos profundamente agradecidos por el apoyo que hemos recibido a lo largo de los años y por la oportunidad de compartir nuestra evolución con ustedes.<br><br>Les invitamos a visitar nuestro Local Central y experimentar en persona el lugar que ha dado vida a nuestra visión y ha cimentado nuestra trayectoria. ¡Gracias por ser parte de nuestra historia y por acompañarnos en cada paso de este emocionante viaje!</p>
-          </div>
-          <iframe class="col-12 col-md-4 "src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.1514567950453!2d-56.18615462338078!3d-34.902648473348385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f803525ef5d4f%3A0x6e64cd1cccc215ab!2sMercedes%201541%2C%2011200%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1721705846134!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <br>
-        <div class="row col-12 p-5" style="background-color: rgba(148, 191, 255, 0.336);">
-          <iframe class="col-12 col-md-4 " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.577096262977!2d-56.15178082338143!3d-34.891964472779755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80fd67aa5b1f%3A0x550e28c812c926a6!2sDental%20Latina!5e0!3m2!1ses-419!2suy!4v1721706004300!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <div class="row col-12 col-md-8">
-            <h3 class=""style="text-align:right;">Local</h3>
-            <p style="text-align:right;">Con una imagen renovada y una atención al detalle en cada aspecto del diseño, nuestro nuevo local está concebido para mejorar la calidad del servicio y proporcionar una experiencia superior a nuestros clientes. Cada elemento ha sido cuidadosamente seleccionado para ofrecer un ambiente acogedor y eficiente, asegurando que cada visita sea un momento de confort y satisfacción.
-              <br><br>Estamos emocionados de compartir con ustedes este nuevo capítulo en nuestra historia, y de continuar ofreciendo el nivel de atención y calidad que nos ha distinguido a lo largo de los años. ¡Visítenos en nuestra nueva sucursal y descubra cómo hemos combinado tradición e innovación para servirles mejor!</p>
-          </div>
-        </div>
-          </div>
-        </div>-->
         <br>
         <br>
         <br>
         <br>
         <br>
+        <style>
+            /* Estilo para el select */
+            .form-select {
+                height: 40px;
+                font-size: 1em;
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                transition: border 0.3s ease-in-out;
+            }
+
+                .form-select:focus {
+                    border-color: #007bff;
+                }
+
+            /* Estilo de los campos de texto */
+            input[type="text"], input[type="email"] {
+                height: 40px;
+                font-size: 1em;
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                transition: border 0.3s ease-in-out;
+            }
+
+                input[type="text"]:focus, input[type="email"]:focus {
+                    border-color: #007bff;
+                }
+
+            /* Estilo del botón */
+            .btn-primary {
+                background-color: #007bff;
+                border-color: #007bff;
+                padding: 10px;
+                font-size: 1em;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+                .btn-primary:hover {
+                    background-color: #0056b3;
+                    border-color: #0056b3;
+                }
+        </style>
         <section class="container-fluid p-5" style="background-color: rgba(148, 191, 255, 0.336);">
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 row col-md-12 col-lg-6 justify-content-center align-items-center">
-                        <h2 class="text-center p-0">Este al tanto de nuestras ofertas!</h2>
+                        <h2 class="text-center p-0">¡Estate al tanto de nuestras ofertas!</h2>
                         <p class="text-center col-10">Regístrate para obtener lo último sobre próximos lanzamientos, nuevas llegadas, promociones y más.</p>
-                        <form action="" class="row justify-content-center align-items-center">
-                            <input type="email" name="" id="" placeholder="Nombre y apellido*" class="col-12 col-md-10 my-md-1 my-1 my-md-0 rounded">
-                            <input type="email" name="" id="" placeholder="Correo electronico*" class="col-12 col-md-10 my-md-1 my-1 my-md-0 rounded">
-                            <input type="button" value="Registrarse" class="btn btn-primary col-10" style="margin-top:10px ;">
+                        <form id="clienteForm">
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="nombre">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="apellido">Apellido</label>
+                                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="email2">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email2" name="email2" placeholder="Ingresa tu email" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="esEstudiante">¿Eres estudiante?</label>
+                                <select class="form-control" id="esEstudiante" name="esEstudiante" required>
+                                    <option value="true">Sí</option>
+                                    <option value="false">No</option>
+                                </select>
+                            </div>
+                            <div class="form-text text-danger" id="error-message2" style="display:none;"></div>
+                            <div class="form-text text-success" id="success-message2" style="display:none; color: #28a745; font-weight: bold;">
+                                Registrado correctamente
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary">Registrarse</button>
+                            </div>
                         </form>
-
                     </div>
-
                 </div>
             </div>
-
         </section>
+        </section>
+        <script>
+            document.getElementById("clienteForm").addEventListener("submit", async function (event) {
+                event.preventDefault();
 
+                const nombre = document.getElementById("nombre").value;
+                const apellido = document.getElementById("apellido").value;
+                const email = document.getElementById("email2").value;
+                const password = document.getElementById("password").value;
+                const esEstudiante = document.getElementById("esEstudiante").value === "true"; // Convierte a booleano
+
+                const response = await fetch('/Home/ingresoCliente', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ nombre, apellido, email, password, esEstudiante })
+                });
+
+                const result = await response.json();
+                const passMessage = document.getElementById("success-message2");
+                const errorMessage = document.getElementById("error-message2");
+                passMessage.style.display = "none";
+                errorMessage.style.display = "none";
+                if (result.success) {
+                    passMessage.textContent = result.pass;
+                    passMessage.style.display = "block";
+                } else {
+                    errorMessage.textContent = result.error;
+                    errorMessage.style.display = "block";
+                }
+            });
+        </script>
         <div id="whatsapp" style="position: fixed; bottom: 40px; right:40px">
-            <a href="https://wa.me/59894071157"><svg style="min-width: 50px; min-height: 50px;" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 258"><defs><linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1faf38" /><stop offset="100%" stop-color="#60d669" /></linearGradient><linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#f9f9f9" /><stop offset="100%" stop-color="#fff" /></linearGradient></defs><path fill="url(#logosWhatsappIcon0)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" /><path fill="url(#logosWhatsappIcon1)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" /><path fill="#fff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" /></svg></a>
+            <a href="https://wa.me/59899510559"><svg style="min-width: 50px; min-height: 50px;" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 258"><defs><linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1faf38" /><stop offset="100%" stop-color="#60d669" /></linearGradient><linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#f9f9f9" /><stop offset="100%" stop-color="#fff" /></linearGradient></defs><path fill="url(#logosWhatsappIcon0)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" /><path fill="url(#logosWhatsappIcon1)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" /><path fill="#fff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" /></svg></a>
         </div>
         <br>
         <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -275,8 +335,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- El formulario envía los datos al método Login del controlador Home -->
-                        <form asp-action="Login" asp-controller="Home" method="post">
+                        <form id="loginForm">
                             <div class="form-group mb-3">
                                 <label for="email">Correo electrónico</label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu email" required>
@@ -285,12 +344,36 @@
                                 <label for="password">Contraseña</label>
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña" required>
                             </div>
+                            <div class="form-text text-danger" id="error-message" style="display:none;"></div>
                             <div class="modal-footer d-flex justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary">Ingresar</button>
                             </div>
-                            
                         </form>
+                        <script>
+                            document.getElementById("loginForm").addEventListener("submit", async function (event) {
+                                event.preventDefault();
+
+                                const email = document.getElementById("email").value;
+                                const password = document.getElementById("password").value;
+                                console.log({ email, password });
+                                const response = await fetch('/Home/Login', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({ email, password })
+                                });
+
+                                const result = await response.json();
+
+                                const errorMessage = document.getElementById("error-message");
+
+                                if (result.success) {
+                                    window.location.href = result.redirectUrl;
+                                } else {
+                                    errorMessage.textContent = result.error2;
+                                    errorMessage.style.display = "block";
+                                }
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
@@ -303,21 +386,22 @@
             <div class="col-md-4 mb-4">
                 <h5>Sobre Nosotros</h5>
                 <p class="small">
-                    Somos una empresa comprometida con ofrecer los mejores servicios de envíos a nivel nacional Nuestra prioridad es la satisfacción del cliente.
+                    Somos una empresa comprometida con ofrecer los mejores servicios de envíos a nivel nacional. Nuestra prioridad es la satisfacción del cliente.
                 </p>
             </div>
             <div class="col-md-4 mb-4">
-                <h5>Contacto</h5>
+                <h5 id="Contacto">Contacto</h5>
                 <ul class="list-unstyled">
-                    <li><i class="fas fa-map-marker-alt"></i> 123 Calle Principal, Ciudad, País</li>
-                    <li><i class="fas fa-phone"></i> +123 456 7890</li>
-                    <li><i class="fas fa-envelope"></i> contacto@tusitio.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Mercedes 1541 esquina Tacuarembó</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Dirección Segunda Sucursal (reemplazar con la dirección correcta)</li>
+                    <li><i class="fas fa-phone"></i> 099510559</li>
+                    <li><i class="fas fa-envelope"></i> info@dentallatina.com.uy </li>
                 </ul>
             </div>
             <div class="col-md-4 mb-4 text-center">
                 <h5>Síguenos</h5>
                 <ul class="list-unstyled d-flex justify-content-center">
-                    <li class="mx-2"><a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a></li>
+                    <li class="mx-2"><a href="https://www.instagram.com/dentalatina/" class="text-light"><i class="fab fa-instagram fa-2x"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -325,6 +409,7 @@
             <p class="small mb-0">&copy; 2024 Dental Latina Ltda. Todos los derechos reservados.</p>
         </div>
     </footer>
+
     <script>
         function openModal() {
             var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));

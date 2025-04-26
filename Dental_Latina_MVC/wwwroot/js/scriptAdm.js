@@ -1,7 +1,4 @@
 
-function prueba() {
-    console.log('entree')
-}
 
 function mostrarSeccion(seccionID) {
     // Array con los IDs de las secciones
@@ -169,4 +166,11 @@ function eliminarImagen(numero) {
           alert('Error de red.');
           console.error('Error:', error);
       });
+}
+
+function muestroAgregarC() {
+    let menu = document.getElementById('agregarcategoria');
+    let c_btn = document.getElementById('c_add_cat_btn')
+    menu.style.display = 'block'
+    c_btn.style.display = 'flex'
 }

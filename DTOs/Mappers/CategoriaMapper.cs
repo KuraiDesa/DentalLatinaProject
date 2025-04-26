@@ -18,7 +18,13 @@ namespace DTOs.Mappers
             dto.id = categoria.Id;
             return dto;
         }
-
+        public static Categoria ToCategoria(CategoriaDTO categoria)
+        {
+            Categoria cat = new Categoria();
+            cat.Nombre = categoria.nombre;
+            cat.Id = categoria.id;
+            return cat;
+        }
         public static IEnumerable<CategoriaDTO> ToListaCategoriaDTO(IEnumerable<Categoria> categoria)
         {
             List<CategoriaDTO> prodDL = new List<CategoriaDTO>();

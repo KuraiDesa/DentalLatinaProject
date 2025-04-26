@@ -1,4 +1,5 @@
 ﻿using DTOs.DTOs;
+using LogicaNegocio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace LogicaAplicacion.InterfacesCasosUso
 {
     public interface IAltaProducto
     {
-        void AltaProd(ProductoDTO Prod);
+        void AltaProd(string nombre, string url, string descripcion, int categoria, int subcategoria, string documentacion, int precio);
     }
 }

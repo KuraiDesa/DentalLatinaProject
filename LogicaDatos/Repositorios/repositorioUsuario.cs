@@ -1,5 +1,6 @@
 ﻿using DentalLatina;
 using LogicaDatos.EntityFramework;
+using LogicaNegocio.Entidades;
 using LogicaNegocio.InterfacesRepositorios;
 using System;
 using System.Collections.Generic;
@@ -28,10 +29,15 @@ namespace LogicaDatos.Repositorios
             return Context.Usuarios
            .FirstOrDefault(u => u.mail == email && u.contraseña == contraseña);
         }
-
+        public Usuario BuscarSoloEmail(string email)
+        {
+            return Context.Usuarios
+           .FirstOrDefault(u => u.mail == email);
+        }
         public IEnumerable<Usuario> FindAll()
         {
-            throw new NotImplementedException();
+            return Context.Set<Usuario>()
+             .ToList();
         }
 
         public Usuario FindById(int id)
@@ -47,6 +53,29 @@ namespace LogicaDatos.Repositorios
         public void Update(Usuario obj)
         {
             throw new NotImplementedException();
+        }
+
+        public Usuario RegistrarCliente(string nombre, string apellido, string mail, bool esEstudiante)
+        {
+            try
+            {
+                if (BuscarSoloEmail(mail) == null)
+                {
+                    Usuario us = new Usuario(nombre, apellido, mail, "", esEstudiante);
+                    Context.Usuarios.Add(us);
+
+                    // Guarda los cambios en la base de datos
+                    Context.SaveChanges();
+
+                    return us;
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+           
         }
     }
 }

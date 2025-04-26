@@ -1,17 +1,17 @@
 let estadoDeMenu = false;
-function despliegoMenuCelular(){
-    if(estadoDeMenu == false){
-        contenido = document.getElementById('contenido');
-        contenido.style.height = '230px';
+
+function despliegoMenuCelular() {
+    const contenido = document.getElementById('contenido');
+
+    if (!estadoDeMenu) {
+        contenido.style.height = '230px'; // o 'auto' si prefieres, pero animaciones no funcionan con auto
         estadoDeMenu = true;
-        setTimeout(cargoContMovil, 300);
-    }else{
-        borrarContenidoMenu()
-        contenido = document.getElementById('contenido');
+        setTimeout(cargoContMovil, 300); // si esta función existe y es necesaria
+    } else {
         contenido.style.height = '0px';
         estadoDeMenu = false;
+        borrarContenidoMenu(); // si esta función existe
     }
-    
 }
 
 function cargoContMovil(){

@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -15,112 +19,144 @@
       "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicadatos\\entityframework\\libreriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|solutionrelative:logicadatos\\entityframework\\libreriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\controllers\\eventocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\controllers\\eventocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\altacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\altacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\interfacescasosuso\\ialtacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\interfacescasosuso\\ialtacategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\views\\evento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\evento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\producto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\wwwroot\\js\\scriptadm.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\wwwroot\\js\\scriptadm.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicanegocio\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dtos\\dtos\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|solutionrelative:dtos\\dtos\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\views\\altaproducto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\altaproducto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\listarsubcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\listarsubcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\listarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\listarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\listarcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\listarcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\altaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\altaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dtos\\mappers\\subcategoriamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|solutionrelative:dtos\\mappers\\subcategoriamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\interfacescasosuso\\ialtaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\interfacescasosuso\\ialtaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dtos\\mappers\\categoriamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|solutionrelative:dtos\\mappers\\categoriamapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dtos\\dtos\\subcategoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|solutionrelative:dtos\\dtos\\subcategoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dtos\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|solutionrelative:dtos\\dtos\\clientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dtos\\dtos\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|solutionrelative:dtos\\dtos\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicadatos\\repositorios\\repositoriosubcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|solutionrelative:logicadatos\\repositorios\\repositoriosubcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\eliminarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\eliminarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicadatos\\repositorios\\repositoriocategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|solutionrelative:logicadatos\\repositorios\\repositoriocategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\altaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\altaproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\interfacescasosuso\\ilistarsubcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\interfacescasosuso\\ilistarsubcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\wwwroot\\js\\scriptadm.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\wwwroot\\js\\scriptadm.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\wwwroot\\js\\celularnavbar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\wwwroot\\js\\celularnavbar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\wwwroot\\css\\styleheader.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\wwwroot\\css\\styleheader.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicadatos\\repositorios\\repositorioproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|solutionrelative:logicadatos\\repositorios\\repositorioproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\interfacescasosuso\\ilistarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\interfacescasosuso\\ilistarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\listarcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\listarcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicanegocio\\interfacesrepositorios\\irepositorioproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\interfacesrepositorios\\irepositorioproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicanegocio\\interfacesrepositorios\\irepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\interfacesrepositorios\\irepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\interfacescasosuso\\ieliminarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\interfacescasosuso\\ieliminarproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dtos\\dtos\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|solutionrelative:dtos\\dtos\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dtos\\mappers\\productomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|solutionrelative:dtos\\mappers\\productomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\controllers\\eventocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\controllers\\eventocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicadatos\\entityframework\\libreriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|solutionrelative:logicadatos\\entityframework\\libreriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\interfacescasosuso\\ilistarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\interfacescasosuso\\ilistarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\interfacescasosuso\\ilistarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\interfacescasosuso\\ilistarproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\registrocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\registrocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicadatos\\repositorios\\repositorioevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBFC3E13-F04C-49A4-8908-8F0E7D9D5BD6}|LogicaDatos\\LogicaDatos.csproj|solutionrelative:logicadatos\\repositorios\\repositorioevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicanegocio\\interfacesrepositorios\\irepositoriopromocion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\interfacesrepositorios\\irepositoriopromocion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicanegocio\\interfacesrepositorios\\irepositorioevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\interfacesrepositorios\\irepositorioevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicaaplicacion\\casosuso\\listarsubcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E96C5BD5-9991-4D2D-BE70-D728DE06CC39}|LogicaAplicacion\\LogicaAplicacion.csproj|solutionrelative:logicaaplicacion\\casosuso\\listarsubcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\views\\evento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\evento\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\logicanegocio\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3127DFF-061A-45BA-A2F1-1B5CB6C4B455}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\entidades\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dental_latina_mvc\\views\\altaproducto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F34D4090-6113-4F2C-A139-4B28056A8771}|Dental_Latina_MVC\\Dental_Latina_MVC.csproj|solutionrelative:dental_latina_mvc\\views\\altaproducto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|c:\\users\\soto\\documents\\github\\dental_latina_repo\\dtos\\dtos\\subcategoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E292A10C-B200-42AD-AB43-1AD31B8BA309}|DTOs\\DTOs.csproj|solutionrelative:dtos\\dtos\\subcategoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -135,43 +171,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Dental_Latina_MVC\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAYwDwAAAAIAAAA",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Dental_Latina_MVC\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAcwE8AAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T19:18:10.458Z",
+              "WhenOpened": "2024-11-04T00:00:23.495Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
+              "DocumentIndex": 9,
+              "Title": "ClienteDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\ClienteDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\DTOs\\ClienteDTO.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\ClienteDTO.cs",
+              "RelativeToolTip": "DTOs\\DTOs\\ClienteDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T19:15:23.48Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T02:39:24.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginUser.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\LoginUser.cs",
-              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\LoginUser.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\LoginUser.cs",
-              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\LoginUser.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACMAAAAIAAAA",
+              "DocumentIndex": 5,
+              "Title": "AltaCategoria.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\AltaCategoria.cs",
+              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\AltaCategoria.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\AltaCategoria.cs",
+              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\AltaCategoria.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAA0AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T23:58:51.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T02:36:26.786Z"
             },
             {
               "$type": "Document",
@@ -181,50 +214,113 @@
               "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\Admin\\Index.cshtml",
               "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Admin\\Index.cshtml",
               "RelativeToolTip": "Dental_Latina_MVC\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAQAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T18:49:45.765Z",
+              "WhenOpened": "2025-04-23T23:31:58.084Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ListarSubcategorias.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\ListarSubcategorias.cs",
-              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\ListarSubcategorias.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\ListarSubcategorias.cs",
-              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\ListarSubcategorias.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:38:12.38Z"
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Dental_Latina_MVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAJUAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T23:44:28.771Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SubcategoriaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\SubcategoriaDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\DTOs\\SubcategoriaDTO.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\SubcategoriaDTO.cs",
-              "RelativeToolTip": "DTOs\\DTOs\\SubcategoriaDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAWAAAA",
+              "DocumentIndex": 12,
+              "Title": "AltaProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\AltaProducto.cs",
+              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\AltaProducto.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\AltaProducto.cs",
+              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\AltaProducto.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:30:49.602Z"
+              "WhenOpened": "2024-10-30T21:00:57.827Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
+              "Title": "EliminarProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\EliminarProducto.cs",
+              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\EliminarProducto.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\EliminarProducto.cs",
+              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\EliminarProducto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:36:31.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAltaProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IAltaProducto.cs",
+              "RelativeDocumentMoniker": "LogicaAplicacion\\InterfacesCasosUso\\IAltaProducto.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IAltaProducto.cs",
+              "RelativeToolTip": "LogicaAplicacion\\InterfacesCasosUso\\IAltaProducto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAACIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:37:29.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Program.cs",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Program.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Program.cs",
+              "RelativeToolTip": "Dental_Latina_MVC\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T23:44:26.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Producto\\Index.cshtml",
               "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\Producto\\Index.cshtml",
               "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Producto\\Index.cshtml",
               "RelativeToolTip": "Dental_Latina_MVC\\Views\\Producto\\Index.cshtml",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAAAAcAAAAGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T19:19:21.641Z"
+              "WhenOpened": "2025-04-23T23:56:19.723Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 6,
+              "Title": "IAltaCategoria.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IAltaCategoria.cs",
+              "RelativeDocumentMoniker": "LogicaAplicacion\\InterfacesCasosUso\\IAltaCategoria.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IAltaCategoria.cs",
+              "RelativeToolTip": "LogicaAplicacion\\InterfacesCasosUso\\IAltaCategoria.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T02:42:51.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoriaMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\Mappers\\CategoriaMapper.cs",
+              "RelativeDocumentMoniker": "DTOs\\Mappers\\CategoriaMapper.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\Mappers\\CategoriaMapper.cs",
+              "RelativeToolTip": "DTOs\\Mappers\\CategoriaMapper.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T19:30:13.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "CategoriaDTO.cs",
               "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\CategoriaDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\DTOs\\CategoriaDTO.cs",
@@ -236,234 +332,159 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CategoriaMapper.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\Mappers\\CategoriaMapper.cs",
-              "RelativeDocumentMoniker": "DTOs\\Mappers\\CategoriaMapper.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\Mappers\\CategoriaMapper.cs",
-              "RelativeToolTip": "DTOs\\Mappers\\CategoriaMapper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:30:13.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LibreriaContext.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\EntityFramework\\LibreriaContext.cs",
-              "RelativeDocumentMoniker": "LogicaDatos\\EntityFramework\\LibreriaContext.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\EntityFramework\\LibreriaContext.cs",
-              "RelativeToolTip": "LogicaDatos\\EntityFramework\\LibreriaContext.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA4wCMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T18:45:13.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Dental_Latina_MVC\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T00:00:23.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "scriptAdm.js",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\wwwroot\\js\\scriptAdm.js",
-              "RelativeDocumentMoniker": "Dental_Latina_MVC\\wwwroot\\js\\scriptAdm.js",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\wwwroot\\js\\scriptAdm.js",
-              "RelativeToolTip": "Dental_Latina_MVC\\wwwroot\\js\\scriptAdm.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-02T18:53:01.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Program.cs",
-              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Program.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Program.cs",
-              "RelativeToolTip": "Dental_Latina_MVC\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T20:25:02.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Dental_Latina_MVC\\Views\\_ViewImports.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T19:38:14.315Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EventoController.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\EventoController.cs",
-              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Controllers\\EventoController.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\EventoController.cs",
-              "RelativeToolTip": "Dental_Latina_MVC\\Controllers\\EventoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:56:18.255Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
-              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
-              "RelativeToolTip": "Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T19:35:15.392Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "ListarCategorias.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\ListarCategorias.cs",
-              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\ListarCategorias.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\ListarCategorias.cs",
-              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\ListarCategorias.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAuwCMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:37:59.088Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ListarProductos.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\ListarProductos.cs",
-              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\ListarProductos.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\ListarProductos.cs",
-              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\ListarProductos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:38:30.03Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\AltaProducto\\Index.cshtml",
-              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\AltaProducto\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\AltaProducto\\Index.cshtml",
-              "RelativeToolTip": "Dental_Latina_MVC\\Views\\AltaProducto\\Index.cshtml",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAswCEAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T19:06:34.608Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AltaProducto.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\AltaProducto.cs",
-              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\AltaProducto.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\AltaProducto.cs",
-              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\AltaProducto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T21:00:57.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\Entidades\\Producto.cs",
-              "RelativeDocumentMoniker": "LogicaNegocio\\Entidades\\Producto.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\Entidades\\Producto.cs",
-              "RelativeToolTip": "LogicaNegocio\\Entidades\\Producto.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T21:05:34.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ProductoDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\ProductoDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\DTOs\\ProductoDTO.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\ProductoDTO.cs",
-              "RelativeToolTip": "DTOs\\DTOs\\ProductoDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:30:57.554Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
               "Title": "ProductoController.cs",
               "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\ProductoController.cs",
               "RelativeDocumentMoniker": "Dental_Latina_MVC\\Controllers\\ProductoController.cs",
               "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\ProductoController.cs",
               "RelativeToolTip": "Dental_Latina_MVC\\Controllers\\ProductoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T20:01:36.33Z"
+              "WhenOpened": "2025-04-23T23:55:10.339Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "IListarSubcategorias.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IListarSubcategorias.cs",
-              "RelativeDocumentMoniker": "LogicaAplicacion\\InterfacesCasosUso\\IListarSubcategorias.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IListarSubcategorias.cs",
-              "RelativeToolTip": "LogicaAplicacion\\InterfacesCasosUso\\IListarSubcategorias.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAKAAAA",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Dental_Latina_MVC\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:39:23.451Z"
+              "WhenOpened": "2025-04-24T00:05:35.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "SubcategoriaMapper.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\Mappers\\SubcategoriaMapper.cs",
-              "RelativeDocumentMoniker": "DTOs\\Mappers\\SubcategoriaMapper.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\Mappers\\SubcategoriaMapper.cs",
-              "RelativeToolTip": "DTOs\\Mappers\\SubcategoriaMapper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAiAAAA",
+              "DocumentIndex": 20,
+              "Title": "IRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\InterfacesRepositorios\\IRepositorio.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\InterfacesRepositorios\\IRepositorio.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\InterfacesRepositorios\\IRepositorio.cs",
+              "RelativeToolTip": "LogicaNegocio\\InterfacesRepositorios\\IRepositorio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:36:48.705Z"
+              "WhenOpened": "2024-11-09T19:37:53.337Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "repositorioSubcategoria.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\Repositorios\\repositorioSubcategoria.cs",
-              "RelativeDocumentMoniker": "LogicaDatos\\Repositorios\\repositorioSubcategoria.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\Repositorios\\repositorioSubcategoria.cs",
-              "RelativeToolTip": "LogicaDatos\\Repositorios\\repositorioSubcategoria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAjAAAA",
+              "Title": "ProductoMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\Mappers\\ProductoMapper.cs",
+              "RelativeDocumentMoniker": "DTOs\\Mappers\\ProductoMapper.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\Mappers\\ProductoMapper.cs",
+              "RelativeToolTip": "DTOs\\Mappers\\ProductoMapper.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T20:26:07.624Z"
+              "WhenOpened": "2025-04-24T00:19:56.299Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "repositorioCategoria.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\Repositorios\\repositorioCategoria.cs",
-              "RelativeDocumentMoniker": "LogicaDatos\\Repositorios\\repositorioCategoria.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\Repositorios\\repositorioCategoria.cs",
-              "RelativeToolTip": "LogicaDatos\\Repositorios\\repositorioCategoria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAMAAAA",
+              "DocumentIndex": 13,
+              "Title": "scriptAdm.js",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\wwwroot\\js\\scriptAdm.js",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\wwwroot\\js\\scriptAdm.js",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\wwwroot\\js\\scriptAdm.js",
+              "RelativeToolTip": "Dental_Latina_MVC\\wwwroot\\js\\scriptAdm.js",
+              "ViewState": "AQIAADoAAAAAAAAAAAAgwBMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-02T18:53:01.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "styleHeader.css",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\wwwroot\\css\\styleHeader.css",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\wwwroot\\css\\styleHeader.css",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\wwwroot\\css\\styleHeader.css",
+              "RelativeToolTip": "Dental_Latina_MVC\\wwwroot\\css\\styleHeader.css",
+              "ViewState": "AQIAAEABAAAAAAAAAAAswFQBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-25T02:10:45.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CelularNavBar.js",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\wwwroot\\js\\CelularNavBar.js",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\wwwroot\\js\\CelularNavBar.js",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\wwwroot\\js\\CelularNavBar.js",
+              "RelativeToolTip": "Dental_Latina_MVC\\wwwroot\\js\\CelularNavBar.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-25T02:13:15.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ListarCategorias.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\ListarCategorias.cs",
+              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\ListarCategorias.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\ListarCategorias.cs",
+              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\ListarCategorias.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T20:26:11.585Z"
+              "WhenOpened": "2024-10-30T19:37:59.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IRepositorioProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioProducto.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioProducto.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioProducto.cs",
+              "RelativeToolTip": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioProducto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T19:41:18.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IEliminarProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IEliminarProducto.cs",
+              "RelativeDocumentMoniker": "LogicaAplicacion\\InterfacesCasosUso\\IEliminarProducto.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IEliminarProducto.cs",
+              "RelativeToolTip": "LogicaAplicacion\\InterfacesCasosUso\\IEliminarProducto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:37:21.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "repositorioProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\Repositorios\\repositorioProducto.cs",
+              "RelativeDocumentMoniker": "LogicaDatos\\Repositorios\\repositorioProducto.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\Repositorios\\repositorioProducto.cs",
+              "RelativeToolTip": "LogicaDatos\\Repositorios\\repositorioProducto.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAIwEcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:39:51.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LibreriaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\EntityFramework\\LibreriaContext.cs",
+              "RelativeDocumentMoniker": "LogicaDatos\\EntityFramework\\LibreriaContext.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\EntityFramework\\LibreriaContext.cs",
+              "RelativeToolTip": "LogicaDatos\\EntityFramework\\LibreriaContext.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAA9wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T23:41:10.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\ProductoDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\DTOs\\ProductoDTO.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\ProductoDTO.cs",
+              "RelativeToolTip": "DTOs\\DTOs\\ProductoDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T19:30:57.554Z"
             },
             {
               "$type": "Document",
@@ -475,31 +496,151 @@
               "RelativeToolTip": "Dental_Latina_MVC\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-30T20:16:11.016Z"
+              "WhenOpened": "2025-04-23T23:41:25.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EventoController.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\EventoController.cs",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Controllers\\EventoController.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Controllers\\EventoController.cs",
+              "RelativeToolTip": "Dental_Latina_MVC\\Controllers\\EventoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:05:34.923Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
+              "Title": "IListarClientes.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IListarClientes.cs",
+              "RelativeDocumentMoniker": "LogicaAplicacion\\InterfacesCasosUso\\IListarClientes.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IListarClientes.cs",
+              "RelativeToolTip": "LogicaAplicacion\\InterfacesCasosUso\\IListarClientes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T21:56:56.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "IListarProductos.cs",
               "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IListarProductos.cs",
               "RelativeDocumentMoniker": "LogicaAplicacion\\InterfacesCasosUso\\IListarProductos.cs",
               "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\InterfacesCasosUso\\IListarProductos.cs",
               "RelativeToolTip": "LogicaAplicacion\\InterfacesCasosUso\\IListarProductos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA3AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T19:40:05.832Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ProductoMapper.cs",
-              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\Mappers\\ProductoMapper.cs",
-              "RelativeDocumentMoniker": "DTOs\\Mappers\\ProductoMapper.cs",
-              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\Mappers\\ProductoMapper.cs",
-              "RelativeToolTip": "DTOs\\Mappers\\ProductoMapper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "DocumentIndex": 30,
+              "Title": "RegistroCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\RegistroCliente.cs",
+              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\RegistroCliente.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\RegistroCliente.cs",
+              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\RegistroCliente.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAkwCoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T19:30:15.978Z"
+              "WhenOpened": "2025-01-12T19:17:44.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IRepositorioEvento.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioEvento.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioEvento.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioEvento.cs",
+              "RelativeToolTip": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioEvento.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T19:41:17.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IRepositorioPromocion.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioPromocion.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioPromocion.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\InterfacesRepositorios\\IRepositorioPromocion.cs",
+              "RelativeToolTip": "LogicaNegocio\\InterfacesRepositorios\\IRepositorioPromocion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T19:41:28.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "repositorioEvento.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\Repositorios\\repositorioEvento.cs",
+              "RelativeDocumentMoniker": "LogicaDatos\\Repositorios\\repositorioEvento.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaDatos\\Repositorios\\repositorioEvento.cs",
+              "RelativeToolTip": "LogicaDatos\\Repositorios\\repositorioEvento.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T19:43:51.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ListarSubcategorias.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\ListarSubcategorias.cs",
+              "RelativeDocumentMoniker": "LogicaAplicacion\\CasosUso\\ListarSubcategorias.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaAplicacion\\CasosUso\\ListarSubcategorias.cs",
+              "RelativeToolTip": "LogicaAplicacion\\CasosUso\\ListarSubcategorias.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAACBjwA0AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T19:38:12.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "SubcategoriaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\SubcategoriaDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\DTOs\\SubcategoriaDTO.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\DTOs\\DTOs\\SubcategoriaDTO.cs",
+              "RelativeToolTip": "DTOs\\DTOs\\SubcategoriaDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T19:30:49.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
+              "RelativeToolTip": "Dental_Latina_MVC\\Views\\Evento\\Index.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAACBjwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-02T19:35:15.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\AltaProducto\\Index.cshtml",
+              "RelativeDocumentMoniker": "Dental_Latina_MVC\\Views\\AltaProducto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\Dental_Latina_MVC\\Views\\AltaProducto\\Index.cshtml",
+              "RelativeToolTip": "Dental_Latina_MVC\\Views\\AltaProducto\\Index.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAswCEAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T19:06:34.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\Entidades\\Producto.cs",
+              "RelativeDocumentMoniker": "LogicaNegocio\\Entidades\\Producto.cs",
+              "ToolTip": "C:\\Users\\Soto\\Documents\\GitHub\\Dental_Latina_Repo\\LogicaNegocio\\Entidades\\Producto.cs",
+              "RelativeToolTip": "LogicaNegocio\\Entidades\\Producto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAACBjwBUAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T21:05:34.169Z"
             }
           ]
         },
@@ -510,6 +651,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }
