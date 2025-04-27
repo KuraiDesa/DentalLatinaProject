@@ -1,7 +1,8 @@
-# Prerequisites
 *.d
 *.bin
-.vs
+.vs/
+*obj/
+*bin/
 appsettings.json
 
 # Object files
