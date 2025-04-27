@@ -3,8 +3,6 @@ using DTOs.DTOs;
 using LogicaAplicacion.CasosUso;
 using LogicaAplicacion.InterfacesCasosUso;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using System.ComponentModel.DataAnnotations;
 
 namespace Dental_Latina_MVC.Controllers
@@ -18,10 +16,7 @@ namespace Dental_Latina_MVC.Controllers
         public IAltaProducto altaProd { get; set; }
         public IListarClientes CUListarClientes { get; set; }
         public IAltaCategoria CUAltaCategoria { get; set; }
-        public IAltaSubcategoria CUAltaSubcategoria { get; set; }
-        public AdminController(IListarCategorias CUC, IlistarSubcategorias CUS, IAltaProducto altaProd, IListarClientes CUListarClientes,
-                                IListarProductos CUListarProductos, IEliminarProducto CUEliminarProductro, IAltaCategoria AltaCategoria,
-                                IAltaSubcategoria AltaSubcategoria)
+        public AdminController(IListarCategorias CUC, IlistarSubcategorias CUS, IAltaProducto altaProd, IListarClientes CUListarClientes, IListarProductos CUListarProductos, IEliminarProducto CUEliminarProductro, IAltaCategoria AltaCategoria)
         {
             this.CUListarCategorias = CUC;
             this.CUSubcategorias = CUS;
@@ -30,7 +25,6 @@ namespace Dental_Latina_MVC.Controllers
             this.CUListarProductos = CUListarProductos;
             this.CUEliminarProductro = CUEliminarProductro;
             this.CUAltaCategoria = AltaCategoria;
-            this.CUAltaSubcategoria = AltaSubcategoria;
         }
         
         public IActionResult VerificarSesion()
@@ -146,84 +140,15 @@ namespace Dental_Latina_MVC.Controllers
 
         }
 
-        [HttpPost]
-        [ActionName("CreateCategoria")]
-        public IActionResult CreateCategoria(GeneralViewModel generalViewModel)
-        {
-            VerificarSesion(); // Por seguridad
 
-            if (string.IsNullOrWhiteSpace(generalViewModel.categoria.nombre))
-            {
-                return BadRequest("El nombre de la categoría es obligatorio.");
-            }
-
-            try
-            {
-                CUAltaCategoria.Alta(generalViewModel.categoria.nombre);
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                TempData["ErrorMessage"] = "Error al crear categoría: " + ex.Message;
-                return RedirectToAction("Index");
-            }
-        }
-        [HttpPost]
-        [ActionName("CreateSubcategoria")]
-        public IActionResult CreateSubcategoria(GeneralViewModel generalViewModel)
-        {
-            VerificarSesion(); // Por seguridad
-
-            if (string.IsNullOrWhiteSpace(generalViewModel.subcategoria.nombre))
-            {
-                return BadRequest("El nombre de la categoría es obligatorio.");
-            }
-
-            try
-            {
-                CUAltaSubcategoria.Alta(
-                    generalViewModel.subcategoria.nombre,
-                    generalViewModel.subcategoria.idcat
-                    );
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                TempData["ErrorMessage"] = "Error al crear categoría: " + ex.Message;
-                return RedirectToAction("Index");
-            }
-        }
-
-        public IActionResult GetSubcategoriasPorCategoria(int categoriaId)
-        {
-            // Asegúrate de que recibas correctamente el parametro categoriaId
-            Console.WriteLine($"CategoriaId recibido: {categoriaId}");
-
-            // Obtener las subcategorías filtradas por categoriaId
-            var subcategorias = CUSubcategorias.GetSubcategoria()
-                .Where(s => s.id == categoriaId)  // Filtrar por categoriaId
-                .ToList();
-
-            // Verificar si se encontraron subcategorías
-            if (subcategorias == null || !subcategorias.Any())
-            {
-                return Json(new { message = "No subcategorías encontradas para esta categoría." });
-            }
-
-            // Retornar las subcategorías como JSON
-            return Json(subcategorias); 
-        }
     }
 
-    
 
 
     public class GeneralViewModel
     {
         public ProductoCategoriaViewModel productocategoriaview { get; set; }
         public ProductoViewModel productoview { get; set; }
-        public CategoriaViewModel categoria { get; set; }
-        public SubcategoriaViewModel subcategoria { get; set; }
         public IEnumerable<ClienteDTO> clientes { get; set; }
         
         public IEnumerable<ProductoDTO> productos { get; set; }
@@ -232,17 +157,6 @@ namespace Dental_Latina_MVC.Controllers
     {
         public IEnumerable<SubcategoriaDTO> Subcategoria { get; set; }
         public IEnumerable<CategoriaDTO> Categorias { get; set; }
-    }
-
-    public class CategoriaViewModel
-    {
-        public string nombre { get; set; }
-    }
-
-    public class SubcategoriaViewModel
-    {
-        public string nombre { get; set; }
-        public int idcat {  get; set; }
     }
     public class ProductoViewModel
     {

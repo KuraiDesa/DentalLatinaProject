@@ -69,21 +69,38 @@ C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaDatos\obj\Debug\net8.0\r
 C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaDatos\obj\Debug\net8.0\LogicaDatos.pdb
 C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaDatos\obj\Debug\net8.0\LogicaDatos.genruntimeconfig.cache
 C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaDatos\obj\Debug\net8.0\ref\LogicaDatos.dll
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\bin\Debug\net8.0\LogicaDatos.deps.json
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\bin\Debug\net8.0\LogicaDatos.runtimeconfig.json
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\bin\Debug\net8.0\LogicaDatos.dll
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\bin\Debug\net8.0\LogicaDatos.pdb
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\bin\Debug\net8.0\LogicaNegocio.dll
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\bin\Debug\net8.0\LogicaNegocio.pdb
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.csproj.AssemblyReference.cache
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.AssemblyInfoInputs.cache
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.AssemblyInfo.cs
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.csproj.CoreCompileInputs.cache
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDa.B8F08538.Up2Date
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.dll
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\refint\LogicaDatos.dll
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.pdb
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.genruntimeconfig.cache
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\ref\LogicaDatos.dll
-C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaDatos\obj\Debug\net8.0\LogicaDatos.sourcelink.json
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\bin\Debug\net8.0\LogicaDatos.deps.json
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\bin\Debug\net8.0\LogicaDatos.runtimeconfig.json
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\bin\Debug\net8.0\LogicaDatos.dll
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\bin\Debug\net8.0\LogicaDatos.pdb
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\bin\Debug\net8.0\LogicaNegocio.dll
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\bin\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\LogicaDatos.csproj.AssemblyReference.cache
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\LogicaDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\LogicaDatos.AssemblyInfoInputs.cache
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\LogicaDatos.AssemblyInfo.cs
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\LogicaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\LogicaDatos.sourcelink.json
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\LogicaDa.B8F08538.Up2Date
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\LogicaDatos.dll
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\refint\LogicaDatos.dll
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\LogicaDatos.pdb
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\LogicaDatos.genruntimeconfig.cache
+C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaDatos\obj\Debug\net8.0\ref\LogicaDatos.dll
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\bin\Debug\net8.0\LogicaDatos.deps.json
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\bin\Debug\net8.0\LogicaDatos.runtimeconfig.json
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\bin\Debug\net8.0\LogicaDatos.dll
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\bin\Debug\net8.0\LogicaDatos.pdb
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\bin\Debug\net8.0\LogicaNegocio.dll
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\bin\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\LogicaDatos.csproj.AssemblyReference.cache
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\LogicaDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\LogicaDatos.AssemblyInfoInputs.cache
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\LogicaDatos.AssemblyInfo.cs
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\LogicaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\LogicaDa.B8F08538.Up2Date
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\LogicaDatos.dll
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\refint\LogicaDatos.dll
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\LogicaDatos.pdb
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\LogicaDatos.genruntimeconfig.cache
+C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaDatos\obj\Debug\net8.0\ref\LogicaDatos.dll

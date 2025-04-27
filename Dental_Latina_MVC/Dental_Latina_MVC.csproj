@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\EnvioCotizacion.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\EnvioCotizacion.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\EnvioCotizacion.js" />
     <None Include="wwwroot\utils\bootstrap-5.3.3\.github\CODEOWNERS" />
     <None Include="wwwroot\utils\bootstrap-5.3.3\.github\codeql\codeql-config.yml" />
     <None Include="wwwroot\utils\bootstrap-5.3.3\.github\CONTRIBUTING.md" />
