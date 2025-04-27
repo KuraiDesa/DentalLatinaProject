@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
 *.bin
+.vs
+appsettings.json
 
 # Object files
 *.o
