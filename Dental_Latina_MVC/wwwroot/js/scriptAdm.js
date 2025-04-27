@@ -31,28 +31,42 @@ cerrar.addEventListener("click", () => {
 const crearProductoB = document.getElementById("crearProductoB");
 const modificarProductoB = document.querySelector("#modificarProductoB");
 const eliminarProductoB = document.querySelector("#eliminarProductoB");
+const gestionarCategoriaB = document.getElementById('gestionCategoriaB')
 
 const crearProducto = document.getElementById("crearProducto");
 const modificarProducto = document.querySelector("#modificarProducto");
 const eliminarProducto = document.querySelector("#eliminarProducto");
+const gestionCategoria = document.getElementById('gestionCategoria')
 
 crearProductoB.addEventListener("click", () => {
     crearProducto.style.display = "block";
     modificarProducto.style.display = "none";
     eliminarProducto.style.display = "none";
+    gestionCategoria.style.display = 'none';
 });
 
 modificarProductoB.addEventListener("click", () => {
     crearProducto.style.display = "none";
     modificarProducto.style.display = "block";
     eliminarProducto.style.display = "none";
+    gestionCategoria.style.display = 'none';
 });
 
 eliminarProductoB.addEventListener("click", () => {
     crearProducto.style.display = "none";
     modificarProducto.style.display = "none";
     eliminarProducto.style.display = "block";
+    gestionCategoria.style.display = 'none';
 });
+
+gestionarCategoriaB.addEventListener("click", () => {
+    crearProducto.style.display = "none";
+    modificarProducto.style.display = "none";
+    eliminarProducto.style.display = "none";
+    gestionCategoria.style.display = 'block';
+});
+
+
 
 //Alta de imagenes
 function vistaPreviaImagen(event) {
@@ -169,8 +183,56 @@ function eliminarImagen(numero) {
 }
 
 function muestroAgregarC() {
+    let boton = document.getElementById('agregarCatBtnTxt');
     let menu = document.getElementById('agregarcategoria');
-    let c_btn = document.getElementById('c_add_cat_btn')
-    menu.style.display = 'block'
-    c_btn.style.display = 'flex'
+    let c_btn = document.getElementById('c_add_cat_btn');
+    let c_input = document.getElementById('nuevaCategoriaInput');
+    nuevaCategoriaInput
+    if (boton.innerHTML == '+') {
+        c_input.style.display = 'flex';
+        menu.style.width = '90%';
+        c_btn.style.opacity = '100';
+        boton.innerHTML = '-'
+    } else {
+        c_input.style.display = 'none';
+        menu.style.width = '0%';
+        c_btn.style.opacity = '0';
+        boton.innerHTML = '+'
+        c_input.value = '';
+    }
+    
 }
+
+function muestroAgregarSC() {
+    let boton = document.getElementById('agregarSCatBtnTxt');
+    let menu = document.getElementById('agregarscategoria');
+    let c_btn = document.getElementById('sc_add_cat_btn');
+    let c_input = document.getElementById('nuevaSCategoriaInput');
+    nuevaCategoriaInput
+    if (boton.innerHTML == '+') {
+        c_input.style.display = 'flex';
+        menu.style.width = '90%';
+        c_btn.style.opacity = '100';
+        boton.innerHTML = '-'
+    } else {
+        c_input.style.display = 'none';
+        menu.style.width = '0%';
+        c_btn.style.opacity = '0';
+        boton.innerHTML = '+'
+        c_input.value = '';
+    }
+
+}
+
+document.getElementById('nuevaCategoriaInput').addEventListener('input', function () {
+    console.log("hola")
+    if (document.getElementById('nuevaCategoriaInput').value != '') {
+        document.getElementById('c_add_cat_btn').classList.add('c_add_cat_btn_active');
+        document.getElementById('c_add_cat_btn').classList.remove('c_add_cat_btn_inactive');
+        console.log("tarado sos")
+    } else if (document.getElementById('nuevaCategoriaInput').value == '') {
+        
+        document.getElementById('c_add_cat_btn').classList.add('c_add_cat_btn_inactive');
+        document.getElementById('c_add_cat_btn').classList.remove('c_add_cat_btn_active');
+    }
+});
