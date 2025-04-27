@@ -9,5 +9,6 @@ namespace LogicaNegocio.InterfacesRepositorios
 {
     public interface IRepositorioSubcategoria : IRepositorio<Subcategoria>
     {
+        IEnumerable<Subcategoria> FindByIdList(int? id);
     }
 }

@@ -198,11 +198,10 @@ namespace Dental_Latina_MVC.Controllers
         public IActionResult GetSubcategoriasPorCategoria(int categoriaId)
         {
             // Obtén todas las subcategorías
-            var todas = CUSubcategorias.GetSubcategoria();
+            var todas = CUSubcategorias.GetSubcategoriaById(categoriaId);
 
             // Filtra por la propiedad correcta (aquí asumo que la entidad tiene un campo CategoriaId)
             var subcategorias = todas
-                .Where(s => s.id == categoriaId)
                 .Select(s => new {
                     id = s.id,      // propón nombres sencillos: id y nombre
                     nombre = s.nombre

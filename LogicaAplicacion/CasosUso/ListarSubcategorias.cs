@@ -33,5 +33,20 @@ namespace LogicaAplicacion.CasosUso
                 throw new Exception("Error al traer categoria");
             }
         }
+
+        public IEnumerable<SubcategoriaDTO> GetSubcategoriaById(int id)
+        {
+            try
+            {
+                IEnumerable<Subcategoria> ListaSubcategoria = repoSubcategoria.FindByIdList(id);
+
+                IEnumerable<SubcategoriaDTO> listaSubcategoriaDTO = SubategoriaMapper.ToListaSubcategoriaDTO(ListaSubcategoria);
+
+                return listaSubcategoriaDTO;
+            } catch (Exception ex)
+            {
+                throw new Exception("Error al traer categoria");
+            }
+        }
     }
 }

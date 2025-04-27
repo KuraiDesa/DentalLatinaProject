@@ -1,4 +1,5 @@
-﻿using LogicaDatos.EntityFramework;
+﻿using DentalLatina;
+using LogicaDatos.EntityFramework;
 using LogicaNegocio.Entidades;
 using LogicaNegocio.InterfacesRepositorios;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace LogicaDatos.Repositorios
 {
@@ -44,6 +46,18 @@ namespace LogicaDatos.Repositorios
             return entity;
         }
 
+        public IEnumerable<Subcategoria> FindByIdList(int? id)
+        {
+            var query = Context.Set<Subcategoria>().AsQueryable();
+
+            if (id.HasValue && id.Value != -1)
+            {
+                query = query.Where(p => p.categoria.Id == id.Value);
+            }
+
+            return query.Include(p => p.categoria).ToList();
+        }
+
         public void Remove(int id)
         {
             throw new NotImplementedException();
@@ -53,5 +67,6 @@ namespace LogicaDatos.Repositorios
         {
             throw new NotImplementedException();
         }
+
     }
 }
