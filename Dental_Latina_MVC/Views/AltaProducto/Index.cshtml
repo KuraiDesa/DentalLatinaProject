@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Dental_Latina_MVC.Controllers
+@model ProductoCategoriaViewModel
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    <div class="container-flex mt-3">
+        <div>
+            <form class="d-inline-grid">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre"></input>
+
+                <label for="photoUrl">Url de la foto</label>
+                <input type="text" id="photoUrl"></input>
+
+                <label for="descripcion">Descripcion</label>
+                <input type="text" id="descripcion"></input>
+
+                <label for="categoria">Categoria</label>
+                <select id="categoria">
+                    @foreach (var categoria in Model.Categorias)
+                    {
+                        <option value="@categoria.id">@categoria.nombre</option>
+                    }             
+                </select>
+                
+                <label for="subcategoria">Subcategoria</label>
+                <select id="subcategoria">
+                    @foreach (var subcategoria in Model.Subcategoria)
+                    {
+                        <option value="@subcategoria.id">@subcategoria.nombre</option>
+                    }
+                </select>
+
+                <label for="documentacion">Documentacion</label>
+                <input type="text" id="documentacion"></input>
+
+                <label for="precio">Precio</label>
+                <input type="number" id="precio"></input>
+            </form>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

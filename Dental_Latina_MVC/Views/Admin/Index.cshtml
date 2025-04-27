@@ -1,0 +1,652 @@
+﻿@{
+    Layout = null;
+}
+@using Dental_Latina_MVC.Controllers
+@model GeneralViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styleAdm.css">
+    <link rel="stylesheet" href="/css/styleHeader.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .container-flex {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .card-body {
+            flex: 1;
+        }
+
+        .product-card-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div id="menu">
+        <figure><img src="/img/logopng.png" alt="Logo"></figure>
+        <div class="menu-icon" id="menu-icon" style="font-size:2.5vh" onclick="despliegoMenuCelular()">&#9776;</div>
+        
+        </div>
+        </div>
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list" style="margin:0">
+                <li><a href="#" onclick="mostrarSeccion('estadisticas')">Estadísticas</a></li>
+                <li><a href="#" onclick="mostrarSeccion('gestionProductos')">Gestión de productos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('clientes')">Clientes</a></li>
+                <li><a href="#" onclick="mostrarSeccion('cambioBanner')">Cambio de banner</a></li>
+                <li><a href="#" onclick="mostrarSeccion('envios')">Envíos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="estadisticas" class="text-white py-4" style="display:none">
+            
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <select id="dataSelect" class="form-select">
+                            <option value="dia">Datos del día</option>
+                            <option value="mes">Datos del mes</option>
+                            <option value="ano">Datos del año</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <div class="counter-container">
+                            <div class="counter-icon">
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <div class="counter-value-wp" id="clientCounter">0</div>
+                            <div class="counter-label">Clientes que contactaron</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <div class="counter-container">
+                            <div class="counter-icon2">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="counter-value-mail" id="clientCounter">0</div>
+                            <div class="counter-label">Clientes que contactaron</div>
+                        </div>
+                </div>
+            </div>
+            <div class="container-fluid mt-4">
+                <div class="row">
+                    <div>
+                        <h2 class="text-center" style="color:black">Productos mas clickeados</h2>
+                        <div class="chart-container col-12 desktop-chart" style="height: 40vh">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                        <div class="chart-container col-12 mobile-chart" style="height: 45vh" >
+                            <canvas id="doughnutChart"></canvas>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div>
+                    <div class="container mt-5" >
+                        <h2 class="text-center" style="color:black">Comparación de clientes más interesados</h2>
+                        <div class="chart-container col-12 desktop-chart" style="height: 40vh;">
+                            <canvas id="barChart2"></canvas>
+                        </div>
+                        <div class="chart-container col-12 mobile-chart" style="height: 40vh;">
+                            <canvas id="doughnutChart2"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+    
+        </section>
+        <section id="gestionProductos">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Gestión de Productos</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="crearProductoB">Crear Producto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="modificarProductoB">Modificar Producto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="eliminarProductoB">Eliminar Producto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="gestionCategoriaB">Gestionar Categorias</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <div id="crearProducto" class="container mt-5">
+                
+                <h2>Crear Producto</h2>
+                <form asp-action="Create" method="post" enctype="multipart/form-data">
+                  
+                    <div class="mb-3">
+                        <label for="imagenProducto" class="form-label">Imagen del Producto</label>
+                        <div class="border border-secondary p-3 text-center" id="dropZone" style="border-style: dashed;">
+                            Arrastra la imagen aquí o <br>
+                            
+                            Comentario Vista previa de imagen
+
+                        <div class="mt-3 justify-content-center align-items-center"style="display:flex;">
+                            <img id="vistaPrevia" src="" alt="Vista previa de la imagen" style="width: 100%;height: 30vh; display: none;">
+                        </div>
+                            <input asp-for="productoview.ImagenArchivo" type="file" class="form-control mt-2" accept="image/*" onchange="vistaPreviaImagen(event)">
+                        </div>
+                       
+                    </div>
+                    
+
+                    <!-- Url de la imagen
+
+                    <div class="mb-3">
+                        <label asp-for="productoview.PhotoUrl" class="form-label">Url del Producto</label>
+                        <input asp-for="productoview.PhotoUrl" type="text" id="urlImagen" class="form-control" required>
+                    </div>-->
+
+                    <!-- Nombre del producto -->
+                    <div class="mb-3">
+                        <label asp-for="productoview.Nombre" class="form-label">Nombre del Producto</label>
+                        <input asp-for="productoview.Nombre" type="text" id="nombreProducto" class="form-control" required>
+                    </div>
+            
+                    <!-- Descripción del producto -->
+                    <div class="mb-3">
+                        <label asp-for="productoview.Descripcion" class="form-label">Descripción del Producto</label>
+                        <textarea asp-for="productoview.Descripcion" id="descripcionProducto" class="form-control" rows="3" required></textarea>
+                    </div>
+            
+                    <!-- Subir documentación opcional -->
+                    <div class="mb-3">
+                        <label asp-for="productoview.DocumentacionArchivo" class="form-label">Documentación del Producto (opcional)</label>
+                        <input asp-for="productoview.DocumentacionArchivo" type="file" class="form-control" accept=".pdf,.doc,.docx">
+                        <p style="font-size:12px;">Por defecto quedara vacio</p>
+                    </div>
+            
+                    <!-- Costo opcional -->
+                    <div class="mb-3">
+                        <label asp-for="productoview.Precio" class="form-label">Costo del Producto (opcional)</label>
+                        <input asp-for="productoview.Precio" type="number" id="costoProducto" class="form-control" step="0.01" min="0">
+                        <p style="font-size:12px;">Por defecto no tendra costo</p>
+                    </div>
+            
+                    <!-- Selección de categoría -->
+                    <div class="mb-3">
+                        <label asp-for="productoview.CategoriaId" class="form-label">Categoría del Producto</label>
+                        <select asp-for="productoview.CategoriaId" id="categoriaProducto" class="form-select" required>
+                            <option value="">Selecciona una categoría</option>
+                            @foreach (var categoria in Model.productocategoriaview.Categorias)
+                            {
+                                <option value=@categoria.id>@categoria.nombre</option>
+                            }
+
+                        </select>
+                    </div>
+                    
+
+
+                    <!-- Seleccion de subcategoria-->
+
+                    <div class="mb-3">
+                        <label asp-for="productoview.SubcategoriaId" class="form-label">Subcategoria del Producto</label>
+                        <select asp-for="productoview.SubcategoriaId" id="subcategoriaProducto" class="form-select" required>
+                            <option value="">Selecciona una subcategoría</option>
+                            <!--@foreach (var subcategoria in Model.productocategoriaview.Subcategoria)
+                            {
+                                <option value=@subcategoria.id>@subcategoria.nombre</option>
+                            }
+                            -->
+                        </select>
+                    </div>
+            
+                    <!-- Botón de envío -->
+                    <button type="submit" class="btn btn-primary col-12 mb-5">Crear Producto</button>
+                </form>
+            </div>
+            <div id="modificarProducto" class="container"style="display: none;">
+                <div id="BusquedaDeProductosModificar">
+                    <div class="mb-3">
+                        <label for="barraBusqueda" class="form-label">Buscar Producto</label>
+                        <input type="text" id="barraBusqueda" class="form-control" placeholder="Ingresa el nombre o código del producto...">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="categoriaFiltro" class="form-label">Filtrar por Categoría</label>
+                        <select id="categoriaFiltro" class="form-select">
+                            <option value="">Todas las categorías</option>
+                            <option value="clinica">Clínica</option>
+                            <option value="laboratorio">Laboratorio</option>
+                            <option value="implantologia">Implantología</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Espacio para mostrar los resultados de la búsqueda -->
+                    <div id="resultadosBusqueda" class="d-flex justify-content-evenly">
+                       @foreach (var producto in Model.productos)
+                        {
+                            <div class="col-md-4 mb-4 d-flex">
+                                <div class="card product-card flex-fill">
+                                    <img src="@producto.photoUrl" class="card-img-top product-card-img" alt="@producto.nombre" style="height:300px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">@producto.nombre</h5>
+                                        @if (producto.precio != 0)
+                                        {
+                                            <p class="card-text">$@producto.precio
+                                            </p>
+                                        }else{
+                                        <p class="card-text"> </p>
+                                        }
+                                        
+                                        <div class="text-center">
+                                            <a href="#" class="btn btn-warning col-10">Modificar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>       
+                <div id="descripcionProducto" style="display: none;">
+                    <h2>Modificar Producto</h2>
+                    <form enctype="multipart/form-data">
+                        <!-- Zona para arrastrar o seleccionar imagen -->
+                        <div class="mb-3">
+                            <label for="imagenProducto" class="form-label">Imagen del Producto</label>
+                            <div class="border border-secondary p-3 text-center" id="dropZone" style="border-style: dashed;">
+                                Arrastra la imagen aquí o <br>
+                                 <!-- Vista previa de la imagen -->
+                            <div class="mt-3 justify-content-center align-items-center"style="display:flex;">
+                                <img id="vistaPrevia" src="" alt="Vista previa de la imagen" style="width: 30vh;height: 30vh; display: none;">
+                            </div>
+                                <input type="file" id="imagenProducto" class="form-control mt-2" accept="image/*" style="display: inline;" onchange="vistaPreviaImagen(event)">
+                            </div>
+                           
+                        </div>
+                
+                        <!-- Nombre del producto -->
+                        <div class="mb-3">
+                            <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+                            <input type="text" id="nombreProducto" class="form-control" required>
+                        </div>
+                
+                        <!-- Descripción del producto -->
+                        <div class="mb-3">
+                            <label for="descripcionProducto" class="form-label">Descripción del Producto</label>
+                            <textarea id="descripcionProducto" class="form-control" rows="3" required></textarea>
+                        </div>
+                
+                        <!-- Subir documentación opcional -->
+                        <div class="mb-3">
+                            <label for="documentacionProducto" class="form-label">Documentación del Producto (opcional)</label>
+                            <input type="file" id="documentacionProducto" class="form-control" accept=".pdf,.doc,.docx">
+                        </div>
+                
+                        <!-- Costo opcional -->
+                        <div class="mb-3">
+                            <label for="costoProducto" class="form-label">Costo del Producto (opcional)</label>
+                            <input type="number" id="costoProducto" class="form-control" step="0.01" min="0">
+                        </div>
+                
+                        <!-- Selección de categoría -->
+                        <div class="mb-3">
+                            <label for="categoriaProducto" class="form-label">Categoría del Producto</label>
+                            <select id="categoriaProducto" class="form-select" required>
+                                <option value="">Selecciona una categoría</option>
+                                <option value="categoria1">Categoría 1</option>
+                                <option value="categoria2">Categoría 2</option>
+                                <option value="categoria3">Categoría 3</option>
+                                <!-- Agrega más categorías según sea necesario -->
+                            </select>
+                        </div>
+                
+                        <!-- Botón de envío -->
+                        <button type="submit" class="btn btn-primary col-12">Modificar producto</button>
+                    </form>
+                </div>         
+            </div>
+            <div id="eliminarProducto" class="container" style="display: none;">
+                <div id="BusquedaDeProductosEliminar">
+                    <div class="mb-3">
+                        <label for="barraBusqueda" class="form-label">Buscar Producto</label>
+                        <input type="text" id="barraBusqueda" class="form-control" placeholder="Ingresa el nombre o código del producto...">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="categoriaFiltro" class="form-label">Filtrar por Categoría</label>
+                        <select id="categoriaFiltro" class="form-select">
+                            <option value="">Todas las categorías</option>
+                            <option value="clinica">Clínica</option>
+                            <option value="laboratorio">Laboratorio</option>
+                            <option value="implantologia">Implantología</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Espacio para mostrar los resultados de la búsqueda -->
+                    <div id="resultadosBusqueda" class="d-flex justify-content-evenly">
+                        @foreach (var producto in Model.productos)
+                        {
+                            <div class="col-md-4 mb-4 d-flex">
+                                <div class="card product-card flex-fill">
+                                    <img src="@producto.photoUrl" class="card-img-top product-card-img" alt="@producto.nombre">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">@producto.nombre</h5>
+                                        @if (producto.precio != 0)
+                                        {
+                                            <p class="card-text">$@producto.precio</p>
+                                        }else{
+                                            <p class="card-text"> </p>
+                                        }
+                                        <div class="text-center">
+                                            <a href="#" class="btn btn-danger col-10" data-bs-toggle="modal" data-bs-target="#confirmarEliminarModal" data-producto-id="@producto.id">Eliminar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>                
+            </div>
+            <div id="gestionCategoria" class="container" style="display:none">
+                <div id="crearCategoria">
+                    <h1>YA ESTA NO???????</h1>
+                    <h2>Crear Categoria</h2>
+                    <h1>HOLA LA CONCHA DE LA LORA</h1>
+                    <form asp-action="CreateCategoria" id="formCategoria" method="post" enctype="multipart/form-data">
+                        <div class="mb-3 d-flex">
+                            <div class="add_cat_btn d-flex justify-content-center align-items-center" style="cursor:pointer;" onclick="muestroAgregarC()">
+                                <a id="agregarCatBtnTxt" class="p-1" style="cursor:pointer; text-decoration:none; color:inherit;">+</a>
+                            </div>
+                            <div style="width:0%; display:flex;" class="transition" id="agregarcategoria">
+                                <input asp-for="categoria.nombre" type="text" id="nuevaCategoriaInput" class="form-control" style="display:none;" placeholder="Nombre de la nueva categoría" required>
+                            </div>
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="opacity:0; width:5%; cursor:pointer;" id="c_add_cat_btn">
+                                <button type="submit" id="crearCat" style=" background-color:transparent; border-color:transparent;">
+                                    <a>✓</a>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="crearSCategoria">
+                    <h2>Crear Subcategoria</h2>
+                    <form asp-action="CreateSubcategoria" id="formSubcategoria" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <select asp-for="subcategoria.idcat" id="categoriaProducto" class="form-select" required>
+                                <option value="">Selecciona una categoría</option>
+                                @foreach (var categoria in Model.productocategoriaview.Categorias)
+                                {
+                                    <option value=@categoria.id>@categoria.nombre</option>
+                                }
+                                <!-- Agrega más categorías según sea necesario -->
+                            </select>
+                        </div>
+
+                        <div class="mb-3 d-flex">
+                            <div class="add_cat_btn d-flex justify-content-center align-items-center" style="cursor:pointer;" onclick="muestroAgregarSC()">
+                                <a id="agregarSCatBtnTxt" class="p-1" style="cursor:pointer; text-decoration:none; color:inherit;">+</a>
+                            </div>
+                            <div style="width:0%; display:flex;" class="transition" id="agregarscategoria">
+                                <input asp-for="subcategoria.nombre" type="text" id="nuevaSCategoriaInput" class="form-control" style="display:none;" placeholder="Nombre de la nueva subccategoría" required>
+                            </div>
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="opacity:0; width:5%; cursor:pointer;" id="sc_add_cat_btn">
+                                <button type="submit" id="crearSCat" style="background-color:transparent; border-color:transparent;">
+                                    <a>✓</a>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="clientes"style="display: none;">
+            <div class="container my-4">
+                <!-- Barra de búsqueda -->
+                <div class="mb-3">
+                    <label for="buscarClientes" class="form-label">Buscar Cliente</label>
+                    <input type="text" id="buscarClientes" class="form-control" placeholder="Ingresa el nombre, apellido o mail del cliente...">
+                </div>
+                
+                <!-- Tabla de clientes -->
+                <table id="tablaClientes" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Correo Electrónico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.clientes != null && Model.clientes.Any())
+                        {
+                            foreach (var cliente in Model.clientes)
+                            {
+                                <tr>
+                                    <td>@cliente.nombre</td>
+                                    <td>@cliente.apellido</td>
+                                    <td>@cliente.mail</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="3" class="text-center">No hay clientes disponibles</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="cambioBanner" style="display: none;">
+            <div class="container-fluid my-4">
+                <h2>Cambiar Imagen del Banner</h2>
+        
+                <!-- Vista previa de imágenes actuales -->
+                <div class="row mb-3">
+                    <div class="my-3">
+                        <img src="img/banner.jpeg" alt="Banner 1" style="height: 80vh;width: 100%;" class="img-fluid" id="previewBanner1">
+                       <div class="justify-content-center align-items-center row" style="display: flex;">
+                        <button class="btn btn-primary mt-2 col-11 col-md-10" onclick="cambiarImagen(1)">Cambiar Imagen 1</button>
+                        <div class="col-md-1 d-md-none"></div>
+                        <button class="btn btn-danger mt-2 col-11 col-md-10" onclick="eliminarImagen(1)">Eliminar Imagen 1</button>
+                       </div>
+                        
+                    </div>  
+                </div>
+                <div class="row mb-3">
+                    <div class="my-3">
+                        <img src="img/banner.jpeg" alt="Banner 1" style="height: 80vh;width: 100%;" class="img-fluid" id="previewBanner1">
+                       <div class="justify-content-center align-items-center row" style="display: flex;">
+                        <button class="btn btn-primary mt-2 col-11 col-md-10" onclick="cambiarImagen(1)">Cambiar Imagen 1</button>
+                        <div class="col-md-1 d-md-none"></div>
+                        <button class="btn btn-danger mt-2 col-11 col-md-10" onclick="eliminarImagen(1)">Eliminar Imagen 1</button>
+                       </div>
+                        
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="my-3">
+                        <img src="img/banner.jpeg" alt="Banner 1" style="height: 80vh;width: 100%;" class="img-fluid" id="previewBanner1">
+                       <div class="justify-content-center align-items-center row" style="display: flex;">
+                        <button class="btn btn-primary mt-2 col-11 col-md-10" onclick="cambiarImagen(1)">Cambiar Imagen 1</button>
+                        <div class="col-md-1 d-md-none"></div>
+                        <button class="btn btn-danger mt-2 col-11 col-md-10" onclick="eliminarImagen(1)">Eliminar Imagen 1</button>
+                       </div>
+                        
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="my-3">
+                        <img src="img/banner.jpeg" alt="Banner 1" style="height: 80vh;width: 100%;" class="img-fluid" id="previewBanner1">
+                       <div class="justify-content-center align-items-center row" style="display: flex;">
+                        <button class="btn btn-primary mt-2 col-11 col-md-10" onclick="cambiarImagen(1)">Cambiar Imagen 1</button>
+                        <div class="col-md-1 d-md-none"></div>
+                        <button class="btn btn-danger mt-2 col-11 col-md-10" onclick="eliminarImagen(1)">Eliminar Imagen 1</button>
+                       </div>
+                        
+                    </div>
+                </div>
+                <!-- Formulario de carga de imágenes -->
+                <div id="formularioCambio1" style="display: none;">
+                    <h3>Cargar Nueva Imagen</h3>
+                    <input type="file" id="nuevaImagen" class="form-control mb-2" accept="image/*">
+                    <button class="btn btn-primary" onclick="subirImagen()">Guardar Imagen</button>
+                    <button class="btn btn-secondary" onclick="cancelarCambio()">Cancelar</button>
+                </div>
+            </div>
+        </section>
+        <section id="envios" style="display:none;">
+            <div class="container-fluid my-4">
+                <h2>Modificar zonas de envío</h2>
+                
+                <!-- Formulario para modificar zonas de envío -->
+                <div class="mb-4">
+                    <form id="formularioEnvio">
+                        <div class="mb-3">
+                            <label for="zonaSeleccionada" class="form-label">Seleccionar Zona</label>
+                            <select id="zonaSeleccionada" class="form-control" onchange="cargarDatosZona()" required>
+                                <option value="">Seleccionar zona</option>
+                                <!-- Opciones generadas dinámicamente -->
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="zonaNombre" class="form-label">Nombre de la Zona</label>
+                            <input type="text" id="zonaNombre" class="form-control" placeholder="Ingrese el nombre de la zona" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="costoEnvio" class="form-label">Costo de Envío</label>
+                            <input type="number" id="costoEnvio" class="form-control" placeholder="Ingrese el costo de envío" step="0.01" required>
+                        </div>
+                        <button type="button" class="btn btn-primary col-12" onclick="guardarCambios()">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!--MODALS-->
+        <!-- Modal de confirmación -->
+        <div class="modal fade" id="confirmarEliminarModal" tabindex="-1" aria-labelledby="confirmarEliminarLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmarEliminarLabel">Confirmar eliminación</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        ¿Estás seguro de que querés eliminar este producto?
+                    </div>
+                    <div class="modal-footer">
+                        <form id="formEliminarProducto" method="post" asp-controller="Admin" asp-action="Eliminar">
+                            <input type="hidden" name="id" id="productoIdEliminar" />
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var confirmarEliminarModal = document.getElementById('confirmarEliminarModal');
+        confirmarEliminarModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget;
+            var productoId = button.getAttribute('data-producto-id');
+            var inputProductoId = document.getElementById('productoIdEliminar');
+            inputProductoId.value = productoId;
+        });
+    </script>
+    <script>
+        function muestroAgregarC() {
+            document.getElementById("agregarcategoria").style.display = "block";
+            document.getElementById("c_add_cat_btn").style.display = "flex";
+        }
+    </script>
+    <script>
+        async function agregarNuevaCategoria() {
+            const nuevaCategoria = document.getElementById("nuevaCategoriaInput").value.trim();
+            if (!nuevaCategoria) return alert("El nombre no puede estar vacío");
+
+            try {
+                const response = await fetch('/TuControlador/AgregarCategoria', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value // si usás AntiForgery
+                    },
+                    body: JSON.stringify({ nombre: nuevaCategoria })
+                });
+
+                if (response.ok) {
+                    const nueva = await response.json(); // Suponiendo que devuelve { id, nombre }
+
+                    const select = document.getElementById("categoriaProducto");
+                    const option = document.createElement("option");
+                    option.value = nueva.id;
+                    option.text = nueva.nombre;
+                    option.selected = true;
+                    select.appendChild(option);
+
+                    // Limpiar e invisibilizar
+                    document.getElementById("nuevaCategoriaInput").value = "";
+                    document.getElementById("agregarcategoria").style.display = "none";
+                    document.getElementById("c_add_cat_btn").style.display = "none";
+                } else {
+                    const error = await response.text();
+                    alert("Error al agregar categoría: " + error);
+                }
+            } catch (err) {
+                alert("Ocurrió un error al conectar con el servidor.");
+                console.error(err);
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="/js/manuelitoElPollito.js">
+    
+</script>
+    <script src="/js/scriptAdm.js"></script>
+    <script src="/js/graficas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

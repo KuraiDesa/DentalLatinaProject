@@ -1,0 +1,116 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleHeader.css">
+    <link rel="stylesheet" href="/css/styleGeneral.css">
+    <link rel="stylesheet" href="/css/styleProfesional.css">
+    <link rel="stylesheet" href="/css/styleEvento.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+    <body>
+    <header id="navbar position-relative">
+
+        <div id="menu">
+            <figure><img src="/img/logopng.png" alt="Logo"></figure>
+            <div class="menu-icon" id="menu-icon" style="font-size:2.5vh" onclick="despliegoMenuCelular()">&#9776;</div>
+            <div>
+                <nav class="navbar">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#Empresa">
+                                    <i class="fas fa-building"></i>
+                                    Empresa
+                                </a>
+                            </li>
+
+                            <li>
+                                <a asp-page="/Productos/Index">
+                                    <i class="fas fa-box-open"></i> Productos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#Contacto" id="liContacto">
+                                    <i class="fas fa-envelope" id="cambiopaulauwu"></i>
+                                    Contacto
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#Envios" class="envios-link">
+                                    <i class="fas fa-shipping-fast"></i>
+                                    Envios
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#Ingresar" onclick="openModal()">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Ingresar
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="mb-1 justify-content-left d-flex lineaI">
+        <p class="h1 ml-4">Eventos Proximos</p>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="w-75">
+            @for(int i=0;i<4;i++){
+                <div class="flex-auto justify-content-center eventoAnuncio m-1 mb-4 mt-4">
+                    <div class="h-15 lineaI justify-content-center d-flex">
+                        <p class="flex-auto justify-content-center m-1">Nombre del evento</p>
+                    </div>
+                    <div class="h-85 justify-content-left d-flex">
+                        <p class="flex-auto justify-content-center m-1">Descripcion del evento totalmente real</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>    
+    <footer class="footerProd container-fluid text-light py-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>Sobre Nosotros</h5>
+                <p class="small">
+                    Somos una empresa comprometida con ofrecer los mejores servicios de envíos a nivel nacional Nuestra prioridad es la satisfacción del cliente.
+                </p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Contacto</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Calle Principal, Ciudad, País</li>
+                    <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                    <li><i class="fas fa-envelope"></i> contacto@tusitio.com</li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4 text-center">
+                <h5>Síguenos</h5>
+                <ul class="list-unstyled d-flex justify-content-center">
+                    <li class="mx-2"><a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center pt-3 border-top border-secondary">
+            <p class="small mb-0">&copy; 2024 Dental Latina Ltda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    </body>
+
+</html>

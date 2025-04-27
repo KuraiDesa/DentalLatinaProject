@@ -1,0 +1,207 @@
+﻿@using DTOs.DTOs
+@using Dental_Latina_MVC.Controllers
+@{
+    Layout = null;
+}
+@model GeneralProductosViewModel
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styleHeader.css">
+    <link rel="stylesheet" href="/css/styleGeneral.css">
+    <link rel="stylesheet" href="/css/styleProfesional.css">
+    <link rel="icon" href="~/img/logo.png" type="image/x-icon">
+    <style>
+        .container-flex {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .card-body {
+            flex: 1;
+        }
+
+        .product-card-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="navbar" class="prods">
+        <div id="menu">
+            <figure><img src="/img/logopng.png" alt="Logo"></figure>
+            <div class="menu-icon" id="menu-icon" style="font-size:2.5vh" onclick="despliegoMenuCelular()">&#9776;</div>
+            <nav class="navbar">
+                <ul>
+                    <li class="no-estilo" style="cursor:pointer;">
+                        <a asp-controller="Home" asp-action="Index" class="no-estilo" style="text-decoration:none;">
+                            <i class="fas fa-home"></i> Volver al inicio
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-flex mt-4">
+        <div class="row">
+            <!-- Filtros -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Filtros</h5>
+                        <form asp-action="Filter" method="post">
+                            <div class="form-group">
+                                <label asp-for="searchByName">Buscar productos</label>
+                                <input asp-for="searchByName" type="text" class="form-control mb-2" placeholder="Buscar productos..." />
+
+                                <label asp-for="catFilter">Categorías</label>
+                                <select asp-for="catFilter" class="form-control">
+                                    <option value="-1">Todas</option>
+                                    @foreach (var categoria in Model.Categorias)
+                                    {
+                                        <option value="@categoria.id">@categoria.nombre</option>
+                                    }
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary col-12">Filtrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos -->
+            <div class="col-md-9">
+                <div class="row p-3">
+                    @if (Model.Productos.Any())
+                    {
+                        var productos = Model.Productos.Skip((Model.paginaActual - 1) * 9).Take(9);
+                        foreach (var producto in productos)
+                        {
+                            <div class="col-md-4 mb-4 d-flex">
+                                <div class="card product-card flex-fill">
+                                    <img src="@producto.photoUrl" class="card-img-top product-card-img" alt="@producto.nombre">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">@producto.nombre</h5>
+                                        @if (producto.precio != 0)
+                                        {
+                                            <p class="card-text">$@producto.precio</p>
+                                        }
+                                        else
+                                        {
+                                            <p class="card-text"> </p>
+                                        }
+                                        <div class="text-center">
+                                            <a href="#" class="btn btn-primary col-10">Ver detalles</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    }
+                    else
+                    {
+                        <div class="d-flex w-100 h-100 justify-content-center align-items-center">
+                            <p style="font-size:20px; color:#b1bbc7; user-select: none;">No se encontraron productos</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @if (Model.Productos.Any())
+    {
+        <div class="row w-100 m-0">
+            <div class="col-12 d-flex justify-content-center">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", "Producto", new { page = 1, filtrando = Model.catFilter })">◀</a>
+                    </li>
+                    @for (int i = 1; i <= Model.cantPaginas; i++)
+                    {
+                        <li class="page-item @(i == Model.paginaActual ? "active" : "")">
+                            <a class="page-link" href="@Url.Action("Index", "Producto", new { page = i, filtrando = Model.catFilter })">@i</a>
+                        </li>
+                    }
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", "Producto", new { page = Model.cantPaginas, filtrando = Model.catFilter })">▶</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+    
+   
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<style>
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position:absolute !important;
+        bottom:0px;
+        width:100%;
+    }
+</style>
+<footer class="footerProd container-fluid text-light py-5">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <h5>Sobre Nosotros</h5>
+            <p class="small">
+                Somos una empresa comprometida con ofrecer los mejores servicios de envíos a nivel nacional. Nuestra prioridad es la satisfacción del cliente.
+            </p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <h5>Contacto</h5>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-map-marker-alt"></i> 123 Calle Principal, Ciudad, País</li>
+                <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                <li><i class="fas fa-envelope"></i> info@dentallatina.com.uy</li>
+            </ul>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+            <h5>Síguenos</h5>
+            <ul class="list-unstyled d-flex justify-content-center">
+                <li class="mx-2"><a href="https://www.instagram.com/dentalatina/" class="text-light"><i class="fab fa-instagram fa-2x"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</html>
+
+
+<!--
+
+
+
+-->

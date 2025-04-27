@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+p{
+    font-size: 1.1rem;
+}
+
+.play{
+    position:fixed;
+}
+.container{
+    padding: 0;
+    min-width: 90%;
+}
+.col-6{
+    padding: 0;
+}
+.no-estilo {
+    all: unset; /* Elimina todos los estilos heredados */
+    text-decoration: none; /* Opcional, por si el navegador agrega subrayado */
+    color: inherit; /* Mantiene el color del contenedor */
+    display: inline-block; /* Si necesitas un comportamiento similar al bloque */
+}
+.agrando:hover{
+    size: 1;
+}
+input{
+    padding: 10px;
+}
+
+footer{
+    background-color: rgb(8, 57, 129);
+    color:white;
+    padding: 2rem;
+    -webkit-box-shadow: 0px -4px 30px -3px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px -4px 30px -3px rgba(0,0,0,0.35);
+    box-shadow: 0px -4px 30px -3px rgba(0,0,0,0.35);;
+    text-align: center; 
+    position: revert;
+}
+
+
+.enviosBanner {
+    position: relative;
+    background-image: url(../img/bannerEnvios.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Color blanco para todo el texto dentro del banner */
+}
+
+.enviosBanner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 94, 184, 0.199); /* Fondo negro semi-transparente */
+    z-index: 1;
+}
+
+.enviosBanner .row {
+    position: relative;
+    z-index: 2;
+}
+.enviosBanner h2 {
+    color: #ffffff; /* Texto blanco para contraste */
+   
+    padding: 15px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    
+    font-size: 3rem; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    display: inline-block; /* Ajuste del ancho al contenido */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+/* Aplicar la animación en hover */
+/* Aplicamos la transición para el giro cuando el mouse se va */
+.flip-vertical-right {
+    transform: rotateY(0); /* Inicialmente en la posición normal */
+    transition: transform 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955); /* Transición suave */
+}
+
+    /* Al pasar el mouse, se aplica la rotación de 180 grados */
+    .flip-vertical-right:hover {
+        transform: rotateY(180deg); /* Giro a 180 grados */
+    }

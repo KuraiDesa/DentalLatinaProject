@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #ffffff;
+    BOX-SHADOW: 0px 0px 5px;
+}
+
+.logo {
+    max-width: 4rem;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+.chart-container {
+    padding: 15px;
+}
+
+.desktop-chart {
+    display: none;
+}
+
+.mobile-chart {
+    display: none;
+}
+#estadisticas {
+    padding: 20px;
+}
+#estadisticas h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000; /* Color de texto más oscuro */
+}
+.select-container {
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.custom-select {
+    border-radius: 10px; /* Bordes más redondeados */
+    padding: 10px 15px; /* Espacio interno más amplio */
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #dee2e6; /* Borde gris claro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-size: 16px; /* Tamaño de fuente más grande */
+    color: #495057; /* Color del texto */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.custom-select:focus {
+    border-color: #007bff; /* Borde azul al enfocar */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Sombra azul al enfocar */
+    outline: none; /* Quitar contorno por defecto */
+}
+
+.custom-select option {
+    background-color: #ffffff; /* Fondo blanco para opciones */
+    color: #495057; /* Color del texto */
+    padding: 10px; /* Espacio alrededor del texto en opciones */
+}
+
+.custom-select option:hover {
+    background-color: #f1f1f1; /* Fondo gris claro al pasar el cursor */
+    color: #007bff; /* Color del texto en hover */
+}
+
+/* Mejorar apariencia de opciones seleccionadas */
+.custom-select option:checked {
+    background-color: #007bff; /* Fondo azul para opción seleccionada */
+    color: #ffffff; /* Texto blanco para opción seleccionada */
+}
+.counter-container {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: inline-block;
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.counter-icon {
+    font-size: 3rem; /* Tamaño grande del ícono */
+    color: #25D366; /* Color de WhatsApp */
+    margin-bottom: 10px;
+}
+.counter-icon2 {
+    font-size: 3rem; /* Tamaño grande del ícono */
+    color: #dd342e; /* Color de WhatsApp */
+    margin-bottom: 10px;
+}
+
+.counter-value-wp,.counter-value-mail {
+    font-size: 4rem; /* Tamaño grande del contador */
+    font-weight: bold; /* Negrita */
+    color: #343a40; /* Color del texto */
+    margin-bottom: 10px;
+}
+
+.counter-label {
+    font-size: 1.2rem; /* Tamaño del texto */
+    color: #6c757d; /* Color de texto más claro */
+}
+@media (min-width: 768px) {
+    .desktop-chart {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-chart {
+        display: block;
+    }
+    .counter-container{
+        margin-top:1vh;
+    }
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #1c1c1c;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+
+    .nav {
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #001e25;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ecececec;
+    }
+
+}
+
+.add_cat_btn {
+    border: 1px;
+    width: 5%;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: #dee2e6;
+    user-select: none;
+}
+
+.c_add_cat_btn {
+    border: 1px;
+    width: 5%;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: #dee2e6;
+    background-color: #0d6efd;
+    
+}
+
+.c_add_cat_btn_inactive {
+    border: 1px;
+    width: 5%;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: #dee2e6;
+    background-color: #c1c1c1;
+    transition-duration: 300ms;
+}
+
+.c_add_cat_btn_active {
+    border: 1px;
+    width: 5%;
+    border-style: solid;
+    border-radius: 7px;
+    color: #fff;
+    border-color: #dee2e6;
+    background-color: #0b5ed7;
+    transition-duration: 300ms;
+}
+
+.add_cat_txt{
+    display:none;
+    width:90%;
+}
+
+.transition {
+    transition-duration: 700ms;
+}

@@ -1,0 +1,107 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DentalLatina;
+using LogicaDatos.EntityFramework;
+using LogicaNegocio.Entidades;
+using LogicaNegocio.InterfacesRepositorios;
+using Microsoft.EntityFrameworkCore;
+
+namespace LogicaDatos.Repositorios
+{
+    public class repositorioProducto : IRepositorioProducto
+    {
+        public LibreriaContext Context { get; set; }
+        public repositorioProducto(LibreriaContext context)
+        {
+            Context = context;
+        }
+        public void Add(Producto obj)
+        {
+            if (Context.Entry(obj.categoria).State == EntityState.Detached)
+            {
+                Context.Attach(obj.categoria);
+            }
+            if (Context.Entry(obj.subcategoria).State == EntityState.Detached)
+            {
+                Context.Attach(obj.subcategoria);
+            }
+            Context.Set<Producto>().Add(obj);
+            Context.SaveChanges();
+        }
+
+        public IEnumerable<Producto> BuscarPorNombre(string nombre)
+        {
+            if (string.IsNullOrEmpty(nombre))
+            {
+                return FindAll();
+            }
+
+            return Context.Set<Producto>()
+                          .Where(p => p.nombre.ToLower().Contains(nombre.ToLower()))
+                          .ToList();
+        }
+
+        public IEnumerable<Producto> FindAll()
+        {
+            return Context.Set<Producto>()
+              .ToList();
+        }
+
+        public Producto FindById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(int id)
+        {
+            // Buscar el producto por ID
+            Producto producto = Context.Set<Producto>().Find(id);
+
+            if (producto != null)
+            {
+                Context.Set<Producto>().Remove(producto);
+                Context.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException("No se encontró un producto con el ID proporcionado.");
+            }
+        }
+
+        public void Update(Producto obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Producto> BuscarPorCategoria(int id)
+        {
+            return Context.Set<Producto>()
+              .Include(p => p.categoria)
+              .Where(P => P.categoria.Id == id)
+              .ToList();
+        }
+
+        public IEnumerable<Producto> BuscarPorNombreCategoria(int? id, string nombre)
+        {
+            var query = Context.Set<Producto>().AsQueryable();
+
+            // Filtrar por nombre si se proporciona
+            if (!string.IsNullOrEmpty(nombre))
+            {
+                query = query.Where(p => p.nombre.ToLower().Contains(nombre.ToLower()));
+            }
+
+            // Filtrar por categoría si se proporciona un id válido
+            if (id.HasValue && id.Value != -1)
+            {
+                query = query.Where(p => p.categoria.Id == id.Value);
+            }
+
+            return query.Include(p => p.categoria).ToList();
+        }
+
+    }
+}
