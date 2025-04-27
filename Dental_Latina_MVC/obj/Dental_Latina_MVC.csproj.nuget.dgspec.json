@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\Dental_Latina_MVC\\Dental_Latina_MVC.csproj": {}
+    "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\Dental_Latina_MVC\\Dental_Latina_MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\Dental_Latina_MVC\\Dental_Latina_MVC.csproj": {
+    "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\Dental_Latina_MVC\\Dental_Latina_MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\Dental_Latina_MVC\\Dental_Latina_MVC.csproj",
+        "projectUniqueName": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\Dental_Latina_MVC\\Dental_Latina_MVC.csproj",
         "projectName": "Dental_Latina_MVC",
-        "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\Dental_Latina_MVC\\Dental_Latina_MVC.csproj",
-        "packagesPath": "C:\\Users\\rafar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\Dental_Latina_MVC\\obj\\",
+        "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\Dental_Latina_MVC\\Dental_Latina_MVC.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\Dental_Latina_MVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaAplicacion\\LogicaAplicacion.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaAplicacion\\LogicaAplicacion.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaAplicacion\\LogicaAplicacion.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaAplicacion\\LogicaAplicacion.csproj"
               }
             }
           }
@@ -83,21 +84,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\DTOs\\DTOs.csproj": {
+    "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\DTOs\\DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\DTOs\\DTOs.csproj",
+        "projectUniqueName": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\DTOs\\DTOs.csproj",
         "projectName": "DTOs",
-        "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\DTOs\\DTOs.csproj",
-        "packagesPath": "C:\\Users\\rafar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\DTOs\\obj\\",
+        "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\DTOs\\DTOs.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\DTOs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,14 +106,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj"
               }
             }
           }
@@ -147,21 +149,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaAplicacion\\LogicaAplicacion.csproj": {
+    "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaAplicacion\\LogicaAplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaAplicacion\\LogicaAplicacion.csproj",
+        "projectUniqueName": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaAplicacion\\LogicaAplicacion.csproj",
         "projectName": "LogicaAplicacion",
-        "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaAplicacion\\LogicaAplicacion.csproj",
-        "packagesPath": "C:\\Users\\rafar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaAplicacion\\obj\\",
+        "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaAplicacion\\LogicaAplicacion.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaAplicacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -169,20 +171,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\DTOs\\DTOs.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\DTOs\\DTOs.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\DTOs\\DTOs.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\DTOs\\DTOs.csproj"
               },
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaDatos\\LogicaDatos.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaDatos\\LogicaDatos.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaDatos\\LogicaDatos.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaDatos\\LogicaDatos.csproj"
               },
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj"
               }
             }
           }
@@ -217,21 +220,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaDatos\\LogicaDatos.csproj": {
+    "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaDatos\\LogicaDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaDatos\\LogicaDatos.csproj",
+        "projectUniqueName": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaDatos\\LogicaDatos.csproj",
         "projectName": "LogicaDatos",
-        "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaDatos\\LogicaDatos.csproj",
-        "packagesPath": "C:\\Users\\rafar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaDatos\\obj\\",
+        "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaDatos\\LogicaDatos.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaDatos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -239,14 +242,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj"
               }
             }
           }
@@ -319,21 +323,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj": {
+    "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj",
+        "projectUniqueName": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj",
         "projectName": "LogicaNegocio",
-        "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj",
-        "packagesPath": "C:\\Users\\rafar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatinaProject\\DentalLatinaProject\\DentalLatinaProject\\LogicaNegocio\\obj\\",
+        "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaNegocio\\LogicaNegocio.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Documents\\GitHub\\DentalLatinaProject\\LogicaNegocio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -341,6 +345,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -391,7 +396,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -17,51 +17,51 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Dental_Latina_MVC
 build_property.RootNamespace = Dental_Latina_MVC
-build_property.ProjectDir = C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\Dental_Latina_MVC\
+build_property.ProjectDir = C:\Users\Soto\Documents\GitHub\DentalLatinaProject\Dental_Latina_MVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\Dental_Latina_MVC
+build_property.MSBuildProjectDirectory = C:\Users\Soto\Documents\GitHub\DentalLatinaProject\Dental_Latina_MVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/rafar/OneDrive/Escritorio/DentalLatinaProject/DentalLatinaProject/DentalLatinaProject/Dental_Latina_MVC/Views/Admin/Index.cshtml]
+[C:/Users/Soto/Documents/GitHub/DentalLatinaProject/Dental_Latina_MVC/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rafar/OneDrive/Escritorio/DentalLatinaProject/DentalLatinaProject/DentalLatinaProject/Dental_Latina_MVC/Views/AltaProducto/Index.cshtml]
+[C:/Users/Soto/Documents/GitHub/DentalLatinaProject/Dental_Latina_MVC/Views/AltaProducto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx0YVByb2R1Y3RvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rafar/OneDrive/Escritorio/DentalLatinaProject/DentalLatinaProject/DentalLatinaProject/Dental_Latina_MVC/Views/Evento/Index.cshtml]
+[C:/Users/Soto/Documents/GitHub/DentalLatinaProject/Dental_Latina_MVC/Views/Evento/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rafar/OneDrive/Escritorio/DentalLatinaProject/DentalLatinaProject/DentalLatinaProject/Dental_Latina_MVC/Views/Home/Index.cshtml]
+[C:/Users/Soto/Documents/GitHub/DentalLatinaProject/Dental_Latina_MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rafar/OneDrive/Escritorio/DentalLatinaProject/DentalLatinaProject/DentalLatinaProject/Dental_Latina_MVC/Views/Producto/Index.cshtml]
+[C:/Users/Soto/Documents/GitHub/DentalLatinaProject/Dental_Latina_MVC/Views/Producto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rafar/OneDrive/Escritorio/DentalLatinaProject/DentalLatinaProject/DentalLatinaProject/Dental_Latina_MVC/Views/Shared/Error.cshtml]
+[C:/Users/Soto/Documents/GitHub/DentalLatinaProject/Dental_Latina_MVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rafar/OneDrive/Escritorio/DentalLatinaProject/DentalLatinaProject/DentalLatinaProject/Dental_Latina_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Soto/Documents/GitHub/DentalLatinaProject/Dental_Latina_MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rafar/OneDrive/Escritorio/DentalLatinaProject/DentalLatinaProject/DentalLatinaProject/Dental_Latina_MVC/Views/_ViewImports.cshtml]
+[C:/Users/Soto/Documents/GitHub/DentalLatinaProject/Dental_Latina_MVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rafar/OneDrive/Escritorio/DentalLatinaProject/DentalLatinaProject/DentalLatinaProject/Dental_Latina_MVC/Views/_ViewStart.cshtml]
+[C:/Users/Soto/Documents/GitHub/DentalLatinaProject/Dental_Latina_MVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rafar/OneDrive/Escritorio/DentalLatinaProject/DentalLatinaProject/DentalLatinaProject/Dental_Latina_MVC/Views/Shared/_Layout.cshtml]
+[C:/Users/Soto/Documents/GitHub/DentalLatinaProject/Dental_Latina_MVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ijshn0mrpi

@@ -640,44 +640,8 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script>
-    $(document).ready(function() {
-        // Asigna la función al evento 'change' de la categoría
-        $('#categoriaProducto').change(function() {
-            cargarSubcategorias();  // Llamar a la función al cambiar la categoría
-        });
-        
-        function cargarSubcategorias() {
-            var categoriaId = $('#categoriaProducto').val(); // Obtener el valor de la categoría seleccionada
-
-            if (categoriaId) {
-                    $.ajax({
-                        url: '/Admin/GetSubcategoriasPorCategoria?categoriaId=' + categoriaId,
-                        type: 'GET',
-                        dataType: 'json',  // Asegúrate de que el tipo de respuesta esperado es JSON
-                        success: function (response) {
-                            console.log("Respuesta recibida:", response);  // Verifica los datos en la consola
-
-                            // Verifica que la respuesta sea un arreglo y contenga datos
-                            if (Array.isArray(response) && response.length > 0) {
-                                var subcategoriaSelect = $('#subcategoriaProducto');
-                                subcategoriaSelect.empty();  // Limpiar las opciones anteriores
-
-                                subcategoriaSelect.append('<option value="">Selecciona una subcategoría</option>');
-                                response.forEach(function (subcategoria) {
-                                    subcategoriaSelect.append('<option value="' + subcategoria.idcat + '">' + subcategoria.nombre + '</option>');
-                                });
-                            } else {
-                                $('#subcategoriaProducto').empty().append('<option value="">No hay subcategorías disponibles</option>');
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            console.error("Error al cargar subcategorías:", error);
-                        }
-                    });
-            }
-        }
-    });
+    <script src="/js/manuelitoElPollito.js">
+    
 </script>
     <script src="/js/scriptAdm.js"></script>
     <script src="/js/graficas.js"></script>
