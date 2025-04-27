@@ -20,8 +20,7 @@ namespace LogicaDatos.Repositorios
         }
         public void Add(Categoria obj)
         {
-            Context.Set<Categoria>().Add(obj);
-            Context.SaveChanges();
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Categoria> FindAll()

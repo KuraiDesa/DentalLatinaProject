@@ -192,7 +192,6 @@ header {
     border-style: solid;
     border-radius: 7px;
     border-color: #dee2e6;
-    user-select: none;
 }
 
 .c_add_cat_btn {
@@ -203,6 +202,7 @@ header {
     border-color: #dee2e6;
     background-color: #0d6efd;
     
+
 }
 
 .c_add_cat_btn_inactive {
@@ -212,25 +212,4 @@ header {
     border-radius: 7px;
     border-color: #dee2e6;
     background-color: #c1c1c1;
-    transition-duration: 300ms;
-}
-
-.c_add_cat_btn_active {
-    border: 1px;
-    width: 5%;
-    border-style: solid;
-    border-radius: 7px;
-    color: #fff;
-    border-color: #dee2e6;
-    background-color: #0b5ed7;
-    transition-duration: 300ms;
-}
-
-.add_cat_txt{
-    display:none;
-    width:90%;
-}
-
-.transition {
-    transition-duration: 700ms;
 }

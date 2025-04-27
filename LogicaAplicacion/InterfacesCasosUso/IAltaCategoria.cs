@@ -9,6 +9,6 @@ namespace LogicaAplicacion.InterfacesCasosUso
 {
     public interface IAltaCategoria
     {
-        void Alta(string cat);
+        void Alta(CategoriaDTO pr);
     }
 }

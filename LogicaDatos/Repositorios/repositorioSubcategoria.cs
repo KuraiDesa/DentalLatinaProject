@@ -19,12 +19,7 @@ namespace LogicaDatos.Repositorios
         }
         public void Add(Subcategoria obj)
         {
-            if (Context.Entry(obj.categoria).State == EntityState.Detached)
-            {
-                Context.Attach(obj.categoria);
-            }
-            Context.Set<Subcategoria>().Add(obj);
-            Context.SaveChanges(); ;
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Subcategoria> FindAll()

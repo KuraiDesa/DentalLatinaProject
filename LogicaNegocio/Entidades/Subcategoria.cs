@@ -13,10 +13,10 @@ namespace LogicaNegocio.Entidades
         public int Id { get; set; }
         public string Nombre { get; set; }
         public Categoria categoria { get; set; }
-        public Subcategoria(string nombre, Categoria ca)
+        public Subcategoria(string nombre, Categoria cat)
         {
             this.Nombre = nombre;
-            this.categoria = ca;
+            this.categoria = cat;
         }
         public Subcategoria() { }
     }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaAplicacion\\LogicaAplicacion.csproj": {}
+    "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaAplicacion\\LogicaAplicacion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\DTOs\\DTOs.csproj": {
+    "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\DTOs\\DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\DTOs\\DTOs.csproj",
+        "projectUniqueName": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\DTOs\\DTOs.csproj",
         "projectName": "DTOs",
-        "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\DTOs\\DTOs.csproj",
-        "packagesPath": "C:\\Users\\rafar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\DTOs\\obj\\",
+        "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\DTOs\\DTOs.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\DTOs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaNegocio\\LogicaNegocio.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaNegocio\\LogicaNegocio.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaNegocio\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaNegocio\\LogicaNegocio.csproj"
               }
             }
           }
@@ -64,21 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaAplicacion\\LogicaAplicacion.csproj": {
+    "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaAplicacion\\LogicaAplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaAplicacion\\LogicaAplicacion.csproj",
+        "projectUniqueName": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaAplicacion\\LogicaAplicacion.csproj",
         "projectName": "LogicaAplicacion",
-        "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaAplicacion\\LogicaAplicacion.csproj",
-        "packagesPath": "C:\\Users\\rafar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaAplicacion\\obj\\",
+        "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaAplicacion\\LogicaAplicacion.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaAplicacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,20 +87,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\DTOs\\DTOs.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\DTOs\\DTOs.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\DTOs\\DTOs.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\DTOs\\DTOs.csproj"
               },
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaDatos\\LogicaDatos.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaDatos\\LogicaDatos.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaDatos\\LogicaDatos.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaDatos\\LogicaDatos.csproj"
               },
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaNegocio\\LogicaNegocio.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaNegocio\\LogicaNegocio.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaNegocio\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaNegocio\\LogicaNegocio.csproj"
               }
             }
           }
@@ -134,21 +136,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaDatos\\LogicaDatos.csproj": {
+    "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaDatos\\LogicaDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaDatos\\LogicaDatos.csproj",
+        "projectUniqueName": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaDatos\\LogicaDatos.csproj",
         "projectName": "LogicaDatos",
-        "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaDatos\\LogicaDatos.csproj",
-        "packagesPath": "C:\\Users\\rafar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaDatos\\obj\\",
+        "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaDatos\\LogicaDatos.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaDatos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,14 +158,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaNegocio\\LogicaNegocio.csproj": {
-                "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaNegocio\\LogicaNegocio.csproj"
+              "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaNegocio\\LogicaNegocio.csproj": {
+                "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaNegocio\\LogicaNegocio.csproj"
               }
             }
           }
@@ -236,21 +239,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaNegocio\\LogicaNegocio.csproj": {
+    "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaNegocio\\LogicaNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaNegocio\\LogicaNegocio.csproj",
+        "projectUniqueName": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaNegocio\\LogicaNegocio.csproj",
         "projectName": "LogicaNegocio",
-        "projectPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaNegocio\\LogicaNegocio.csproj",
-        "packagesPath": "C:\\Users\\rafar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafar\\OneDrive\\Escritorio\\DentalLatina\\LogicaNegocio\\obj\\",
+        "projectPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaNegocio\\LogicaNegocio.csproj",
+        "packagesPath": "C:\\Users\\Soto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Soto\\Documents\\GitHub\\Nueva carpeta\\LogicaNegocio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rafar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Soto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -258,6 +261,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -308,7 +312,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
