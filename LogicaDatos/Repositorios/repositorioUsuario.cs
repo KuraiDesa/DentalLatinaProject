@@ -17,7 +17,6 @@ namespace LogicaDatos.Repositorios
         {
             Context = context;
         }
-        public List<Usuario> usuarios = new List<Usuario>();
 
         public void Add(Usuario obj)
         {

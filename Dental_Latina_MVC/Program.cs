@@ -25,6 +25,8 @@ builder.Services.AddScoped<IEliminarProducto, EliminarProducto>();
 builder.Services.AddScoped<IRepositorioUsuario, repositorioUsuario>();
 builder.Services.AddScoped<IRepositorioProducto, repositorioProducto>();
 builder.Services.AddScoped<IRepositorioCategoria, repositorioCategoria>();
+builder.Services.AddScoped<IRepositorioZona, repositorioZona>();
+builder.Services.AddScoped<IDetalleZona, DetalleZona>();
 builder.Services.AddScoped<IAltaSubcategoria, AltaSubcategoria>();
 builder.Services.AddScoped<IRepositorioSubcategoria, repositorioSubcategoria>();
 builder.Services.AddScoped<IAltaProducto, AltaProducto>();
@@ -54,7 +56,7 @@ app.UseSession();
 // Configuración de las rutas
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Admin}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 if (app.Environment.IsDevelopment())
 {

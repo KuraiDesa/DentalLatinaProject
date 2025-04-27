@@ -9,6 +9,6 @@ namespace LogicaAplicacion.InterfacesCasosUso
 {
     public interface IDetalleZona
     {
-        ZonaDTO Zona(int id);
+        ZonaDTO ZonabyId(int id);
     }
 }

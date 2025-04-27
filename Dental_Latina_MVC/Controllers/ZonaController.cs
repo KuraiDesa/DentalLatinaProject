@@ -1,4 +1,5 @@
-﻿using LogicaAplicacion.InterfacesCasosUso;
+﻿using DTOs.DTOs;
+using LogicaAplicacion.InterfacesCasosUso;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,29 +7,35 @@ namespace Dental_Latina_MVC.Controllers
 {
     public class ZonaController : Controller
     {
+        private readonly IDetalleZona _cuDetalleZona;
 
-        IDetalleZona CUDetalleZona {  get; set; }
-
-
-        public ZonaController(IDetalleZona cu) 
+        public ZonaController(IDetalleZona cuDetalleZona)
         {
-            this.CUDetalleZona = cu;        
-        }
-        // GET: ZonaController
-        public ActionResult Index()
-        {
-            return View();
+            _cuDetalleZona = cuDetalleZona;
         }
 
-        // GET: ZonaController/Details/5
-        public ActionResult Details(int id)
+        [HttpGet]
+        public IActionResult Details(int id)
         {
-            return View();
+            try
+            {
+                ZonaDTO zona = _cuDetalleZona.ZonabyId(id);
+
+                if (zona == null)
+                {
+                    return NotFound(new { error = "Zona no encontrada." });
+                }
+
+                return Ok(zona); // <-- Devuelve JSON automático
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new
+                {
+                    error = "Error interno del servidor.",
+                    detalle = ex.Message
+                });
+            }
         }
-
-       
-
-
-        
     }
 }

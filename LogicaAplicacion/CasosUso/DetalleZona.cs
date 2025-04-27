@@ -1,4 +1,6 @@
-﻿using DTOs.DTOs;
+﻿using DentalLatina;
+using DTOs.DTOs;
+using DTOs.Mappers;
 using LogicaAplicacion.InterfacesCasosUso;
 using LogicaNegocio.InterfacesRepositorios;
 using System;
@@ -16,9 +18,23 @@ namespace LogicaAplicacion.CasosUso
         {
             this.rep = rep;
         }
-        public ZonaDTO Zona(int id)
+        public ZonaDTO ZonabyId(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Zona z = rep.FindById(id);
+                if(z == null)
+                {
+                    return null;
+                }
+                ZonaDTO zD = ZonaMapper.ToDTOZona(z);
+                return zD;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Algo salio mal");
+            }
+           
         }
     }
 }
