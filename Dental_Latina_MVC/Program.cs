@@ -25,11 +25,10 @@ builder.Services.AddScoped<IEliminarProducto, EliminarProducto>();
 builder.Services.AddScoped<IRepositorioUsuario, repositorioUsuario>();
 builder.Services.AddScoped<IRepositorioProducto, repositorioProducto>();
 builder.Services.AddScoped<IRepositorioCategoria, repositorioCategoria>();
-builder.Services.AddScoped<IRepositorioZona, repositorioZona>();
-builder.Services.AddScoped<IDetalleZona, DetalleZona>();
-builder.Services.AddScoped<IAltaCategoria, AltaCategoria>();
+builder.Services.AddScoped<IAltaSubcategoria, AltaSubcategoria>();
 builder.Services.AddScoped<IRepositorioSubcategoria, repositorioSubcategoria>();
 builder.Services.AddScoped<IAltaProducto, AltaProducto>();
+builder.Services.AddScoped<IAltaCategoria, AltaCategoria>();
 builder.Services.AddDbContext<LibreriaContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 25))));

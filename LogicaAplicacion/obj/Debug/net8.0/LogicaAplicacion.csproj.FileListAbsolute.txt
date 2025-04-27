@@ -75,42 +75,43 @@ C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaAplicacion\obj\Debug\net
 C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaAplicacion\obj\Debug\net8.0\refint\LogicaAplicacion.dll
 C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.pdb
 C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo\LogicaAplicacion\obj\Debug\net8.0\ref\LogicaAplicacion.dll
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.deps.json
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.dll
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.pdb
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\bin\Debug\net8.0\DTOs.dll
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\bin\Debug\net8.0\LogicaDatos.dll
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\bin\Debug\net8.0\LogicaNegocio.dll
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\bin\Debug\net8.0\DTOs.pdb
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\bin\Debug\net8.0\LogicaDatos.pdb
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\bin\Debug\net8.0\LogicaNegocio.pdb
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.csproj.AssemblyReference.cache
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.AssemblyInfoInputs.cache
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.AssemblyInfo.cs
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.csproj.CoreCompileInputs.cache
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.sourcelink.json
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\LogicaAp.7CDA08B3.Up2Date
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.dll
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\refint\LogicaAplicacion.dll
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.pdb
-C:\Users\Soto\Documents\GitHub\Dental_Latina_Repo - copia (2)\LogicaAplicacion\obj\Debug\net8.0\ref\LogicaAplicacion.dll
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.csproj.AssemblyReference.cache
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.AssemblyInfoInputs.cache
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.AssemblyInfo.cs
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.csproj.CoreCompileInputs.cache
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.dll
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\obj\Debug\net8.0\refint\LogicaAplicacion.dll
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.pdb
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.deps.json
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.dll
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.pdb
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\bin\Debug\net8.0\DTOs.dll
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\bin\Debug\net8.0\LogicaDatos.dll
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\bin\Debug\net8.0\LogicaNegocio.dll
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\bin\Debug\net8.0\DTOs.pdb
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\bin\Debug\net8.0\LogicaDatos.pdb
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\bin\Debug\net8.0\LogicaNegocio.pdb
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\obj\Debug\net8.0\LogicaAp.7CDA08B3.Up2Date
-C:\Users\Soto\Documents\GitHub\Nueva carpeta\LogicaAplicacion\obj\Debug\net8.0\ref\LogicaAplicacion.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.deps.json
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.pdb
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\bin\Debug\net8.0\DTOs.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\bin\Debug\net8.0\LogicaDatos.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\bin\Debug\net8.0\LogicaNegocio.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\bin\Debug\net8.0\DTOs.pdb
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\bin\Debug\net8.0\LogicaDatos.pdb
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\bin\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.csproj.AssemblyReference.cache
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.AssemblyInfoInputs.cache
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.AssemblyInfo.cs
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.csproj.CoreCompileInputs.cache
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAp.7CDA08B3.Up2Date
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\refint\LogicaAplicacion.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.pdb
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\ref\LogicaAplicacion.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatina\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.sourcelink.json
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.deps.json
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\bin\Debug\net8.0\LogicaAplicacion.pdb
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\bin\Debug\net8.0\DTOs.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\bin\Debug\net8.0\LogicaDatos.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\bin\Debug\net8.0\LogicaNegocio.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\bin\Debug\net8.0\DTOs.pdb
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\bin\Debug\net8.0\LogicaDatos.pdb
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\bin\Debug\net8.0\LogicaNegocio.pdb
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.csproj.AssemblyReference.cache
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.AssemblyInfoInputs.cache
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.AssemblyInfo.cs
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.csproj.CoreCompileInputs.cache
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.sourcelink.json
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\LogicaAp.7CDA08B3.Up2Date
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\refint\LogicaAplicacion.dll
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\LogicaAplicacion.pdb
+C:\Users\rafar\OneDrive\Escritorio\DentalLatinaProject\DentalLatinaProject\DentalLatinaProject\LogicaAplicacion\obj\Debug\net8.0\ref\LogicaAplicacion.dll
