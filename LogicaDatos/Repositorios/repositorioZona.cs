@@ -1,36 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DentalLatina;
 using LogicaNegocio.InterfacesRepositorios;
+using DentalLatina;
+using LogicaDatos.EntityFramework;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
 namespace LogicaDatos.Repositorios
 {
     public class repositorioZona : IRepositorioZona
     {
-        public void Add(Zona obj)
+        // Lista en memoria para simular el almacenamiento
+        public LibreriaContext _zonas { get; set; }
+        public repositorioZona(LibreriaContext context)
         {
-            throw new NotImplementedException();
+            _zonas = context;
         }
 
-        public Zona BuscarPorZona(string Zona)
+        public void Add(Zona obj)
         {
-            throw new NotImplementedException();
+            if (obj == null)
+            {
+                throw new ArgumentNullException(nameof(obj), "La zona no puede ser nula.");
+            }
+
+            // Agregar una nueva zona a la lista
+            _zonas.Add(obj);
         }
+
 
         public IEnumerable<Zona> FindAll()
         {
+            // Devuelve todas las zonas
             throw new NotImplementedException();
         }
 
         public Zona FindById(int id)
         {
-            throw new NotImplementedException();
+            // Buscar una zona por su id
+            return _zonas.Zonas
+           .FirstOrDefault(z => z.Id == id);
         }
-
-        public void Remove(int id)
+         public void Remove(int id)
         {
             throw new NotImplementedException();
         }

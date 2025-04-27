@@ -9,6 +9,5 @@ namespace LogicaNegocio.InterfacesRepositorios
 {
     public interface IRepositorioZona : IRepositorio<Zona>
     {
-        Zona BuscarPorZona(string Zona);
     }
 }
