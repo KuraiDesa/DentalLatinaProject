@@ -194,24 +194,23 @@ namespace Dental_Latina_MVC.Controllers
             }
         }
 
+        [HttpGet]
         public IActionResult GetSubcategoriasPorCategoria(int categoriaId)
         {
-            // Asegúrate de que recibas correctamente el parametro categoriaId
-            Console.WriteLine($"CategoriaId recibido: {categoriaId}");
+            // Obtén todas las subcategorías
+            var todas = CUSubcategorias.GetSubcategoria();
 
-            // Obtener las subcategorías filtradas por categoriaId
-            var subcategorias = CUSubcategorias.GetSubcategoria()
-                .Where(s => s.id == categoriaId)  // Filtrar por categoriaId
+            // Filtra por la propiedad correcta (aquí asumo que la entidad tiene un campo CategoriaId)
+            var subcategorias = todas
+                .Where(s => s.id == categoriaId)
+                .Select(s => new {
+                    id = s.id,      // propón nombres sencillos: id y nombre
+                    nombre = s.nombre
+                })
                 .ToList();
 
-            // Verificar si se encontraron subcategorías
-            if (subcategorias == null || !subcategorias.Any())
-            {
-                return Json(new { message = "No subcategorías encontradas para esta categoría." });
-            }
-
-            // Retornar las subcategorías como JSON
-            return Json(subcategorias); 
+            // Siempre devuelve un JSON de lista, aunque esté vacío
+            return Json(subcategorias);
         }
     }
 
