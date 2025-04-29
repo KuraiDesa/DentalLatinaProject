@@ -57,7 +57,6 @@ namespace LogicaDatos.Repositorios
 
         public void Remove(int id)
         {
-            // Buscar el producto por ID
             Producto producto = Context.Set<Producto>().Find(id);
 
             if (producto != null)
@@ -68,6 +67,38 @@ namespace LogicaDatos.Repositorios
             else
             {
                 throw new ArgumentException("No se encontró un producto con el ID proporcionado.");
+            }
+        }
+
+        public void RemoveByCatId(int id)
+        {
+            IEnumerable<Producto> prodL = Context.Set<Producto>()
+              .Include(p => p.categoria)
+              .Where(P => P.categoria.Id == id)
+              .ToList();
+            if (prodL.Any())
+            {
+                foreach(Producto prod in prodL)
+                {
+                    Context.Set<Producto>().Remove(prod);
+                    Context.SaveChanges();
+                }
+            }
+        }
+
+        public void RemoveByScatId(int id)
+        {
+            IEnumerable<Producto> prodL = Context.Set<Producto>()
+              .Include(p => p.subcategoria)
+              .Where(P => P.subcategoria.Id == id)
+              .ToList();
+            if (prodL.Any())
+            {
+                foreach (Producto prod in prodL)
+                {
+                    Context.Set<Producto>().Remove(prod);
+                    Context.SaveChanges();
+                }
             }
         }
 
@@ -102,6 +133,8 @@ namespace LogicaDatos.Repositorios
 
             return query.Include(p => p.categoria).ToList();
         }
+
+
 
     }
 }
