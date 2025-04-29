@@ -7,6 +7,7 @@ using LogicaNegocio.Entidades;
 using Microsoft.AspNetCore.HttpOverrides;
 using LogicaAplicacion.InterfacesCasoUso;
 using Microsoft.EntityFrameworkCore;
+using FluentAssertions.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
@@ -32,6 +33,8 @@ builder.Services.AddScoped<IRepositorioSubcategoria, repositorioSubcategoria>();
 builder.Services.AddScoped<IAltaProducto, AltaProducto>();
 builder.Services.AddScoped<IAltaCategoria, AltaCategoria>();
 builder.Services.AddScoped<IEliminarCategoriaSub, EliminarCategoriaSub>();
+builder.Services.AddScoped<IListarCategoriasEspeciales, ListarCategoriasEspeciales>();
+builder.Services.AddScoped<IRepositorioCEspecial, repositorioCEspecial>();
 builder.Services.AddDbContext<LibreriaContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 25))));

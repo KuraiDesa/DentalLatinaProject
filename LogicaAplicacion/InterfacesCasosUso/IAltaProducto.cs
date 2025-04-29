@@ -11,5 +11,7 @@ namespace LogicaAplicacion.InterfacesCasosUso
     public interface IAltaProducto
     {
         void AltaProd(string nombre, string url, string descripcion, int categoria, int subcategoria, string documentacion, int precio);
+        void AltaProdCatEspecial(string nombre, string url, string descripcion, int categoria, int subcategoria, int categroiaEspecial, string documentacion, int precio);
+        bool verificarCategoria(int categoria);
     }
 }

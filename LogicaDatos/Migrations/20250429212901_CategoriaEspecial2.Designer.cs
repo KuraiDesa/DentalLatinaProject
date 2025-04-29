@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LogicaDatos.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250319002432_p1")]
-    partial class p1
+    [Migration("20250429212901_CategoriaEspecial2")]
+    partial class CategoriaEspecial2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,6 +57,9 @@ namespace LogicaDatos.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("categoriaEspecialid")
+                        .HasColumnType("int");
+
                     b.Property<int>("categoriaId")
                         .HasColumnType("int");
 
@@ -83,6 +86,8 @@ namespace LogicaDatos.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("categoriaEspecialid");
 
                     b.HasIndex("categoriaId");
 
@@ -152,6 +157,10 @@ namespace LogicaDatos.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("minimoDeEnvio")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<int>("precio")
                         .HasColumnType("int");
 
@@ -162,6 +171,23 @@ namespace LogicaDatos.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Zonas");
+                });
+
+            modelBuilder.Entity("LogicaNegocio.Entidades.CEspecial", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("id");
+
+                    b.ToTable("CEspecial");
                 });
 
             modelBuilder.Entity("LogicaNegocio.Entidades.Categoria", b =>
@@ -205,6 +231,10 @@ namespace LogicaDatos.Migrations
 
             modelBuilder.Entity("DentalLatina.Producto", b =>
                 {
+                    b.HasOne("LogicaNegocio.Entidades.CEspecial", "categoriaEspecial")
+                        .WithMany()
+                        .HasForeignKey("categoriaEspecialid");
+
                     b.HasOne("LogicaNegocio.Entidades.Categoria", "categoria")
                         .WithMany()
                         .HasForeignKey("categoriaId")
@@ -218,6 +248,8 @@ namespace LogicaDatos.Migrations
                         .IsRequired();
 
                     b.Navigation("categoria");
+
+                    b.Navigation("categoriaEspecial");
 
                     b.Navigation("subcategoria");
                 });

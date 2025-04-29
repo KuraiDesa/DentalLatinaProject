@@ -28,6 +28,13 @@ namespace LogicaDatos.Repositorios
             {
                 Context.Attach(obj.subcategoria);
             }
+            if (obj.categoriaEspecial != null)
+            {
+                if (Context.Entry(obj.categoriaEspecial).State == EntityState.Detached)
+                {
+                    Context.Attach(obj.categoriaEspecial);
+                }
+            }
             Context.Set<Producto>().Add(obj);
             Context.SaveChanges();
         }
