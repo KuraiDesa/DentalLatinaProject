@@ -20,6 +20,7 @@ namespace LogicaDatos.EntityFramework
         public DbSet<Zona> Zonas { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Subcategoria> Subcategorias { get; set; }
+        public DbSet<CEspecial> CEspecial { get; set; }
 
 
         public LibreriaContext(DbContextOptions<LibreriaContext> options) : base(options) { }

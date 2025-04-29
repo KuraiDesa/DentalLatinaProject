@@ -21,12 +21,14 @@ namespace Dental_Latina_MVC.Controllers
         public IAltaCategoria CUAltaCategoria { get; set; }
         public IAltaSubcategoria CUAltaSubcategoria { get; set; }
         public IEliminarCategoriaSub CUEliminarCategoriaSub { get; set; }
+        public IListarCategoriasEspeciales CUListarCategoriaEspecial {  get; set; }
         public AdminController(IListarCategorias CUC, IlistarSubcategorias CUS, IAltaProducto altaProd, IListarClientes CUListarClientes,
                                 IListarProductos CUListarProductos, IEliminarProducto CUEliminarProductro, IAltaCategoria AltaCategoria,
-                                IAltaSubcategoria AltaSubcategoria, IEliminarCategoriaSub eliminarCategoriaSub)
+                                IAltaSubcategoria AltaSubcategoria, IEliminarCategoriaSub eliminarCategoriaSub, IListarCategoriasEspeciales CUCS)
         {
             this.CUListarCategorias = CUC;
             this.CUSubcategorias = CUS;
+            this.CUListarCategoriaEspecial = CUCS;
             this.CUAltaProd = altaProd; 
             this.CUListarClientes = CUListarClientes;
             this.CUListarProductos = CUListarProductos;
@@ -57,12 +59,14 @@ namespace Dental_Latina_MVC.Controllers
                 
                 IEnumerable<CategoriaDTO> listaCategoria = CUListarCategorias.GetCategoria();
                 IEnumerable<SubcategoriaDTO> listaSubcategoria = CUSubcategorias.GetSubcategoria();
+                IEnumerable<CategoriaEspecialDTO> listaCategoriaEspeciales = CUListarCategoriaEspecial.GetCategoriaespecial();
                 IEnumerable<ClienteDTO> clientesDTO = CUListarClientes.GetClientes();
                 IEnumerable<ProductoDTO> productosDTO = CUListarProductos.GetProductos();
                 ProductoCategoriaViewModel prodviewModel = new ProductoCategoriaViewModel
                 {
                     Subcategoria = listaSubcategoria,
-                    Categorias = listaCategoria
+                    Categorias = listaCategoria,
+                    CategoriasEsepciales = listaCategoriaEspeciales
                 };
 
                 GeneralViewModel viewModel = new GeneralViewModel
@@ -145,8 +149,21 @@ namespace Dental_Latina_MVC.Controllers
                 generalViewModel.productoview.DocumentacionUrl = "Sin Documentacion";
             }
 
-            // Guardar en tu lógica
-            CUAltaProd.AltaProd(
+            if (CUAltaProd.verificarCategoria(generalViewModel.productoview.CategoriaId))
+            {
+                CUAltaProd.AltaProdCatEspecial(
+                generalViewModel.productoview.Nombre,
+                generalViewModel.productoview.PhotoUrl,
+                generalViewModel.productoview.Descripcion,
+                generalViewModel.productoview.CategoriaId,
+                generalViewModel.productoview.SubcategoriaId,
+                generalViewModel.productoview.CategoriaEspecial,
+                generalViewModel.productoview.DocumentacionUrl,
+                generalViewModel.productoview.Precio ?? 0
+                );
+            }
+            else {
+                CUAltaProd.AltaProd(
                 generalViewModel.productoview.Nombre,
                 generalViewModel.productoview.PhotoUrl,
                 generalViewModel.productoview.Descripcion,
@@ -154,7 +171,9 @@ namespace Dental_Latina_MVC.Controllers
                 generalViewModel.productoview.SubcategoriaId,
                 generalViewModel.productoview.DocumentacionUrl,
                 generalViewModel.productoview.Precio ?? 0
-            );
+                );
+            }
+            
 
             return RedirectToAction("Index");
         }
@@ -306,6 +325,7 @@ namespace Dental_Latina_MVC.Controllers
     {
         public IEnumerable<SubcategoriaDTO> Subcategoria { get; set; }
         public IEnumerable<CategoriaDTO> Categorias { get; set; }
+        public IEnumerable<CategoriaEspecialDTO> CategoriasEsepciales { get; set; }
     }
 
     public class CategoriaViewModel
@@ -330,7 +350,7 @@ namespace Dental_Latina_MVC.Controllers
         public string Descripcion { get; set; }
         public int CategoriaId { get; set; }
         public int SubcategoriaId { get; set; }
-
+        public int CategoriaEspecial { get; set; }
         public string? DocumentacionUrl { get; set; } // opcional, para guardar la ruta
         public int? Precio { get; set; }
 

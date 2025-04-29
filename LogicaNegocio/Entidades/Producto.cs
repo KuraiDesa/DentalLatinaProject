@@ -19,6 +19,7 @@ namespace DentalLatina
         public string descripcion { get; set; }
         public Categoria categoria { get; set; }
         public  Subcategoria subcategoria { get; set; }
+        public CEspecial? categoriaEspecial { get; set; }
         public string documentacion { get; set; }
         public int precio { get; set; }
         
@@ -50,6 +51,12 @@ namespace DentalLatina
         public void Validar()
         {
             throw new NotImplementedException();
+        }
+
+        public void agregarCategoriaEspecial(CEspecial ces)
+        {
+            this.categoriaEspecial= ces;
+
         }
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LogicaDatos.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250428235330_AtualizacionDeZona")]
-    partial class AtualizacionDeZona
+    [Migration("20250429211851_CategoriaEspecial")]
+    partial class CategoriaEspecial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,6 +57,9 @@ namespace LogicaDatos.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("categoriaEspecialid")
+                        .HasColumnType("int");
+
                     b.Property<int>("categoriaId")
                         .HasColumnType("int");
 
@@ -83,6 +86,8 @@ namespace LogicaDatos.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("categoriaEspecialid");
 
                     b.HasIndex("categoriaId");
 
@@ -168,6 +173,23 @@ namespace LogicaDatos.Migrations
                     b.ToTable("Zonas");
                 });
 
+            modelBuilder.Entity("LogicaNegocio.Entidades.CEspecial", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("id");
+
+                    b.ToTable("CEspecial");
+                });
+
             modelBuilder.Entity("LogicaNegocio.Entidades.Categoria", b =>
                 {
                     b.Property<int>("Id")
@@ -209,6 +231,12 @@ namespace LogicaDatos.Migrations
 
             modelBuilder.Entity("DentalLatina.Producto", b =>
                 {
+                    b.HasOne("LogicaNegocio.Entidades.CEspecial", "categoriaEspecial")
+                        .WithMany()
+                        .HasForeignKey("categoriaEspecialid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("LogicaNegocio.Entidades.Categoria", "categoria")
                         .WithMany()
                         .HasForeignKey("categoriaId")
@@ -222,6 +250,8 @@ namespace LogicaDatos.Migrations
                         .IsRequired();
 
                     b.Navigation("categoria");
+
+                    b.Navigation("categoriaEspecial");
 
                     b.Navigation("subcategoria");
                 });

@@ -3,7 +3,7 @@
         var categoriaId = $(this).val();
         if (!categoriaId) {
             $('#subcategoriaProducto')
-                .html('<option value="">Selecciona primero categoría</option>');
+                .html('<option value="">Selecciona primero una categoría</option>');
             return;
         }
 

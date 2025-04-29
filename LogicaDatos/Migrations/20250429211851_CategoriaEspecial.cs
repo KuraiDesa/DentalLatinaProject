@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace LogicaDatos.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class CategoriaEspecial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -27,6 +27,21 @@ namespace LogicaDatos.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Categorias", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "CEspecial",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    nombre = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CEspecial", x => x.id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -96,6 +111,8 @@ namespace LogicaDatos.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     precio = table.Column<int>(type: "int", nullable: false),
                     horario = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    minimoDeEnvio = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -140,6 +157,7 @@ namespace LogicaDatos.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     categoriaId = table.Column<int>(type: "int", nullable: false),
                     subcategoriaId = table.Column<int>(type: "int", nullable: false),
+                    categoriaEspecialid = table.Column<int>(type: "int", nullable: false),
                     documentacion = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     precio = table.Column<int>(type: "int", nullable: false)
@@ -147,6 +165,12 @@ namespace LogicaDatos.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Productos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Productos_CEspecial_categoriaEspecialid",
+                        column: x => x.categoriaEspecialid,
+                        principalTable: "CEspecial",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Productos_Categorias_categoriaId",
                         column: x => x.categoriaId,
@@ -161,6 +185,11 @@ namespace LogicaDatos.Migrations
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Productos_categoriaEspecialid",
+                table: "Productos",
+                column: "categoriaEspecialid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Productos_categoriaId",
@@ -195,6 +224,9 @@ namespace LogicaDatos.Migrations
 
             migrationBuilder.DropTable(
                 name: "Zonas");
+
+            migrationBuilder.DropTable(
+                name: "CEspecial");
 
             migrationBuilder.DropTable(
                 name: "Subcategorias");
