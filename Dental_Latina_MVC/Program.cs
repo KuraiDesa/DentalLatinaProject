@@ -31,6 +31,7 @@ builder.Services.AddScoped<IAltaSubcategoria, AltaSubcategoria>();
 builder.Services.AddScoped<IRepositorioSubcategoria, repositorioSubcategoria>();
 builder.Services.AddScoped<IAltaProducto, AltaProducto>();
 builder.Services.AddScoped<IAltaCategoria, AltaCategoria>();
+builder.Services.AddScoped<IEliminarCategoriaSub, EliminarCategoriaSub>();
 builder.Services.AddDbContext<LibreriaContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 25))));

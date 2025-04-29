@@ -43,7 +43,16 @@ namespace LogicaDatos.Repositorios
         }
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            Categoria cat = Context.Set<Categoria>().Find(id);
+            if (cat != null)
+            {
+                Context.Set<Categoria>().Remove(cat);
+                Context.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException("Error inesperado");
+            }
         }
 
         public void Update(Categoria obj)
