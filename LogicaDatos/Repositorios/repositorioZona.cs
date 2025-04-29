@@ -10,7 +10,6 @@ namespace LogicaDatos.Repositorios
 {
     public class repositorioZona : IRepositorioZona
     {
-        // Lista en memoria para simular el almacenamiento
         public LibreriaContext _zonas { get; set; }
         public repositorioZona(LibreriaContext context)
         {

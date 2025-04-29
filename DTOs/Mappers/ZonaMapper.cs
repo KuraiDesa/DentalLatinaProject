@@ -16,7 +16,7 @@ namespace DTOs.Mappers
             zoDTO.nombre = zo.zona;
             zoDTO.horario = zo.horario;
             zoDTO.precio = zo.precio;
-
+            zoDTO.minimoDeEnvio = zo.minimoDeEnvio;
             return zoDTO;
         }
     }

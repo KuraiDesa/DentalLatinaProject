@@ -12,5 +12,6 @@ namespace DTOs.DTOs
         public int precio { get; set; }
 
         public string horario { get; set; }
+        public string minimoDeEnvio { get; set; }
     }
 }

@@ -13,6 +13,7 @@ namespace DentalLatina
         public string zona {  get; set; }
         public int precio { get; set; }
         public string horario { get; set; }
+        public string minimoDeEnvio { get; set; }
         [Key]
         public int Id { get; set; }
 
