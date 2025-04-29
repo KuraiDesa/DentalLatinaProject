@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 
 namespace Dental_Latina_MVC.Controllers
 {
@@ -97,10 +98,22 @@ namespace Dental_Latina_MVC.Controllers
             {
                 var nombreImagen = Path.GetFileName(generalViewModel.productoview.ImagenArchivo.FileName);
                 var rutaImagen = Path.Combine(carpetaImagenes, nombreImagen);
+
+                // Si el archivo ya existe, agregar un sufijo para evitar sobrescritura
+                if (System.IO.File.Exists(rutaImagen))  // Uso explícito de System.IO.File
+                {
+                    var extension = Path.GetExtension(nombreImagen);
+                    var nombreBase = Path.GetFileNameWithoutExtension(nombreImagen);
+                    var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+                    nombreImagen = $"{nombreBase}_{timestamp}{extension}";
+                    rutaImagen = Path.Combine(carpetaImagenes, nombreImagen);
+                }
+
                 using (var stream = new FileStream(rutaImagen, FileMode.Create))
                 {
                     await generalViewModel.productoview.ImagenArchivo.CopyToAsync(stream);
                 }
+
                 generalViewModel.productoview.PhotoUrl = "/imagenes/productos/" + nombreImagen;
             }
 
@@ -109,10 +122,22 @@ namespace Dental_Latina_MVC.Controllers
             {
                 var nombreDoc = Path.GetFileName(generalViewModel.productoview.DocumentacionArchivo.FileName);
                 var rutaDoc = Path.Combine(carpetaDocs, nombreDoc);
+
+                // Si el archivo ya existe, agregar un sufijo para evitar sobrescritura
+                if (System.IO.File.Exists(rutaDoc))  // Uso explícito de System.IO.File
+                {
+                    var extension = Path.GetExtension(nombreDoc);
+                    var nombreBase = Path.GetFileNameWithoutExtension(nombreDoc);
+                    var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+                    nombreDoc = $"{nombreBase}_{timestamp}{extension}";
+                    rutaDoc = Path.Combine(carpetaDocs, nombreDoc);
+                }
+
                 using (var stream = new FileStream(rutaDoc, FileMode.Create))
                 {
                     await generalViewModel.productoview.DocumentacionArchivo.CopyToAsync(stream);
                 }
+
                 generalViewModel.productoview.DocumentacionUrl = "/documentos/" + nombreDoc;
             }
             else
