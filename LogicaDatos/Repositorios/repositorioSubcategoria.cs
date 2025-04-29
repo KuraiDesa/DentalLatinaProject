@@ -37,13 +37,13 @@ namespace LogicaDatos.Repositorios
 
         public Subcategoria FindById(int id)
         {
-            Subcategoria entity = Context.Subcategorias.Local.FirstOrDefault(c => c.Id == id);
-            if (entity == null)
+            Subcategoria subcat = Context.Subcategorias.Local.FirstOrDefault(c => c.Id == id);
+            if (subcat == null)
             {
-                entity = Context.Subcategorias.AsNoTracking().FirstOrDefault(c => c.Id == id);
+                subcat = Context.Subcategorias.AsNoTracking().FirstOrDefault(c => c.Id == id);
             }
 
-            return entity;
+            return subcat;
         }
 
         public IEnumerable<Subcategoria> FindByIdList(int? id)
@@ -60,7 +60,36 @@ namespace LogicaDatos.Repositorios
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            Subcategoria subcat = Context.Set<Subcategoria>().Find(id);
+
+            if (subcat!=null)
+            {
+                Context.Set<Subcategoria>().Remove(subcat);
+                Context.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException("Error inesperado.");
+            }
+        }
+
+        public void RemoveByCatId(int id)
+        {
+            IEnumerable<Subcategoria> subcat = FindByIdList(id);
+            if (subcat.Any())
+            {
+                foreach(Subcategoria subcatId in subcat)
+                {
+                    Context.Set<Subcategoria>().Remove(subcatId);
+                    Context.SaveChanges();
+                }
+            }
+            else
+            {
+                return;
+
+            }
+
         }
 
         public void Update(Subcategoria obj)

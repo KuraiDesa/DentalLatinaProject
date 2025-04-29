@@ -231,11 +231,6 @@
                         <label asp-for="productoview.SubcategoriaId" class="form-label">Subcategoria del Producto</label>
                         <select asp-for="productoview.SubcategoriaId" id="subcategoriaProducto" class="form-select" required>
                             <option value="">Selecciona una subcategoría</option>
-                            <!--@foreach (var subcategoria in Model.productocategoriaview.Subcategoria)
-                            {
-                                <option value=@subcategoria.id>@subcategoria.nombre</option>
-                            }
-                            -->
                         </select>
                     </div>
             
@@ -414,7 +409,6 @@
                                 {
                                     <option value=@categoria.id>@categoria.nombre</option>
                                 }
-                                <!-- Agrega más categorías según sea necesario -->
                             </select>
                         </div>
 
@@ -433,6 +427,43 @@
                         </div>
                     </form>
                 </div>
+                <div id="eliminarCategoria">
+                    <h2>Eliminar Categoria</h2>
+                    <form asp-action="RemoveCategoria" id="formEliminarCategoria" method="post" enctype="multipart/form-data">
+                        <label asp-for="categoria.id" class="form-label">Categoría del Producto</label>
+                        <select asp-for="categoria.id" id="categoriaEliminar" class="form-select" required>
+                            <option value="">Selecciona una categoría</option>
+                            @foreach (var categoria in Model.productocategoriaview.Categorias)
+                            {
+                                <option value=@categoria.id>@categoria.nombre</option>
+                            }
+
+                        </select>
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </div>
+                <div id="eliminarSubcategoria">
+                    <h2 class="mt-3">Eliminar Subcategoria</h2>
+                    <form asp-action="RemoveSubcategoria" id="formEliminarSubcategoria" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                        <label asp-for="categoria.id" class="form-label">Categoría</label>
+                        <select asp-for="categoria.id" id="categoriaSEliminar" class="form-select" required>
+                            <option value="">Selecciona una categoría</option>
+                            @foreach (var categoria in Model.productocategoriaview.Categorias)
+                            {
+                                <option value=@categoria.id>@categoria.nombre</option>
+                            }
+
+                        </select>
+                            <select asp-for="subcategoria.id" id="subcategoriaEliminar" class="form-select" required>
+                                <option value="">Selecciona una categoría</option>
+                                
+                            </select>
+                        </div>
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </div>
+
             </div>
         </section>
         <section id="clientes"style="display: none;">

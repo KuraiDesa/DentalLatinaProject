@@ -16,22 +16,24 @@ namespace Dental_Latina_MVC.Controllers
         public IlistarSubcategorias CUSubcategorias { get; set; }
         public IListarProductos CUListarProductos { get; set; }
         public IEliminarProducto CUEliminarProductro { get; set; }
-        public IAltaProducto altaProd { get; set; }
+        public IAltaProducto CUAltaProd { get; set; }
         public IListarClientes CUListarClientes { get; set; }
         public IAltaCategoria CUAltaCategoria { get; set; }
         public IAltaSubcategoria CUAltaSubcategoria { get; set; }
+        public IEliminarCategoriaSub CUEliminarCategoriaSub { get; set; }
         public AdminController(IListarCategorias CUC, IlistarSubcategorias CUS, IAltaProducto altaProd, IListarClientes CUListarClientes,
                                 IListarProductos CUListarProductos, IEliminarProducto CUEliminarProductro, IAltaCategoria AltaCategoria,
-                                IAltaSubcategoria AltaSubcategoria)
+                                IAltaSubcategoria AltaSubcategoria, IEliminarCategoriaSub eliminarCategoriaSub)
         {
             this.CUListarCategorias = CUC;
             this.CUSubcategorias = CUS;
-            this.altaProd = altaProd; 
+            this.CUAltaProd = altaProd; 
             this.CUListarClientes = CUListarClientes;
             this.CUListarProductos = CUListarProductos;
             this.CUEliminarProductro = CUEliminarProductro;
             this.CUAltaCategoria = AltaCategoria;
             this.CUAltaSubcategoria = AltaSubcategoria;
+            this.CUEliminarCategoriaSub = eliminarCategoriaSub;
         }
         
         public IActionResult VerificarSesion()
@@ -144,7 +146,7 @@ namespace Dental_Latina_MVC.Controllers
             }
 
             // Guardar en tu lógica
-            altaProd.AltaProd(
+            CUAltaProd.AltaProd(
                 generalViewModel.productoview.Nombre,
                 generalViewModel.productoview.PhotoUrl,
                 generalViewModel.productoview.Descripcion,
@@ -175,16 +177,18 @@ namespace Dental_Latina_MVC.Controllers
         [ActionName("CreateCategoria")]
         public IActionResult CreateCategoria(GeneralViewModel generalViewModel)
         {
-            VerificarSesion(); // Por seguridad
+            VerificarSesion();
 
-            if (string.IsNullOrWhiteSpace(generalViewModel.categoria.nombre))
+            if ((generalViewModel.categoria.nombre).Equals(""))
             {
                 return BadRequest("El nombre de la categoría es obligatorio.");
             }
 
             try
             {
-                CUAltaCategoria.Alta(generalViewModel.categoria.nombre);
+                CUAltaCategoria.Alta(
+                    generalViewModel.categoria.nombre
+                    );
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -193,6 +197,7 @@ namespace Dental_Latina_MVC.Controllers
                 return RedirectToAction("Index");
             }
         }
+
         [HttpPost]
         [ActionName("CreateSubcategoria")]
         public IActionResult CreateSubcategoria(GeneralViewModel generalViewModel)
@@ -219,21 +224,67 @@ namespace Dental_Latina_MVC.Controllers
             }
         }
 
+
+       
+
+        [HttpPost]
+        [ActionName("RemoveCategoria")]
+        public IActionResult removeCategoria(GeneralViewModel generalViewModel)
+        {
+            VerificarSesion(); // Por seguridad
+
+            if (generalViewModel.categoria.id <= 0)
+            {
+                return BadRequest("Eliga una categoria valida.");
+            }
+
+            try
+            {
+                CUEliminarCategoriaSub.eliminarCategoria(generalViewModel.categoria.id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "Error al eliminar categoria: " + ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
+
+        [HttpPost]
+        [ActionName("RemoveSubcategoria")]
+        public IActionResult removeSubcategoria(GeneralViewModel generalViewModel)
+        {
+            VerificarSesion(); // Por seguridad
+
+            if (generalViewModel.subcategoria.id <= 0)
+            {
+                return BadRequest("Eliga una subcategoria valida.");
+            }
+
+            try
+            {
+                CUEliminarCategoriaSub.eliminarSubcategoria(generalViewModel.subcategoria.id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "Error al eliminar subcategoria: " + ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
+
         [HttpGet]
         public IActionResult GetSubcategoriasPorCategoria(int categoriaId)
         {
-            // Obtén todas las subcategorías
-            var todas = CUSubcategorias.GetSubcategoriaById(categoriaId);
 
-            // Filtra por la propiedad correcta (aquí asumo que la entidad tiene un campo CategoriaId)
+            var todas = CUSubcategorias.GetSubcategoriaById(categoriaId);
             var subcategorias = todas
                 .Select(s => new {
-                    id = s.id,      // propón nombres sencillos: id y nombre
+                    id = s.id,
                     nombre = s.nombre
                 })
                 .ToList();
 
-            // Siempre devuelve un JSON de lista, aunque esté vacío
             return Json(subcategorias);
         }
     }
@@ -260,12 +311,14 @@ namespace Dental_Latina_MVC.Controllers
     public class CategoriaViewModel
     {
         public string nombre { get; set; }
+        public int id { get; set; }
     }
 
     public class SubcategoriaViewModel
     {
         public string nombre { get; set; }
-        public int idcat {  get; set; }
+        public int idcat { get; set; }
+        public int id { get; set; }
     }
     public class ProductoViewModel
     {
