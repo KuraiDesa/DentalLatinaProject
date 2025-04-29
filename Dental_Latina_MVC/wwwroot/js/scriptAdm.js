@@ -203,36 +203,38 @@ function muestroAgregarC() {
     
 }
 
+
 function muestroAgregarSC() {
-    let boton = document.getElementById('agregarSCatBtnTxt');
+    let boton = document.getElementById('crearSCat');
     let menu = document.getElementById('agregarscategoria');
-    let c_btn = document.getElementById('sc_add_cat_btn');
-    let c_input = document.getElementById('nuevaSCategoriaInput');
+    let c_input = document.getElementById('sc_add_cat_btn');
+    let input = document.getElementById('nuevaSCategoriaInput');
     nuevaCategoriaInput
-    if (boton.innerHTML == '+') {
-        c_input.style.display = 'flex';
-        menu.style.width = '90%';
-        c_btn.style.opacity = '100';
-        boton.innerHTML = '-'
+    if (document.getElementById('categoriaCreateSub').value != "") {
+        input.style.display = 'flex';
+        menu.style.width = '95%';
+        c_input.style.opacity = '100%'
     } else {
-        c_input.style.display = 'none';
+        input.style.display = 'none';
         menu.style.width = '0%';
-        c_btn.style.opacity = '0';
-        boton.innerHTML = '+'
-        c_input.value = '';
+        c_input.style.opacity = '0%'
+
     }
 
 }
 
-document.getElementById('nuevaCategoriaInput').addEventListener('input', function () {
-    console.log("hola")
-    if (document.getElementById('nuevaCategoriaInput').value != '') {
-        document.getElementById('c_add_cat_btn').classList.add('c_add_cat_btn_active');
-        document.getElementById('c_add_cat_btn').classList.remove('c_add_cat_btn_inactive');
-        console.log("tarado sos")
-    } else if (document.getElementById('nuevaCategoriaInput').value == '') {
-        
-        document.getElementById('c_add_cat_btn').classList.add('c_add_cat_btn_inactive');
-        document.getElementById('c_add_cat_btn').classList.remove('c_add_cat_btn_active');
+
+function alternarActive(idtexto, idbotonCambiar, idcolorTxt) {
+    let texto = document.getElementById(idtexto);
+    let btn = document.getElementById(idbotonCambiar);
+    let colortxt = document.getElementById(idcolorTxt);
+    if (texto.value != "") {
+        btn.classList.add('c_add_cat_btn_active');
+        btn.classList.remove('c_add_cat_btn_inactive');
+        colortxt.style.color = 'white';
+    } else {
+        btn.classList.remove('c_add_cat_btn_active');
+        btn.classList.add('c_add_cat_btn_inactive');
+        colortxt.style.color = 'white';
     }
-});
+}
