@@ -52,7 +52,7 @@ namespace LogicaDatos.Repositorios
 
         public Producto FindById(int id)
         {
-            throw new NotImplementedException();
+            return Context.Productos.FirstOrDefault(p => p.Id == id);
         }
 
         public void Remove(int id)
