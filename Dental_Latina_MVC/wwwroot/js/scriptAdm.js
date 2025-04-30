@@ -243,6 +243,7 @@ function verificarCategoria(){
     let cat = document.getElementById('categoriaProducto');
     let label = document.getElementById('catEspLabel');
     let select = document.getElementById('categoriaEspecialProducto')
+
     let magic = document.getElementById('magia')
     if (cat.options[cat.selectedIndex].text == 'Implantologia') {
         magic.style.height = '70px'
@@ -266,6 +267,7 @@ function verificarCategoria(){
             label.style.display = 'none';  
             select.style.display = 'none';
         }, 200);
+
 
     }
 }
