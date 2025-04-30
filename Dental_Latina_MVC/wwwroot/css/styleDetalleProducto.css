@@ -1,0 +1,15 @@
+﻿.detalle-producto {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+    .detalle-producto h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+.object-fit-cover {
+    object-fit: cover;
+    height: 100%;
+}

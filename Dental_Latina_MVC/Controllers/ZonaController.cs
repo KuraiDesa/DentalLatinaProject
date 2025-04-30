@@ -26,7 +26,7 @@ namespace Dental_Latina_MVC.Controllers
                     return NotFound(new { error = "Zona no encontrada." });
                 }
 
-                return Ok(zona); // <-- Devuelve JSON automático
+                return Ok(zona); 
             }
             catch (Exception ex)
             {
