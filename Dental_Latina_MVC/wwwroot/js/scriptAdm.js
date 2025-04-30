@@ -243,26 +243,31 @@ function verificarCategoria(){
     let cat = document.getElementById('categoriaProducto');
     let label = document.getElementById('catEspLabel');
     let select = document.getElementById('categoriaEspecialProducto')
-    if (cat.options[cat.selectedIndex].text == 'Implantologia') {
-        document.getElementById('catEspecial').style.height = '100%';
-        document.getElementById('catEspecial').style.width = '100%';
-        label.style.display = 'flex';
-        select.style.display = 'flex';
-        setTimeout(() => {
-            label.style.opacity = '100%'
-            select.style.opacity = '100%'
-        }, 200);
 
+    let magic = document.getElementById('magia')
+    if (cat.options[cat.selectedIndex].text == 'Implantologia') {
+        magic.style.height = '70px'
+        setTimeout(() => {
+            document.getElementById('catEspecial').style.width = '100%';
+            label.style.display = 'flex';
+            select.style.display = 'flex';
+            setTimeout(() => {
+                label.style.display = 'flex';
+                label.style.opacity = '100%'
+
+            }, 210);
+        }, 200);
         
     } else {
-        document.getElementById('catEspecial').style.height = '0%';
+        magic.style.height = '0px'
         document.getElementById('catEspecial').style.width = '0%';
         label.style.opacity = '0%'
-        select.style.opacity = '0%'
+
         setTimeout(() => {
             label.style.display = 'none';  
             select.style.display = 'none';
-        }, 350);
+        }, 200);
+
 
     }
 }

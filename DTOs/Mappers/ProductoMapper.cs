@@ -15,10 +15,20 @@ namespace DTOs.Mappers
 
         public static ProductoDTO ToDTOProducto(Producto prod)
         {
-            ProductoDTO productoDTO = new ProductoDTO(prod.Id,prod.nombre, prod.photoUrl, prod.documentacion, prod.descripcion, prod.precio);
+            ProductoDTO productoDTO = crearDTO(prod.Id,prod.nombre, prod.photoUrl, prod.documentacion, prod.descripcion, prod.precio);
             return productoDTO;
         }
 
+        public static ProductoDTO crearDTO(int id, string nombre, string photoUrl, string documentacion, string descripcion, int precio)
+        {
+            ProductoDTO productoDTO = new ProductoDTO();
+            productoDTO.nombre = nombre;
+            productoDTO.photoUrl = photoUrl;
+            productoDTO.descripcion = descripcion;
+            productoDTO.documentacion = documentacion;
+            productoDTO.precio = precio;
+            return productoDTO;
+        }
         public static IEnumerable<ProductoDTO> ToListaProductoDTO(IEnumerable<Producto> prod)
         {
             List<ProductoDTO> prodDL = new List<ProductoDTO>();
