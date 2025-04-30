@@ -19,6 +19,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ILoginUser, LoginUser>();
 builder.Services.AddScoped<IRegistroCliente, RegistroCliente>();
 builder.Services.AddScoped<IListarProductos, ListarProductos>();
+builder.Services.AddScoped<IDetalleProducto, DetalleProducto>();
 builder.Services.AddScoped<IListarCategorias, ListarCategorias>();
 builder.Services.AddScoped<IlistarSubcategorias, ListarSubcategorias>();
 builder.Services.AddScoped<IListarClientes, ListarClientes>();
