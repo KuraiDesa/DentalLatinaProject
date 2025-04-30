@@ -16,14 +16,6 @@ namespace DTOs.DTOs
         public string documentacion { get; set; }
         public int precio { get; set; }
 
-        public ProductoDTO(int id,string nombre, string photoUrl, string documentacion, string descripcion, int precio)
-        {
-            this.id = id;
-            this.nombre = nombre;
-            this.photoUrl = photoUrl;
-            this.descripcion = descripcion;
-            this.documentacion = documentacion;
-            this.precio = precio;
-        }
+
     }
 }

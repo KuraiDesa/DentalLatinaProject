@@ -234,3 +234,7 @@ header {
 .transition {
     transition-duration: 700ms;
 }
+
+.transitionLarga {
+    transition-duration: 1000ms;
+}
