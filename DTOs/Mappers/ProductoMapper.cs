@@ -22,6 +22,7 @@ namespace DTOs.Mappers
         public static ProductoDTO crearDTO(int id, string nombre, string photoUrl, string documentacion, string descripcion, int precio)
         {
             ProductoDTO productoDTO = new ProductoDTO();
+            productoDTO.id = id;
             productoDTO.nombre = nombre;
             productoDTO.photoUrl = photoUrl;
             productoDTO.descripcion = descripcion;

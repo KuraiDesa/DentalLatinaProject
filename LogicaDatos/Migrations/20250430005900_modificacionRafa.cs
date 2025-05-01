@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace LogicaDatos.Migrations
 {
     /// <inheritdoc />
-    public partial class CategoriaEspecial : Migration
+    public partial class modificacionRafa : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -157,7 +157,7 @@ namespace LogicaDatos.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     categoriaId = table.Column<int>(type: "int", nullable: false),
                     subcategoriaId = table.Column<int>(type: "int", nullable: false),
-                    categoriaEspecialid = table.Column<int>(type: "int", nullable: false),
+                    categoriaEspecialid = table.Column<int>(type: "int", nullable: true),
                     documentacion = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     precio = table.Column<int>(type: "int", nullable: false)
@@ -169,8 +169,7 @@ namespace LogicaDatos.Migrations
                         name: "FK_Productos_CEspecial_categoriaEspecialid",
                         column: x => x.categoriaEspecialid,
                         principalTable: "CEspecial",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "id");
                     table.ForeignKey(
                         name: "FK_Productos_Categorias_categoriaId",
                         column: x => x.categoriaId,

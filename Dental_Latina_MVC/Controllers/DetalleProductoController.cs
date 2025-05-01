@@ -1,8 +1,10 @@
-﻿using DTOs.DTOs;
+﻿using DentalLatina;
+using DTOs.DTOs;
 using Humanizer;
 using LogicaAplicacion.InterfacesCasosUso;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using static Dental_Latina_MVC.Controllers.DetalleProductoController;
 
 namespace Dental_Latina_MVC.Controllers
 {
@@ -19,7 +21,11 @@ namespace Dental_Latina_MVC.Controllers
             try
             {
                 ProductoDTO dto = CUDetalleProducto.detalleProducto(id);
-                return View(dto);
+                IEnumerable<ProductoDTO> productoParecidos = CUDetalleProducto.traerHasta4ProductoParecidos(id);
+                ProductossViewModel newViewModel = new ProductossViewModel();
+                newViewModel.Producto = dto;
+                newViewModel.ProductosRelacionados = productoParecidos;
+                return View(newViewModel);
             }
             catch (Exception ex)
             {
@@ -96,6 +102,12 @@ namespace Dental_Latina_MVC.Controllers
             {
                 return View();
             }
+        }
+
+        public class ProductossViewModel
+        {
+            public ProductoDTO Producto { get; set; }
+            public IEnumerable<ProductoDTO> ProductosRelacionados { get; set; }
         }
     }
 }

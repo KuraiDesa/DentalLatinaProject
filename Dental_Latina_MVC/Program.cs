@@ -61,7 +61,7 @@ app.UseSession();
 // Configuración de las rutas
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Producto}/{action=Index}/{id?}");
 
 if (app.Environment.IsDevelopment())
 {
