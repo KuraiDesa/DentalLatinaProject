@@ -10,5 +10,6 @@ namespace LogicaAplicacion.InterfacesCasosUso
     public interface IDetalleProducto
     {
         ProductoDTO detalleProducto(int id);
+        IEnumerable<ProductoDTO> traerHasta4ProductoParecidos(int id);
     }
 }

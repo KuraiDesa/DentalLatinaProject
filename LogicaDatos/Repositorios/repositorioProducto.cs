@@ -57,6 +57,25 @@ namespace LogicaDatos.Repositorios
               .ToList();
         }
 
+
+        public IEnumerable<Producto> GetProductosRelacionados(int productoId)
+        {
+            // Buscar el producto original
+            var producto = Context.Productos
+                .Include(p => p.categoria) // Incluimos la categoría para acceder a su ID
+                .FirstOrDefault(p => p.Id == productoId);
+
+            if (producto == null || producto.categoria == null)
+            {
+                return new List<Producto>(); // Devuelve lista vacía si no se encuentra
+            }
+
+            // Buscar hasta 4 productos de la misma categoría, excluyendo el original
+            return Context.Productos
+                .Where(p => p.categoria.Id == producto.categoria.Id && p.Id != productoId)
+                .Take(4)
+                .ToList();
+        }
         public Producto FindById(int id)
         {
             return Context.Productos.FirstOrDefault(p => p.Id == id);

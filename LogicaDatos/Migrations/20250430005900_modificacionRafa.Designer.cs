@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LogicaDatos.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250429211851_CategoriaEspecial")]
-    partial class CategoriaEspecial
+    [Migration("20250430005900_modificacionRafa")]
+    partial class modificacionRafa
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,7 +57,7 @@ namespace LogicaDatos.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("categoriaEspecialid")
+                    b.Property<int?>("categoriaEspecialid")
                         .HasColumnType("int");
 
                     b.Property<int>("categoriaId")
@@ -233,9 +233,7 @@ namespace LogicaDatos.Migrations
                 {
                     b.HasOne("LogicaNegocio.Entidades.CEspecial", "categoriaEspecial")
                         .WithMany()
-                        .HasForeignKey("categoriaEspecialid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("categoriaEspecialid");
 
                     b.HasOne("LogicaNegocio.Entidades.Categoria", "categoria")
                         .WithMany()

@@ -1,0 +1,119 @@
+﻿
+.product-section {
+    padding: 50px 0;
+    background-color: #fefefe;
+}
+
+.product-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    height: 100%;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+    .product-card:hover {
+        box-shadow: 0 8px 20px rgba(0,131,176,0.12);
+        transform: translateY(-5px);
+    }
+
+.product-img-container {
+    background-color: #f8fafc;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f0f4f8;
+}
+
+.product-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.product-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #2d3748;
+    margin-bottom: 12px;
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+}
+
+.btn-details {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #4a5568;
+    padding: 6px 18px;
+    font-size: 0.85rem;
+    border-radius: 18px;
+    transition: all 0.3s;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+    .btn-details:hover {
+        background-color: #00acc1;
+        border-color: #00acc1;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0,172,193,0.2);
+    }
+
+.section-title {
+    color: #2d3748;
+    margin-bottom: 30px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+    .section-title:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #00acc1, #a0f0ff);
+        margin: 15px auto 0;
+        border-radius: 3px;
+    }
+
+@media (max-width: 992px) {
+    .product-img-container {
+        height: 180px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-img-container {
+        height: 160px;
+    }
+
+    .product-title {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+

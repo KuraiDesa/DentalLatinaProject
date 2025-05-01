@@ -163,9 +163,7 @@ header.prods {
     justify-content: space-between;
 }
 @media (max-width: 1150px) { /* Ajusta el valor según tus necesidades */
-  #menu {
-      justify-content: center;
-  }
+
   #menu div {
     margin-bottom: 10px;
   }
@@ -251,27 +249,27 @@ nav ul li:hover {
         font-size: clamp(14px, 1vw + 0.5rem, 18px);
     }
 
-
+    
 @media screen and (max-width: 768px) {
   
   #navbar{
     display: flex;
-
     z-index: 10;
-    background-color: rgb(230, 239, 248);
     position: fixed;
     width: 100%;
     margin: 0 auto;
     justify-content: space-between;
   }
-
-  #menu {
-    flex-wrap: nowrap;
-    padding: 0;
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-  }
+    .hometext{
+        display:none;
+    }
+    #menu {
+        flex-wrap: nowrap;
+        padding: 0;
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+    }
   #menu div:nth-child(3) {
     display: none;
 }

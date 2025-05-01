@@ -28,10 +28,21 @@ namespace LogicaAplicacion.CasosUso
                 }
                 ProductoDTO prDto = ProductoMapper.ToDTOProducto(pr);
                 return prDto;
-            
-            
-           
-
         }
+        public IEnumerable<ProductoDTO> traerHasta4ProductoParecidos(int idProd) 
+        { 
+            IEnumerable<Producto> prodParecidos = rep.GetProductosRelacionados(idProd);
+            if (prodParecidos.Count() == 0) {
+                return null;
+            }
+            else
+            {
+                IEnumerable<ProductoDTO> prodParecidosDto = ProductoMapper.ToListaProductoDTO(prodParecidos);
+                return prodParecidosDto;
+            }
+            
+            
+        }
+
     }
 }
