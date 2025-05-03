@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DTOs\DTOs.csproj" />
     <ProjectReference Include="..\LogicaDatos\LogicaDatos.csproj" />
     <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj" />

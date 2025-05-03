@@ -3,6 +3,7 @@ using DTOs.DTOs;
 using DTOs.DTOs.UsuarioDTOs;
 using LogicaAplicacion.InterfacesCasosUso;
 using LogicaAplicacion.InterfacesCasoUso;
+using LogicaAplicacion.ServicioCorreo;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
@@ -68,6 +69,7 @@ namespace Dental_Latina_MVC.Controllers
         [HttpPost]
         public JsonResult ingresoCliente([FromBody] ingresoClienteRequest request)
         {
+            //ME FALTA TERMINAR LA LOGICA Y AGREGAR UNA VALIDACION BUSCANDO SI YA NO ESTA REGISTRADO ESE MAIL DIRECTAMENTE
             if(request == null)
             {
                 return Json(new { success = false, error = "Respuesta invalida." });
@@ -77,24 +79,31 @@ namespace Dental_Latina_MVC.Controllers
             {
                 return Json(new { success = false, error = "Ingrese todos los datos." });
             }
-            RegistroUsuarioDTO usDTO = new RegistroUsuarioDTO();
-            usDTO.nombre = request.nombre;
-            usDTO.email = request.email;
-            usDTO.esEstudiante = request.esEstudiante;
-            usDTO.apellido = request.apellido;
-            try
-            {
-                if(CURegistroCliente.RegistroClientes(usDTO) == null)
-                {
-                    return Json(new { success = false, error = "Ya existe un cliente con ese mail registrado." });
-                }
-                return Json(new { success = true, pass = "Registrado exitosamente!" });
-            }
-            catch (Exception ex)
-            {
-                return Json(new { success = false, error = "Algo ocurrio mal." });
-            }
+            //RegistroUsuarioDTO usDTO = new RegistroUsuarioDTO();
+            //usDTO.nombre = request.nombre;
+            //usDTO.email = request.email;
+            //usDTO.esEstudiante = request.esEstudiante;
+            //usDTO.apellido = request.apellido;
+            //try
+            //{
+            //    if(CURegistroCliente.RegistroClientes(usDTO) == null)
+            //    {
+            var servicioCorreo = new ServicioCorreo();
+            string codigo = servicioCorreo.GenerarCodigo();
+            string emailDestino = request.email;
+            servicioCorreo.EnviarCodigoPorCorreo(emailDestino, codigo);
+            return Json(new { success = false, error = "Ya existe un cliente con ese mail registrado." });
+            //    }
+            //    return Json(new { success = true, pass = "Registrado exitosamente!" });
+            //}
+            //catch (Exception ex)
+            //{
+            //    return Json(new { success = false, error = "Algo ocurrio mal." });
+            //}
             
         }
+
+
+        
     }
 }

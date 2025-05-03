@@ -41,9 +41,9 @@
         }
 
         .product-card-img {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
+            height: 200px; /* o el alto que quieras */
+            object-fit: contain; /* o "cover" si querés recorte centrado */
+            object-position: center;
         }
     </style>
 </head>
@@ -103,17 +103,19 @@
                             <div class="col-md-4 mb-4 d-flex">
                                 <div class="card product-card flex-fill">
                                     <img src="@producto.photoUrl" class="card-img-top product-card-img" alt="@producto.nombre">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">@producto.nombre</h5>
-                                        @if (producto.precio != 0)
-                                        {
-                                            <p class="card-text">$@producto.precio</p>
-                                        }
-                                        else
-                                        {
-                                            <p class="card-text"> </p>
-                                        }
-                                        <div class="text-center">
+                                    <div class="card-body d-flex flex-column justify-content-between">
+                                        <div>
+                                            <h5 class="card-title text-center">@producto.nombre</h5>
+                                            @if (producto.precio != 0)
+                                            {
+                                                <p class="card-text text-center">$@producto.precio</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="card-text text-center invisible">$0</p> <!-- Invisible mantiene espacio sin mostrar -->
+                                            }
+                                        </div>
+                                        <div class="text-center mt-3">
                                             <a href="@Url.Action("Index", "DetalleProducto", new { id = producto.id })" class="btn btn-primary col-10">Ver detalles</a>
                                         </div>
                                     </div>
@@ -163,14 +165,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 <style>
-    footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        position:absolute !important;
-        bottom:0px;
-        width:100%;
+    html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        flex: 1; /* Esto empuja el footer al fondo */
     }
 </style>
 <footer class="container-fluid text-light py-5" style="background-color: rgb(8, 57, 129);">
