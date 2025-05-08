@@ -1,4 +1,4 @@
-using Dental_Latina_MVC.Models;
+﻿using Dental_Latina_MVC.Models;
 using DTOs.DTOs;
 using DTOs.DTOs.UsuarioDTOs;
 using LogicaAplicacion.InterfacesCasosUso;
@@ -48,7 +48,7 @@ namespace Dental_Latina_MVC.Controllers
 
             LoguinUsuarioDTO loguinUsuarioDTO = new LoguinUsuarioDTO();
             loguinUsuarioDTO.mail = request.Email;
-            loguinUsuarioDTO.contrase�a = request.Password;
+            loguinUsuarioDTO.contraseña = request.Password;
 
             if (CULoginUser.Login(loguinUsuarioDTO) != null)
             {
@@ -67,43 +67,32 @@ namespace Dental_Latina_MVC.Controllers
             public bool esEstudiante { get; set; }
         }
         [HttpPost]
+        public JsonResult registroCliente([FromBody] ingresoClienteRequest request)
+        {
+            // Aquí hacés el registro en la base de datos
+            return Json(new { success = true });
+        }
+
+        [HttpPost]
         public JsonResult ingresoCliente([FromBody] ingresoClienteRequest request)
         {
-            //ME FALTA TERMINAR LA LOGICA Y AGREGAR UNA VALIDACION BUSCANDO SI YA NO ESTA REGISTRADO ESE MAIL DIRECTAMENTE
-            if(request == null)
-            {
-                return Json(new { success = false, error = "Respuesta invalida." });
-            }
-            if (string.IsNullOrWhiteSpace(request.apellido) || string.IsNullOrWhiteSpace(request.nombre) 
-                || string.IsNullOrWhiteSpace(request.email) || request.esEstudiante == null)
-            {
-                return Json(new { success = false, error = "Ingrese todos los datos." });
-            }
-            //RegistroUsuarioDTO usDTO = new RegistroUsuarioDTO();
-            //usDTO.nombre = request.nombre;
-            //usDTO.email = request.email;
-            //usDTO.esEstudiante = request.esEstudiante;
-            //usDTO.apellido = request.apellido;
-            //try
-            //{
-            //    if(CURegistroCliente.RegistroClientes(usDTO) == null)
-            //    {
             var servicioCorreo = new ServicioCorreo();
             string codigo = servicioCorreo.GenerarCodigo();
             string emailDestino = request.email;
-            servicioCorreo.EnviarCodigoPorCorreo(emailDestino, codigo);
-            return Json(new { success = false, error = "Ya existe un cliente con ese mail registrado." });
-            //    }
-            //    return Json(new { success = true, pass = "Registrado exitosamente!" });
-            //}
-            //catch (Exception ex)
-            //{
-            //    return Json(new { success = false, error = "Algo ocurrio mal." });
-            //}
-            
+
+            try
+            {
+                // Enviar correo
+                //servicioCorreo.EnviarCodigoPorCorreo(emailDestino, codigo).Wait(); // Forzamos sincrónicamente para no hacer async todo
+                return Json(new { success = true, codigo = codigo }); // 👈 ¡Devuelve el código!
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, error = "Error al enviar el correo: " + ex.Message });
+            }
         }
 
 
-        
+
     }
 }
