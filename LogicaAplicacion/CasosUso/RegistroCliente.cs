@@ -18,6 +18,18 @@ namespace LogicaAplicacion.CasosUso
         {
             this.Repo = repo;
         }
+
+        public Boolean buscoMail(string mail)
+        {
+            Usuario usu = Repo.BuscarSoloEmail(mail);
+            if (usu == null) {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         public Usuario RegistroClientes(RegistroUsuarioDTO registroUsuario)
         {
             Usuario usEncontrado = Repo.BuscarPorEmail(registroUsuario.email,null);

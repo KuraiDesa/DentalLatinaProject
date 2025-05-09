@@ -16,8 +16,8 @@
     const codeInputs = document.querySelectorAll('.code-input');
     const verificarBtn = document.getElementById('verificarBtn');
     const reenviarBtn = document.getElementById('reenviarBtn');
-    const modalErrorMessage = document.querySelector('.status-message.error');
-    console.log(modalErrorMessage)
+    //const modalErrorMessage = document.querySelector('.status-message.error');
+    const modalErrorMessage = document.getElementById('DALEDELFI');
     const modalSuccessMessage = document.querySelector('.status-message.success');
     const resendSuccess = document.querySelector('.status-message.resend-success');
     const modal = document.getElementById('codigoModal');
@@ -25,7 +25,7 @@
     const originalBtnText = submitBtn.innerHTML;
     // Funciones auxiliares
     const hideAllMessages = () => {
-        modalErrorMessage.classList.remove('visible');
+       // modalErrorMessage.classList.remove('visible');
         modalSuccessMessage.classList.remove('visible');
         resendSuccess.classList.remove('visible');
         errorMessage.style.display = "none";
@@ -114,7 +114,6 @@
         } finally {
             // Restaurar botón
             const submitBtn = event.target.querySelector('button[type="submit"]');
-            console.log(submitBtn);
             submitBtn.innerHTML = originalBtnText;
             submitBtn.disabled = false;
         }
@@ -174,7 +173,6 @@
         verificarBtn.disabled = true;
 
         try {
-            console.log(codigoGenerado)
             if (codigoIngresado === codigoGenerado) {
                 const registroResponse = await fetch('/Home/registroCliente', {
                     method: 'POST',
@@ -203,10 +201,13 @@
                         passMessage.textContent = "Registrado correctamente y código verificado.";
                         passMessage.style.display = "block";
                         passMessage.classList.add('animate__animated', 'animate__fadeIn');
+                        nombre = document.getElementById("nombre").value = '';
+                        apellido = document.getElementById("apellido").value = '';
+                        email = document.getElementById("email2").value = '';
                         setTimeout(() => {
                             passMessage.classList.remove('animate__animated', 'animate__fadeIn');
-                        }, 1000);
-                    }, 2000);
+                        }, 3000);
+                    }, 1000);
                 } else {
                     modalErrorMessage.textContent = registroResult.error || "Error al registrar el cliente.";
                     modalErrorMessage.classList.add('visible', 'animate__animated', 'animate__headShake');
@@ -215,18 +216,19 @@
                     }, 1000);
                 }
             } else {
+               
                 modalErrorMessage.textContent = 'Código incorrecto. Intente nuevamente.';
                 modalErrorMessage.classList.add('visible', 'animate__animated', 'animate__headShake');
-                console.log("se supone" + modalErrorMessage)
+
                 setTimeout(() => {
-                    modalErrorMessage.classList.remove('animate__animated', 'animate__headShake');
-                }, 1000);   
+                    modalErrorMessage.classList.remove('visible','animate__animated', 'animate__headShake');
+                }, 5000);   
 
                 shakeInputs();
                 setTimeout(() => {
                     clearInputs();
                     codeInputs[0].focus();
-                }, 1000);
+                }, 3000);
             }
         } catch (error) {
             modalErrorMessage.textContent = "Error de conexión. Intente nuevamente.";
