@@ -11,6 +11,7 @@ namespace LogicaNegocio.InterfacesRepositorios
     {
         Usuario BuscarPorEmail(string emailm,string contraseña);
         Usuario RegistrarCliente(string nombre, string apellido, string mail, bool esEstudiante);
-           
+
+        Usuario BuscarSoloEmail(string email);
     }
 }
