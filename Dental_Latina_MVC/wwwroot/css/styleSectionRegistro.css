@@ -84,6 +84,7 @@
     border-bottom: 1px solid #e2e8f0;
     background: transparent;
     transition: all 0.3s ease;
+    border-radius: 6px;
 }
 
 .form-input:focus, .form-select:focus {

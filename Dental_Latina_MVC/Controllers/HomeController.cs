@@ -69,22 +69,43 @@ namespace Dental_Latina_MVC.Controllers
         [HttpPost]
         public JsonResult registroCliente([FromBody] ingresoClienteRequest request)
         {
-            // Aquí hacés el registro en la base de datos
-            return Json(new { success = true });
+            try
+            {
+                RegistroUsuarioDTO newUser = new RegistroUsuarioDTO();
+                newUser.nombre = request.nombre;
+                newUser.apellido = request.apellido;
+                newUser.email = request.email;
+                newUser.esEstudiante = request.esEstudiante;
+                CURegistroCliente.RegistroClientes(newUser);
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = "Algo salio mal"});
+            }
+           
+           
         }
 
         [HttpPost]
         public JsonResult ingresoCliente([FromBody] ingresoClienteRequest request)
         {
-            var servicioCorreo = new ServicioCorreo();
-            string codigo = servicioCorreo.GenerarCodigo();
-            string emailDestino = request.email;
-
             try
             {
+                string emailDestino = request.email;
+                if (CURegistroCliente.buscoMail(emailDestino)){
+                    return Json(new { success = false, error = "Ya estas registrado!"});
+                }
+                
+
+            var servicioCorreo = new ServicioCorreo();
+            string codigo = servicioCorreo.GenerarCodigo();
+           
+
+            
                 // Enviar correo
-                //servicioCorreo.EnviarCodigoPorCorreo(emailDestino, codigo).Wait(); // Forzamos sincrónicamente para no hacer async todo
-                return Json(new { success = true, codigo = codigo }); // 👈 ¡Devuelve el código!
+                servicioCorreo.EnviarCodigoPorCorreo(emailDestino, codigo).Wait(); 
+                return Json(new { success = true, codigo = codigo });
             }
             catch (Exception ex)
             {

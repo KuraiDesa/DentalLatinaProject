@@ -12,5 +12,6 @@ namespace LogicaAplicacion.InterfacesCasosUso
     public interface IRegistroCliente
     {
         public Usuario RegistroClientes(RegistroUsuarioDTO registroUsuario);
+        public Boolean buscoMail(string mail);
     }
 }
