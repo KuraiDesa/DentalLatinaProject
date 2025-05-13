@@ -17,6 +17,7 @@
     const verificarBtn = document.getElementById('verificarBtn');
     const reenviarBtn = document.getElementById('reenviarBtn');
     const modalErrorMessage = document.querySelector('.status-message.error');
+    const modalErrorMessage2 = document.getElementById('sotito')
     console.log(modalErrorMessage)
     const modalSuccessMessage = document.querySelector('.status-message.success');
     const resendSuccess = document.querySelector('.status-message.resend-success');
@@ -145,7 +146,7 @@
             } else {
                 e.target.classList.remove('filled');
             }
-            hideAllMessages();
+            //hideAllMessages();
         });
 
         input.addEventListener('keydown', (e) => {
@@ -231,6 +232,7 @@
         } catch (error) {
             modalErrorMessage.textContent = "Error de conexión. Intente nuevamente.";
             modalErrorMessage.classList.add('visible', 'animate__animated', 'animate__headShake');
+            modalErrorMessage2.style.opacity('1');
             setTimeout(() => {
                 modalErrorMessage.classList.remove('animate__animated', 'animate__headShake');
             }, 1000);
@@ -245,7 +247,7 @@
 
     // Reenvío de código
     reenviarBtn.addEventListener('click', async () => {
-        hideAllMessages();
+        //hideAllMessages();
         resendAttempts++;
 
         if (resendAttempts >= MAX_RESEND_ATTEMPTS) {
@@ -316,7 +318,7 @@
     // Reset al abrir modal
     modal.addEventListener('shown.bs.modal', () => {
         clearInputs();
-        hideAllMessages();
+        //hideAllMessages();
         resendAttempts = 0;
         clearInterval(cooldownInterval);
         resendCooldown = false;
