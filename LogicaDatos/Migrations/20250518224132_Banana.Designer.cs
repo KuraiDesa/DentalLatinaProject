@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LogicaDatos.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250430005900_modificacionRafa")]
-    partial class modificacionRafa
+    [Migration("20250518224132_Banana")]
+    partial class Banana
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -185,7 +185,12 @@ namespace LogicaDatos.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("subcategoriaId")
+                        .HasColumnType("int");
+
                     b.HasKey("id");
+
+                    b.HasIndex("subcategoriaId");
 
                     b.ToTable("CEspecial");
                 });
@@ -250,6 +255,17 @@ namespace LogicaDatos.Migrations
                     b.Navigation("categoria");
 
                     b.Navigation("categoriaEspecial");
+
+                    b.Navigation("subcategoria");
+                });
+
+            modelBuilder.Entity("LogicaNegocio.Entidades.CEspecial", b =>
+                {
+                    b.HasOne("LogicaNegocio.Entidades.Subcategoria", "subcategoria")
+                        .WithMany()
+                        .HasForeignKey("subcategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("subcategoria");
                 });

@@ -12,6 +12,7 @@ namespace LogicaNegocio.Entidades
         [Key]
         public int id {  get; set; }
         public string nombre { get; set; }
+        public Subcategoria subcategoria { get; set; }
 
         public CEspecial(string nombre)
         {

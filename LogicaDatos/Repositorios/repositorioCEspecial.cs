@@ -19,6 +19,10 @@ namespace LogicaDatos.Repositorios
         }
         public void Add(CEspecial obj)
         {
+            if (Context.Entry(obj.subcategoria).State == EntityState.Detached)
+            {
+                Context.Attach(obj.subcategoria);
+            }
             Context.Set<CEspecial>().Add(obj);
             Context.SaveChanges();
         }

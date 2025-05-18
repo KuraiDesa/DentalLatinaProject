@@ -45,7 +45,7 @@ namespace LogicaDatos.EntityFramework
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Evento>()
-                .HasKey(e => e.id); 
+                .HasKey(e => e.id);
 
             base.OnModelCreating(modelBuilder);
         }
