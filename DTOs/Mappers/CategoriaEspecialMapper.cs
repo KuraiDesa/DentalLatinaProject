@@ -15,6 +15,7 @@ namespace DTOs.Mappers
             CategoriaEspecialDTO dto = new CategoriaEspecialDTO();
             dto.nombre = categoria.nombre;
             dto.id = categoria.id;
+            
             return dto;
         }
 
