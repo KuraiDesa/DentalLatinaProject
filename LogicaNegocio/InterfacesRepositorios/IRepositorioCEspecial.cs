@@ -9,5 +9,6 @@ namespace LogicaNegocio.InterfacesRepositorios
 {
     public interface IRepositorioCEspecial : IRepositorio<CEspecial>
     {
+        public IEnumerable<CEspecial> FindAllById(int? id);
     }
 }

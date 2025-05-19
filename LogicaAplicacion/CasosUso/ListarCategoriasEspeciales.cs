@@ -34,5 +34,21 @@ namespace LogicaAplicacion.CasosUso
                 throw new Exception("Error al traer categoria");
             }
         }
+
+        public IEnumerable<CategoriaEspecialDTO> GetCategoriaEspecialById(int id)
+        {
+            try
+            {
+                IEnumerable<CEspecial> ListaCategoriaEspecial = repositorioCespecial.FindAllById(id);
+
+                IEnumerable<CategoriaEspecialDTO> listaCategoriaEspecialDTO = CategoriaEspecialMapper.ToListaCategoriaEspecialDTO(ListaCategoriaEspecial);
+
+                return listaCategoriaEspecialDTO;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al traer categoria");
+            }
+        }
     }
 }

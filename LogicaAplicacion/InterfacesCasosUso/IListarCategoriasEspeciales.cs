@@ -10,6 +10,7 @@ namespace LogicaAplicacion.InterfacesCasosUso
     public interface IListarCategoriasEspeciales
     {
         public IEnumerable<CategoriaEspecialDTO> GetCategoriaespecial();
+        public IEnumerable<CategoriaEspecialDTO> GetCategoriaEspecialById(int id);
 
     }
 }

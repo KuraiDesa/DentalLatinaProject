@@ -18,5 +18,10 @@ namespace LogicaNegocio.Entidades
         {
             this.nombre = nombre;
         }
+
+        public void agregarSub(Subcategoria subcategoria)
+        {
+            this.subcategoria = subcategoria;
+        }
     }
 }

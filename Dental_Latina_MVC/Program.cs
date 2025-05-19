@@ -36,6 +36,7 @@ builder.Services.AddScoped<IAltaCategoria, AltaCategoria>();
 builder.Services.AddScoped<IEliminarCategoriaSub, EliminarCategoriaSub>();
 builder.Services.AddScoped<IListarCategoriasEspeciales, ListarCategoriasEspeciales>();
 builder.Services.AddScoped<IRepositorioCEspecial, repositorioCEspecial>();
+builder.Services.AddScoped<IAltaCategoriaEspecial, AltaCategoriaEspecial>();
 builder.Services.AddDbContext<LibreriaContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 25))));

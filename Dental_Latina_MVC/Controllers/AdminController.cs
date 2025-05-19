@@ -20,11 +20,13 @@ namespace Dental_Latina_MVC.Controllers
         public IListarClientes CUListarClientes { get; set; }
         public IAltaCategoria CUAltaCategoria { get; set; }
         public IAltaSubcategoria CUAltaSubcategoria { get; set; }
+        public IAltaCategoriaEspecial CUAltaCategoriaEspecial { get; set; }
         public IEliminarCategoriaSub CUEliminarCategoriaSub { get; set; }
         public IListarCategoriasEspeciales CUListarCategoriaEspecial {  get; set; }
         public AdminController(IListarCategorias CUC, IlistarSubcategorias CUS, IAltaProducto altaProd, IListarClientes CUListarClientes,
                                 IListarProductos CUListarProductos, IEliminarProducto CUEliminarProductro, IAltaCategoria AltaCategoria,
-                                IAltaSubcategoria AltaSubcategoria, IEliminarCategoriaSub eliminarCategoriaSub, IListarCategoriasEspeciales CUCS)
+                                IAltaSubcategoria AltaSubcategoria, IEliminarCategoriaSub eliminarCategoriaSub, IListarCategoriasEspeciales CUCS,
+                                IAltaCategoriaEspecial AltaCategoriaEspecial)
         {
             this.CUListarCategorias = CUC;
             this.CUSubcategorias = CUS;
@@ -36,6 +38,7 @@ namespace Dental_Latina_MVC.Controllers
             this.CUAltaCategoria = AltaCategoria;
             this.CUAltaSubcategoria = AltaSubcategoria;
             this.CUEliminarCategoriaSub = eliminarCategoriaSub;
+            this.CUAltaCategoriaEspecial = AltaCategoriaEspecial;
         }
         
         public IActionResult VerificarSesion()
@@ -243,7 +246,32 @@ namespace Dental_Latina_MVC.Controllers
             }
         }
 
+        [HttpPost]
+        [ActionName("CreateCateEspecial")]
+        public IActionResult CreateCateEspecial(GeneralViewModel generalViewModel)
+        {
+            VerificarSesion();
 
+
+            if (string.IsNullOrWhiteSpace(generalViewModel.categoriaEspecial.nombre))
+            {
+                return BadRequest("El nombre de la categoría especial es obligatorio.");
+            }
+
+            try
+            {
+                CUAltaCategoriaEspecial.Alta(
+                    generalViewModel.categoriaEspecial.nombre,
+                    generalViewModel.categoriaEspecial.idscat
+                    );
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "Error al crear categoría: " + ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
        
 
         [HttpPost]
@@ -306,6 +334,21 @@ namespace Dental_Latina_MVC.Controllers
 
             return Json(subcategorias);
         }
+
+        [HttpGet]
+        public IActionResult GetCategoriaEspecialPorSubcategoria(int subcategoriaId)
+        {
+
+            var todas = CUListarCategoriaEspecial.GetCategoriaEspecialById(subcategoriaId);
+            var categoriaespecial = todas
+                .Select(s => new {
+                    id = s.id,
+                    nombre = s.nombre
+                })
+                .ToList();
+
+            return Json(categoriaespecial);
+        }
     }
 
     
@@ -317,6 +360,7 @@ namespace Dental_Latina_MVC.Controllers
         public ProductoViewModel productoview { get; set; }
         public CategoriaViewModel categoria { get; set; }
         public SubcategoriaViewModel subcategoria { get; set; }
+        public CategoriaEspecialViewModel categoriaEspecial { get; set; }
         public IEnumerable<ClienteDTO> clientes { get; set; }
         
         public IEnumerable<ProductoDTO> productos { get; set; }
@@ -339,6 +383,12 @@ namespace Dental_Latina_MVC.Controllers
         public string nombre { get; set; }
         public int idcat { get; set; }
         public int id { get; set; }
+    }
+    public class CategoriaEspecialViewModel
+    {
+        public string nombre { get; set; }
+        public int id { get; set; }
+        public int idscat { get; set; }
     }
     public class ProductoViewModel
     {
