@@ -45,6 +45,18 @@ namespace LogicaDatos.Repositorios
             return entity;
         }
 
+        public IEnumerable<CEspecial> FindAllById(int? id)
+        {
+            var query = Context.Set<CEspecial>().AsQueryable();
+
+            if (id.HasValue && id.Value != -1)
+            {
+                query = query.Where(p => p.subcategoria.Id == id.Value);
+            }
+
+            return query.Include(p => p.subcategoria).ToList();
+        }
+
         public void Remove(int id)
         {
             CEspecial cat = Context.Set<CEspecial>().Find(id);
