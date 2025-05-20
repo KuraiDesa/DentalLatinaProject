@@ -254,24 +254,24 @@
             <div id="modificarProducto" class="container"style="display: none;">
                 <div id="BusquedaDeProductosModificar">
                     <div class="mb-3">
-                        <label for="barraBusqueda" class="form-label">Buscar Producto</label>
-                        <input type="text" id="barraBusqueda" class="form-control" placeholder="Ingresa el nombre o código del producto...">
-                    </div>
-                    
-                    <div class="mb-3">
+                        <form>
+                        <label for="barraBusquedaModificar" class="form-label">Buscar Producto</label>
+                        <input type="text" id="barraBusquedaModificar" class="form-control" placeholder="Ingresa el nombre o código del producto...">
                         <label asp-for="productoview.CategoriaId" class="form-label">Categoría del Producto</label>
-                        <select asp-for="productoview.CategoriaId" id="categoriaProducto" class="form-select" required onclick="verificarCategoria()">
-                            <option value="">Selecciona una categoría</option>
+                        <select asp-for="productoview.CategoriaId" id="categoriaProductoModificar" class="form-select" required onclick="verificarCategoria()">
+                            <option value="-1">Selecciona una categoría</option>
                             @foreach (var categoria in Model.productocategoriaview.Categorias)
                             {
                                 <option value=@categoria.id>@categoria.nombre</option>
                             }
-
+                            
                         </select>
+                        <button type="button" class="btn btn-primary col-12" onclick="filtrar('resultadosBusquedaModificar','categoriaProductoModificar','barraBusquedaModificar')">Filtrar</button>
+                        </form>
                     </div>
                     
                     <!-- Espacio para mostrar los resultados de la búsqueda -->
-                    <div id="resultadosBusqueda" class="d-flex justify-content-evenly row p-3">
+                    <div id="resultadosBusquedaModificar" class="d-flex justify-content-evenly row p-3">
                        @foreach (var producto in Model.productos)
                         {
                             <div class="col-md-4 mb-4 d-flex">
@@ -360,25 +360,26 @@
 
             <div id="eliminarProducto" class="container" style="display: none;">
                 <div id="BusquedaDeProductosEliminar">
-                    <div class="mb-3">
-                        <label for="barraBusqueda" class="form-label">Buscar Producto</label>
-                        <input type="text" id="barraBusqueda" class="form-control" placeholder="Ingresa el nombre o código del producto...">
-                    </div>
                     
                     <div class="mb-3">
-                        <label asp-for="productoview.CategoriaId" class="form-label">Categoría del Producto</label>
-                        <select asp-for="productoview.CategoriaId" id="categoriaProducto" class="form-select" required onclick="verificarCategoria()">
-                            <option value="">Selecciona una categoría</option>
-                            @foreach (var categoria in Model.productocategoriaview.Categorias)
-                            {
-                                <option value=@categoria.id>@categoria.nombre</option>
-                            }
+                        <form>
+                            <label for="barraBusquedaEliminar" class="form-label">Buscar Producto</label>
+                            <input type="text" id="barraBusquedaEliminar" class="form-control" placeholder="Ingresa el nombre o código del producto...">
+                            <label asp-for="productoview.CategoriaId" class="form-label">Categoría del Producto</label>
+                            <select asp-for="productoview.CategoriaId" id="categoriaProductoEliminar" class="form-select" required onclick="verificarCategoria()">
+                                <option value="-1">Selecciona una categoría</option>
+                                @foreach (var categoria in Model.productocategoriaview.Categorias)
+                                {
+                                    <option value=@categoria.id>@categoria.nombre</option>
+                                }
 
-                        </select>
+                            </select>
+                            <button type="button" class="btn btn-primary col-12" onclick="filtrar('resultadosBusquedaEliminar','categoriaProductoEliminar','barraBusquedaEliminar')">Filtrar</button>
+                        </form>
                     </div>
                     
                     <!-- Espacio para mostrar los resultados de la búsqueda -->
-                    <div id="resultadosBusqueda" class="d-flex justify-content-evenly row p-3">
+                    <div id="resultadosBusquedaEliminar" class="d-flex justify-content-evenly row p-3">
                         @foreach (var producto in Model.productos)
                         {
                             <div class="col-md-4 mb-4 d-flex">

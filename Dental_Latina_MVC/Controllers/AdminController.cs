@@ -349,6 +349,39 @@ namespace Dental_Latina_MVC.Controllers
 
             return Json(categoriaespecial);
         }
+
+        [HttpGet]
+        public IActionResult FilterByCategoria(int categoria, string nombre)
+        {
+            IEnumerable<ProductoDTO> lista=[];
+            if (string.IsNullOrEmpty(nombre) && categoria != -1)
+            {
+                lista = CUListarProductos.ListarProductosCategoria(categoria);              
+            }
+            else if (string.IsNullOrEmpty(nombre) && categoria == -1)
+            {
+                lista = CUListarProductos.GetProductos();
+            }
+            else if (!string.IsNullOrEmpty(nombre) && categoria == -1)
+            {
+                lista = CUListarProductos.ListarProductosNombre(nombre);                
+            }
+            else if (!string.IsNullOrEmpty(nombre) && categoria != -1)
+            {
+                lista = CUListarProductos.ListarPorCateNombre(categoria, nombre);             
+            }
+
+            var productos = lista
+                .Select(s => new {
+                    id = s.id,
+                    nombre = s.nombre,
+                    photoUrl = s.photoUrl,
+                    precio = s.precio,
+
+                })
+                .ToList();
+            return Json(productos);
+        }
     }
 
     
