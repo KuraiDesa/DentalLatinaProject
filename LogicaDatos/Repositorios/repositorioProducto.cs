@@ -127,6 +127,21 @@ namespace LogicaDatos.Repositorios
                 }
             }
         }
+        public void RemoveByCEId(int id)
+        {
+            IEnumerable<Producto> prodL = Context.Set<Producto>()
+              .Include(p => p.categoriaEspecial)
+              .Where(P => P.categoriaEspecial.id == id)
+              .ToList();
+            if (prodL.Any())
+            {
+                foreach (Producto prod in prodL)
+                {
+                    Context.Set<Producto>().Remove(prod);
+                    Context.SaveChanges();
+                }
+            }
+        }
 
         public void Update(Producto obj)
         {
@@ -160,7 +175,6 @@ namespace LogicaDatos.Repositorios
             return query.Include(p => p.categoria).ToList();
         }
 
-
-
+        
     }
 }

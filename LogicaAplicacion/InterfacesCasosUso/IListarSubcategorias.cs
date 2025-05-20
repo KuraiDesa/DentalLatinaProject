@@ -10,7 +10,7 @@ namespace LogicaAplicacion.InterfacesCasosUso
     public interface IlistarSubcategorias
     {
         public IEnumerable<SubcategoriaDTO> GetSubcategoria();
-
+        public IEnumerable<SubcategoriaDTO> GetImplantologiaSubcategoria();
         public IEnumerable<SubcategoriaDTO> GetSubcategoriaById(int id);
     }
 }

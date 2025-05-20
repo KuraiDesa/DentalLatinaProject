@@ -108,6 +108,42 @@ $(function () {
         });
     });
 
+    $('#subcateEliminarCE').on('change', function () {
+        var subcategoriaId = $(this).val();
+        if (!subcategoriaId) {
+            $('#EliminarcategoriaEspecialProducto')
+                .html('<option value="">Selecciona primero una subcategoria</option>');
+            return;
+        }
+
+        $.ajax({
+            url: '/Admin/GetCategoriaEspecialPorSubcategoria',
+            method: 'GET',
+            data: { subcategoriaId: subcategoriaId },
+            dataType: 'json',
+            success: function (data) {
+                // data es siempre un arreglo (posiblemente vacío)
+                var $sub = $('#EliminarcategoriaEspecialProducto');
+                if (!Array.isArray(data) || data.length === 0) {
+                    $sub.html('<option value="">No hay categorias especiales disponibles</option>');
+                    return;
+                }
+
+                // Construye las opciones
+                var html = '<option value="">Selecciona una subcategoría</option>';
+                data.forEach(function (item) {
+                    html += '<option value="' + item.id + '">' + item.nombre + '</option>';
+                });
+                $sub.html(html);
+            },
+            error: function (xhr, status, error) {
+                console.error('AJAX error:', status, error);
+                $('#subcategoriaProducto')
+                    .html('<option value="">Error cargando categoria especiales</option>');
+            }
+        });
+    });
+
 
     $('#subcategoriaProducto').on('change', function () {
         var subcategoriaId = $(this).val();
@@ -150,7 +186,7 @@ $(function () {
         var categoriaId = $(this).val();
         if (!categoriaId) {
             $('#subcategoriaEliminar')
-                .html('<option value="">Selecciona primero categoría</option>');
+                .html('<option value="">Selecciona primero una categoría</option>');
             return;
         }
         $.ajax({

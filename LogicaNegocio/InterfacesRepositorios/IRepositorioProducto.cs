@@ -17,5 +17,6 @@ namespace LogicaNegocio.InterfacesRepositorios
         IEnumerable<Producto> GetProductosRelacionados(int productoId);
         void RemoveByCatId(int id);
         void RemoveByScatId(int id);
+        void RemoveByCEId(int id);
     }
 }

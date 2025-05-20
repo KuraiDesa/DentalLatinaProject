@@ -240,6 +240,42 @@ function muestroAgregarCatEspecial() {
     }
 }
 
+function muestroEliminarCatEspecial() {
+    let selectSubcategoria = document.getElementById('subcateEliminarCE');
+    let divW = document.getElementById('eliminarCEspecial');
+    let label = document.getElementById('labelEliminarCE')
+    let input = document.getElementById('EliminarcategoriaEspecialProducto');
+    let buton = document.getElementById('remove_ce_btn')
+    if (selectSubcategoria.value != "") {
+        input.style.display = 'flex';
+        divW.style.width = '95%';
+        buton.style.opacity = '1'
+    } else {
+        input.style.display = 'none';
+        divW.style.width = '0%';
+        buton.style.opacity = '0'
+
+    }
+}
+
+function muestroEliminarSubCatl() {
+    let selectSubcategoria = document.getElementById('categoriaSEliminar');
+    let divW = document.getElementById('eliminarSubCate');
+    let label = document.getElementById('labelEliminarCE')
+    let input = document.getElementById('subcategoriaEliminar');
+    let buton = document.getElementById('remove_subcate_btn')
+    if (selectSubcategoria.value != "") {
+        input.style.display = 'flex';
+        divW.style.width = '95%';
+        buton.style.opacity = '1'
+    } else {
+        input.style.display = 'none';
+        divW.style.width = '0%';
+        buton.style.opacity = '0'
+
+    }
+}
+
 
 function alternarActive(idtexto, idbotonCambiar, idcolorTxt) {
     let texto = document.getElementById(idtexto);
@@ -251,6 +287,21 @@ function alternarActive(idtexto, idbotonCambiar, idcolorTxt) {
         colortxt.style.color = 'white';
     } else {
         btn.classList.remove('c_add_cat_btn_active');
+        btn.classList.add('c_add_cat_btn_inactive');
+        colortxt.style.color = 'white';
+    }
+}
+
+function alternarActiveRemove(idtexto, idbotonCambiar, idcolorTxt) {
+    let texto = document.getElementById(idtexto);
+    let btn = document.getElementById(idbotonCambiar);
+    let colortxt = document.getElementById(idcolorTxt);
+    if (texto.value != "") {
+        btn.classList.add('c_remove_cat_btn_active');
+        btn.classList.remove('c_add_cat_btn_inactive');
+        colortxt.style.color = 'white';
+    } else {
+        btn.classList.remove('c_remove_cat_btn_active');
         btn.classList.add('c_add_cat_btn_inactive');
         colortxt.style.color = 'white';
     }
@@ -288,3 +339,4 @@ function verificarCategoria(){
 
     }
 }
+
