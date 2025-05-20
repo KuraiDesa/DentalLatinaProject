@@ -14,11 +14,13 @@ namespace LogicaAplicacion.CasosUso
         public IRepositorioSubcategoria repS { get; set; }
         public IRepositorioCategoria repC { get; set; }
         public IRepositorioProducto repP { get; set; }
-        public EliminarCategoriaSub(IRepositorioCategoria repositorioCat, IRepositorioSubcategoria repositorioSub, IRepositorioProducto repositorioProd)
+        public IRepositorioCEspecial repCE {  get; set; }
+        public EliminarCategoriaSub(IRepositorioCategoria repositorioCat, IRepositorioSubcategoria repositorioSub, IRepositorioProducto repositorioProd, IRepositorioCEspecial repCE)
         {
             this.repS = repositorioSub;
             this.repC = repositorioCat;
             this.repP = repositorioProd;
+            this.repCE = repCE;
         }
         public void eliminarCategoria(int id)
         {
@@ -31,6 +33,12 @@ namespace LogicaAplicacion.CasosUso
         {
             repP.RemoveByScatId(id);
             repS.Remove(id);
+        }
+
+        public void eliminarCategoriaEspecial(int id)
+        {
+            repP.RemoveByCEId(id);
+            repCE.Remove(id);
         }
     }
 }

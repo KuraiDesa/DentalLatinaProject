@@ -9,5 +9,6 @@ namespace LogicaNegocio.InterfacesRepositorios
 {
     public interface IRepositorioCategoria : IRepositorio<Categoria>
     {
+        int FindIdByNombre(string nombre);
     }
 }

@@ -62,6 +62,7 @@ namespace Dental_Latina_MVC.Controllers
                 
                 IEnumerable<CategoriaDTO> listaCategoria = CUListarCategorias.GetCategoria();
                 IEnumerable<SubcategoriaDTO> listaSubcategoria = CUSubcategorias.GetSubcategoria();
+                IEnumerable<SubcategoriaDTO> listaSubcategoriaImplantologia = CUSubcategorias.GetImplantologiaSubcategoria();
                 IEnumerable<CategoriaEspecialDTO> listaCategoriaEspeciales = CUListarCategoriaEspecial.GetCategoriaespecial();
                 IEnumerable<ClienteDTO> clientesDTO = CUListarClientes.GetClientes();
                 IEnumerable<ProductoDTO> productosDTO = CUListarProductos.GetProductos();
@@ -69,7 +70,8 @@ namespace Dental_Latina_MVC.Controllers
                 {
                     Subcategoria = listaSubcategoria,
                     Categorias = listaCategoria,
-                    CategoriasEsepciales = listaCategoriaEspeciales
+                    CategoriasEsepciales = listaCategoriaEspeciales,
+                    SubcateImplantologia = listaSubcategoriaImplantologia
                 };
 
                 GeneralViewModel viewModel = new GeneralViewModel
@@ -320,6 +322,30 @@ namespace Dental_Latina_MVC.Controllers
             }
         }
 
+
+        [HttpPost]
+        [ActionName("RemoveCategoriaEspecial")]
+        public IActionResult removeCategoriaEspecial(GeneralViewModel generalViewModel)
+        {
+            VerificarSesion(); // Por seguridad
+
+            if (generalViewModel.productoview.CategoriaEspecial <= 0)
+            {
+                return BadRequest("Eliga una categoria especial valida.");
+            }
+
+            try
+            {
+                CUEliminarCategoriaSub.eliminarCategoriaEspecial(generalViewModel.productoview.CategoriaEspecial);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "Error al eliminar subcategoria: " + ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
+
         [HttpGet]
         public IActionResult GetSubcategoriasPorCategoria(int categoriaId)
         {
@@ -401,6 +427,7 @@ namespace Dental_Latina_MVC.Controllers
     public class ProductoCategoriaViewModel
     {
         public IEnumerable<SubcategoriaDTO> Subcategoria { get; set; }
+        public IEnumerable<SubcategoriaDTO> SubcateImplantologia { get; set; }
         public IEnumerable<CategoriaDTO> Categorias { get; set; }
         public IEnumerable<CategoriaEspecialDTO> CategoriasEsepciales { get; set; }
     }

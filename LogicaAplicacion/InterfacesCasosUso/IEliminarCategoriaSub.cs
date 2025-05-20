@@ -9,7 +9,7 @@ namespace LogicaAplicacion.InterfacesCasosUso
     public interface IEliminarCategoriaSub
     {
         void eliminarCategoria(int id);
-
+        void eliminarCategoriaEspecial(int id);
         void eliminarSubcategoria(int id);
     }
 }

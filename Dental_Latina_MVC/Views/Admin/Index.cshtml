@@ -237,10 +237,7 @@
                             <label asp-for="productoview.CategoriaEspecial" id="catEspLabel" class="form-label transition" style="display:none; opacity:0">Categoria especial del Producto</label>
                             <select asp-for="productoview.CategoriaEspecial" id="categoriaEspecialProducto" class="form-select transition" style="display:none;">
                                 <option value="">Selecciona una categoria especial</option>
-                                    <!--@foreach (var categoriaE in Model.productocategoriaview.CategoriasEsepciales)
-                                    {
-                                        <option value=@categoriaE.id>@categoriaE.nombre</option>
-                                    }-->
+                                  
                             </select>
                         </div>
                     </div>
@@ -463,7 +460,7 @@
                         <div class="mb-3">
                             <select asp-for="categoriaEspecial.idscat" id="subcateCreateCEspecial" class="form-select" required onclick="muestroAgregarCatEspecial()">
                                 <option value ="">Seleccione una subcategoria</option>
-                                @foreach (var subcategoria in Model.productocategoriaview.Subcategoria)
+                                @foreach (var subcategoria in Model.productocategoriaview.SubcateImplantologia)
                                 {
                                     <option value=@subcategoria.id>@subcategoria.nombre</option>
                                 }
@@ -501,6 +498,9 @@
                         <button type="submit">Eliminar</button>
                     </form>
                 </div>
+
+                <!-- Eliminar Subcategoria-->
+
                 <div id="eliminarSubcategoria">
                     <h2 class="mt-3">Eliminar Subcategoria</h2>
                     <form asp-action="RemoveSubcategoria" id="formEliminarSubcategoria" method="post" enctype="multipart/form-data">
@@ -520,6 +520,39 @@
                             </select>
                         </div>
                         <button type="submit">Eliminar</button>
+                    </form>
+                </div>
+
+                <!-- Eliminar Categoria especial-->
+                <div id="eliminarEcategoria">
+                    <h2>Eliminar categoria especial para implantologia</h2>
+                    <form asp-action="RemoveCategoriaEspecial" id="formECateEspecial" method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <select asp-for="categoriaEspecial.idscat" id="subcateEliminarCE" class="form-select" required onclick="muestroEliminarCatEspecial()">
+                                <option value="">Seleccione una subcategoria</option>
+                                
+                                @foreach (var subcategoria in Model.productocategoriaview.SubcateImplantologia)
+                                {
+                                    <option value=@subcategoria.id>@subcategoria.nombre</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="mb-3 d-flex">
+
+                            <div style="width:0%; display:flex;" class="transition" id="eliminarCEspecial">
+                                <label asp-for="productoview.CategoriaEspecial" id="labelEliminarCE" class="form-label transition" style="display:none; opacity:0">Categoria especial del Producto</label>
+                                <select asp-for="productoview.CategoriaEspecial" id="EliminarcategoriaEspecialProducto" class="form-select transition" style="display:none;">
+                                    <option value="">Selecciona una categoria especial</option>
+
+                                </select>
+                            </div>
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="opacity:0; width:5%; cursor:pointer;" id="remove_cate_btn">
+                                <button type="submit" id="crearCEsp" style="background-color:transparent; border-color:transparent;">
+                                    <a id="txtBtnCE">✓</a>
+                                </button>
+                            </div>
+                        </div>
                     </form>
                 </div>
 

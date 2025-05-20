@@ -41,6 +41,17 @@ namespace LogicaDatos.Repositorios
 
             return entity;
         }
+        public int FindIdByNombre(string nombre)
+        {
+            Categoria entity = Context.Categorias.Local.FirstOrDefault(c => c.Nombre == nombre);
+
+            if (entity == null)
+            {
+                entity = Context.Categorias.AsNoTracking().FirstOrDefault(c => c.Nombre == nombre);
+            }
+
+            return entity.Id;
+        }
         public void Remove(int id)
         {
             Categoria cat = Context.Set<Categoria>().Find(id);

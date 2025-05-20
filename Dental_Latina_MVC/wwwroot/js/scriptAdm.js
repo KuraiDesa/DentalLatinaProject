@@ -240,6 +240,24 @@ function muestroAgregarCatEspecial() {
     }
 }
 
+function muestroEliminarCatEspecial() {
+    let selectSubcategoria = document.getElementById('subcateEliminarCE');
+    let divW = document.getElementById('eliminarCEspecial');
+    let label = document.getElementById('labelEliminarCE')
+    let input = document.getElementById('EliminarcategoriaEspecialProducto');
+    let buton = document.getElementById('remove_cate_btn')
+    if (selectSubcategoria.value != "") {
+        input.style.display = 'flex';
+        divW.style.width = '95%';
+        buton.style.opacity = '100%'
+    } else {
+        input.style.display = 'none';
+        divW.style.width = '0%';
+        buton.style.opacity = '0%'
+
+    }
+}
+
 
 function alternarActive(idtexto, idbotonCambiar, idcolorTxt) {
     let texto = document.getElementById(idtexto);

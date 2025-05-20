@@ -14,9 +14,11 @@ namespace LogicaAplicacion.CasosUso
     public class ListarSubcategorias : IlistarSubcategorias
     {
         public IRepositorioSubcategoria repoSubcategoria { get; set; }
-        public ListarSubcategorias(IRepositorioSubcategoria repo)
+        public IRepositorioCategoria repoCategoria { get; set; }
+        public ListarSubcategorias(IRepositorioSubcategoria repo, IRepositorioCategoria repoCategoria)
         {
             repoSubcategoria = repo;
+            this.repoCategoria = repoCategoria;
         }
         public IEnumerable<SubcategoriaDTO> GetSubcategoria()
         {
@@ -47,6 +49,13 @@ namespace LogicaAplicacion.CasosUso
             {
                 throw new Exception("Error al traer categoria");
             }
+        }
+
+        public IEnumerable<SubcategoriaDTO> GetImplantologiaSubcategoria()
+        {
+            int idImplanto = repoCategoria.FindIdByNombre("Implantologia");
+            IEnumerable<SubcategoriaDTO> lista = SubategoriaMapper.ToListaSubcategoriaDTO(repoSubcategoria.FindByIdList(idImplanto));
+            return lista;
         }
     }
 }
