@@ -186,7 +186,7 @@ $(function () {
         var categoriaId = $(this).val();
         if (!categoriaId) {
             $('#subcategoriaEliminar')
-                .html('<option value="">Selecciona primero categoría</option>');
+                .html('<option value="">Selecciona primero una categoría</option>');
             return;
         }
         $.ajax({

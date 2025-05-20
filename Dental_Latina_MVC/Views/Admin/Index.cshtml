@@ -250,7 +250,7 @@
             <!-- Modificar Producto-->
             <div id="modificarProducto" class="container"style="display: none;">
                 <div id="BusquedaDeProductosModificar">
-                    <div class="mb-3">
+                    <div class="mb-3 mt-5">
                         <form>
                         <label for="barraBusquedaModificar" class="form-label">Buscar Producto</label>
                         <input type="text" id="barraBusquedaModificar" class="form-control" placeholder="Ingresa el nombre o código del producto...">
@@ -263,7 +263,7 @@
                             }
                             
                         </select>
-                        <button type="button" class="btn btn-primary col-12" onclick="filtrar('resultadosBusquedaModificar','categoriaProductoModificar','barraBusquedaModificar')">Filtrar</button>
+                        <button type="button" class="btn btn-primary col-12 mt-3" onclick="filtrar('resultadosBusquedaModificar','categoriaProductoModificar','barraBusquedaModificar')">Filtrar</button>
                         </form>
                     </div>
                     
@@ -358,7 +358,7 @@
             <div id="eliminarProducto" class="container" style="display: none;">
                 <div id="BusquedaDeProductosEliminar">
                     
-                    <div class="mb-3">
+                    <div class="mb-3 mt-5">
                         <form>
                             <label for="barraBusquedaEliminar" class="form-label">Buscar Producto</label>
                             <input type="text" id="barraBusquedaEliminar" class="form-control" placeholder="Ingresa el nombre o código del producto...">
@@ -371,7 +371,7 @@
                                 }
 
                             </select>
-                            <button type="button" class="btn btn-primary col-12" onclick="filtrar('resultadosBusquedaEliminar','categoriaProductoEliminar','barraBusquedaEliminar')">Filtrar</button>
+                            <button type="button" class="btn btn-primary col-12 mt-3" onclick="filtrar('resultadosBusquedaEliminar','categoriaProductoEliminar','barraBusquedaEliminar')">Filtrar</button>
                         </form>
                     </div>
                     
@@ -407,7 +407,7 @@
 
                 <!--Crear Categoria-->
 
-                <div id="crearCategoria" style="height:130.39px;">
+                <div id="crearCategoria" style="height:130.39px;" class="mt-5">
                     <h2 class="mt-3">Crear categoria</h2>
                     <form asp-action="CreateCategoria" id="formCategoria" method="post" enctype="multipart/form-data">
                         <div class="mb-3 d-flex">
@@ -487,26 +487,35 @@
                     <h2>Eliminar Categoria</h2>
                     <form asp-action="RemoveCategoria" id="formEliminarCategoria" method="post" enctype="multipart/form-data">
                         <label asp-for="categoria.id" class="form-label">Categoría del Producto</label>
-                        <select asp-for="categoria.id" id="categoriaEliminar" class="form-select" required>
-                            <option value="">Selecciona una categoría</option>
-                            @foreach (var categoria in Model.productocategoriaview.Categorias)
-                            {
-                                <option value=@categoria.id>@categoria.nombre</option>
-                            }
+                        <div class="mb-3 d-flex">
+                            <select asp-for="categoria.id" id="categoriaEliminar" class="form-select" required onchange="alternarActiveRemove('categoriaEliminar','remove_cate_btn','txtBtnAC')">
+                                <option value="">Selecciona una categoría</option>
+                                @foreach (var categoria in Model.productocategoriaview.Categorias)
+                                {
+                                    <option value=@categoria.id>@categoria.nombre</option>
+                                }
 
-                        </select>
-                        <button type="submit">Eliminar</button>
+                            </select>
+                        
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="width:5%; cursor:pointer;" id="remove_cate_btn">
+                                <button type="submit" id="eliminarCatB" style="background-color:transparent; border-color:transparent;">
+                                    <a id="txtBtnAC">
+                                        &times;
+                                    </a>
+                                </button>
+						    </div>
+						</div>
                     </form>
                 </div>
 
                 <!-- Eliminar Subcategoria-->
 
-                <div id="eliminarSubcategoria">
+                <div id="eliminarSubcategoria" class="mt-5">
                     <h2 class="mt-3">Eliminar Subcategoria</h2>
                     <form asp-action="RemoveSubcategoria" id="formEliminarSubcategoria" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                         <label asp-for="categoria.id" class="form-label">Categoría</label>
-                        <select asp-for="categoria.id" id="categoriaSEliminar" class="form-select" required>
+                            <select asp-for="categoria.id" id="categoriaSEliminar" class="form-select" required onclick="muestroEliminarSubCatl()">
                             <option value="">Selecciona una categoría</option>
                             @foreach (var categoria in Model.productocategoriaview.Categorias)
                             {
@@ -514,17 +523,28 @@
                             }
 
                         </select>
-                            <select asp-for="subcategoria.id" id="subcategoriaEliminar" class="form-select" required>
-                                <option value="">Selecciona una categoría</option>
-                                
-                            </select>
                         </div>
-                        <button type="submit">Eliminar</button>
+                        <div class="mb-3 d-flex">
+                            <div style="width:0%; display:flex;" class="transition" id="eliminarSubCate">
+                                <select asp-for="subcategoria.id" id="subcategoriaEliminar" style="display:none;" class="form-select" required onchange="alternarActiveRemove('subcategoriaEliminar','remove_subcate_btn','txtBtnAS')">
+                                    <option value="">Selecciona primero una categoría</option>
+                                
+                                </select>
+                            </div>
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="opacity:0; width:5%; cursor:pointer;" id="remove_subcate_btn">
+                                <button type="submit" id="eliminarSubcate" style="background-color:transparent; border-color:transparent;">
+                                    <a id="txtBtnAS">
+                                        &times;
+                                    </a>
+                                </button>
+                            </div>
+                            
+                        </div>
                     </form>
                 </div>
 
                 <!-- Eliminar Categoria especial-->
-                <div id="eliminarEcategoria">
+                <div id="eliminarEcategoria" >
                     <h2>Eliminar categoria especial para implantologia</h2>
                     <form asp-action="RemoveCategoriaEspecial" id="formECateEspecial" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
@@ -542,21 +562,24 @@
 
                             <div style="width:0%; display:flex;" class="transition" id="eliminarCEspecial">
                                 <label asp-for="productoview.CategoriaEspecial" id="labelEliminarCE" class="form-label transition" style="display:none; opacity:0">Categoria especial del Producto</label>
-                                <select asp-for="productoview.CategoriaEspecial" id="EliminarcategoriaEspecialProducto" class="form-select transition" style="display:none;">
+                                <select asp-for="productoview.CategoriaEspecial" id="EliminarcategoriaEspecialProducto" class="form-select transition" style="display:none;" onchange="alternarActiveRemove('EliminarcategoriaEspecialProducto','remove_ce_btn','eliminarCEsp')">
                                     <option value="">Selecciona una categoria especial</option>
 
                                 </select>
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="opacity:0; width:5%; cursor:pointer;" id="remove_cate_btn">
-                                <button type="submit" id="crearCEsp" style="background-color:transparent; border-color:transparent;">
-                                    <a id="txtBtnCE">✓</a>
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="opacity:0; width:5%; cursor:pointer;" id="remove_ce_btn">
+                                <button type="submit" id="eliminarCEsp" style="background-color:transparent; border-color:transparent;">
+                                    <a id="txtBtnCE">
+                                        &times;
+                                    </a>
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
-
+                
             </div>
+            
         </section>
         <section id="clientes"style="display: none;">
             <div class="container my-4">
@@ -683,6 +706,8 @@
             </div>
         </section>
 
+        <!-- Espacio al final del todo, por que que horrible no tener espacio para bajar-->
+        <div style="height:50px" class="d-flex"></div>
         <!--MODALS-->
         <!-- Modal de confirmación -->
         <div class="modal fade" id="confirmarEliminarModal" tabindex="-1" aria-labelledby="confirmarEliminarLabel" aria-hidden="true">
@@ -705,6 +730,7 @@
                 </div>
             </div>
         </div>
+
     </main>
     <script>
         var confirmarEliminarModal = document.getElementById('confirmarEliminarModal');

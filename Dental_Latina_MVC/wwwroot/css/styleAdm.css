@@ -226,6 +226,17 @@ header {
     transition-duration: 300ms;
 }
 
+.c_remove_cat_btn_active {
+    border: 1px;
+    width: 5%;
+    border-style: solid;
+    border-radius: 7px;
+    color: #ffffff;
+    border-color: #dee2e6;
+    background-color: #bb2d3b;
+    transition-duration: 300ms;
+}
+
 .add_cat_txt{
     display:none;
     width:90%;
