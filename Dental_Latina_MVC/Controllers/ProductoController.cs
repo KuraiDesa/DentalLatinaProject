@@ -22,22 +22,22 @@ namespace Dental_Latina_MVC.Controllers
             CUCategoriasEspeciales = cUCategoriasEspeciales;
         }
 
-        public IActionResult Index(int page=1, int filtrando=-1, Boolean byName=false, string nombre="")
+        public IActionResult Index(int page=1, int filtrando=0, Boolean byName=false, string nombre="")
         {
             if (!Request.Query.Any())
             {
-                return RedirectToAction(nameof(Index), new { page = 1, filtrando = -1, nombre=""});
+                return RedirectToAction(nameof(Index), new { page = 1, filtrando = 0, nombre=""});
             }
 
             IEnumerable<ProductoDTO> listaProductos= CUListarProductos.GetProductos();
-            if (filtrando!=-1&&byName==false) {
+            if (filtrando!=0&&byName==false) {
                 listaProductos = CUListarProductos.ListarProductosCategoria(filtrando);                    
             }
-            if (byName==true&&filtrando==-1)
+            if (byName==true&&filtrando==0)
             {
                 listaProductos = CUListarProductos.ListarProductosNombre(nombre);
             }
-            if (byName==true&&filtrando!=-1)
+            if (byName==true&&filtrando!=0)
             {
                 listaProductos = CUListarProductos.ListarPorCateNombre(filtrando, nombre);
             }
@@ -61,17 +61,17 @@ namespace Dental_Latina_MVC.Controllers
         [HttpPost]
         public IActionResult Filter(GeneralProductosViewModel productoModel)
         {
-            if (productoModel.catFilter == -1&&productoModel.searchByName==null)
+            if (productoModel.catFilter == 0&&productoModel.searchByName==null)
             {
-                return RedirectToAction("Index", new { page = 1, filtrando = -1, byName =false});
+                return RedirectToAction("Index", new { page = 1, filtrando = 0, byName =false});
             }
-            else if(productoModel.catFilter != -1 && productoModel.searchByName == null)
+            else if(productoModel.catFilter != 0 && productoModel.searchByName == null)
             {
                 return RedirectToAction("Index", new { page=1, filtrando = productoModel.catFilter, byName = false});
-            }else if(productoModel.catFilter == -1 && productoModel.searchByName != "")
+            }else if(productoModel.catFilter == 0 && productoModel.searchByName != "")
             {
-                return RedirectToAction("Index", new { page = 1, filtrando = -1, byName = true, nombre = productoModel.searchByName });
-            }else if(productoModel.catFilter != -1 && productoModel.searchByName != "")
+                return RedirectToAction("Index", new { page = 1, filtrando = 0, byName = true, nombre = productoModel.searchByName });
+            }else if(productoModel.catFilter != 0 && productoModel.searchByName != "")
             {
                 return RedirectToAction("Index", new { page = 1, filtrando = productoModel.catFilter, byName = true, nombre = productoModel.searchByName });
             }
