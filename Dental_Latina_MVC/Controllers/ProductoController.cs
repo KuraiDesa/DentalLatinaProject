@@ -101,6 +101,18 @@ namespace Dental_Latina_MVC.Controllers
                 .ToList();
             return Json(subcates);
         }
+        [HttpGet]
+        public IActionResult FilterCategoriaEspecial(int cateid)
+        {
+            var lista = CUCategoriasEspeciales.GetCategoriaEspecialById(cateid);
+            var subcates = lista
+                .Select(s => new {
+                    id = s.id,
+                    nombre = s.nombre
+                })
+                .ToList();
+            return Json(subcates);
+        }
     }
     
     

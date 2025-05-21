@@ -1,27 +1,5 @@
-function filtrarAjax(cat, nombre) {
-    let categoriaId = document.getElementById(categoria);
-    let nombreProd = document.getElementById(nombre);
-    let seccionProd = document.getElementById(seccion);
-    let nombreval = nombreProd.value;
-    let categoriaval = categoriaId.value;
-    $.ajax({
-        url: '/Home/FilterAjax',
-        method: 'GET',
-        data: {
-            categoria: categoriaval,
-            nombre: nombreval
-        },
-        dataType: 'json',
-        success: function (data) {
-            seccionProd.innerHTML = "";
-            
-        },
-        error: function (xhr, status, error) {
-            console.error('AJAX error:', status, error);
-            $('#subcategoriaProducto')
-                .html('<option value="">Error cargando subcategorías</option>');
-        }
-    });
+function filtrarAjax(cat) {
+
 }
 
 function traerSubcategorias(categoria, categoriaId) {
@@ -33,10 +11,38 @@ function traerSubcategorias(categoria, categoriaId) {
         data: { cateid: categoria },
         dataType: 'json',
         success: function (data) {
-            html.innerHTML = ''; // limpia el contenido del elemento
+            html.innerHTML+="<ul>"
             data.forEach(prod => {
-                html.innerHTML += `<a>${prod.nombre}</a>`;
+                html.innerHTML += `<li onclick="filtrarAjax(${prod.id})" id="scatI${prod.id}" class="subcategoria-item" data-id="${prod.id}">${prod.nombre}
+                <div id="catEspecial_${prod.id}"></div>
+                </li>`;
             });
+            html.innerHTML += "</ul"
+
+            data.forEach(prod => {
+                traerCategoriaEspecial(prod.id, `catEspecial_${prod.id}`);
+            });
+        },
+        error: function (err) {
+            console.error("Error al traer subcategorías", err);
+        }
+    });
+}
+
+function traerCategoriaEspecial(categoria, categoriaId) {
+    let html = document.getElementById(categoriaId);
+
+    $.ajax({
+        url: '/Producto/FilterCategoriaEspecial',
+        method: 'GET',
+        data: { cateid: categoria },
+        dataType: 'json',
+        success: function (data) {
+            html.innerHTML += "<ul>"
+            data.forEach(prod => {
+                html.innerHTML += `<li onclick="filtrarAjax(${prod.id})" id="catEI${prod.id}" class="subcategoria-item" >${prod.nombre}</li>`;
+            });
+            html.innerHTML += "</ul"
         },
         error: function (err) {
             console.error("Error al traer subcategorías", err);
