@@ -11,12 +11,15 @@ namespace Dental_Latina_MVC.Controllers
     {
         public  IListarProductos CUListarProductos { get; set; }
         public  IListarCategorias CUCategorias { get; set; }
+        public IlistarSubcategorias CUSubcategorias { get; set; }
+        public IListarCategoriasEspeciales CUCategoriasEspeciales { get; set; }
  
-        public ProductoController(IListarProductos CU, IListarCategorias CatCU)
+        public ProductoController(IListarProductos CU, IListarCategorias CatCU, IlistarSubcategorias cUSubcategorias, IListarCategoriasEspeciales cUCategoriasEspeciales)
         {
             this.CUListarProductos = CU;
             this.CUCategorias = CatCU;
-       
+            CUSubcategorias = cUSubcategorias;
+            CUCategoriasEspeciales = cUCategoriasEspeciales;
         }
 
         public IActionResult Index(int page=1, int filtrando=-1, Boolean byName=false, string nombre="")
@@ -43,6 +46,8 @@ namespace Dental_Latina_MVC.Controllers
             {
                 Productos = listaProductos,
                 Categorias = listarCategorias,
+                Subcategorias = CUSubcategorias.GetSubcategoria(),
+                CategoriasEspeciales = CUCategoriasEspeciales.GetCategoriaespecial(),
                 cantPaginas = (int)Math.Ceiling((double)listaProductos.Count() / 9),
                 paginaActual = page,
                 paginador = page - 1,
@@ -76,7 +81,26 @@ namespace Dental_Latina_MVC.Controllers
             }
         
         }
-        
+
+        [HttpPost]
+        public IActionResult FilterAjax(string nombre, int cat, int sub, int catE)
+        {
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult FilterSubcategorias(int cateid)
+        {
+            var lista = CUSubcategorias.GetSubcategoriaById(cateid);
+            var subcates = lista
+                .Select(s => new {
+                    id = s.id,
+                    nombre = s.nombre
+                })
+                .ToList();
+            return Json(subcates);
+        }
     }
     
     
@@ -84,10 +108,13 @@ namespace Dental_Latina_MVC.Controllers
     public class GeneralProductosViewModel
     {
         public IEnumerable<ProductoDTO> Productos { get; set; }
-        public IEnumerable<CategoriaDTO> Categorias { get; set; }  
+        public IEnumerable<CategoriaDTO> Categorias { get; set; }
+        public IEnumerable<SubcategoriaDTO> Subcategorias { get; set; }
+        public IEnumerable<CategoriaEspecialDTO> CategoriasEspeciales { get; set; }
         public int cantPaginas {  get; set; }
         public int paginaActual {  get; set; }
         public int catFilter {  get; set; }
+        public int subFilter { get; set; }
         public string searchByName { get; set; }
         public int paginador { get; set; }
         public Boolean searchingByName {  get; set; }
