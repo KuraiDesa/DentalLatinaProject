@@ -131,6 +131,8 @@ namespace Dental_Latina_MVC.Controllers
                 .ToList();
             return Json(subcates);
         }
+
+
     }
     
     

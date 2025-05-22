@@ -1,6 +1,9 @@
-﻿﻿@{
+﻿@using DTOs.DTOs
+@using Dental_Latina_MVC.Controllers
+@{
     Layout = null;
 }
+@model GeneralProductosHomeViewModel
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/css/styleGeneral.css">
     <link rel="stylesheet" href="/css/styleHeader.css">
+    <link rel="stylesheet" href="/css/styleProfesional.css">
     <link rel="stylesheet" href="/css/envios.css">
     <link rel="stylesheet" href="/css/styleSectionRegistro.css">
     <link rel="stylesheet" href="/css/styleModalAuth.css">
@@ -86,6 +90,33 @@
             border-radius: 50px;
             padding: 10px 30px;
         }
+
+        .container-flex {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .card-body {
+            flex: 1;
+        }
+
+        .product-card-img {
+            height: 200px; /* o el alto que quieras */
+            object-fit: contain; /* o "cover" si querés recorte centrado */
+            object-position: center;
+        }
     </style>
     <main>
         <section id="carruselSec">
@@ -118,6 +149,36 @@
         </section>
 
         <br>
+        <div class="d-flex justify-content-evenly">
+            @if (Model.Productos.Any())
+            {
+                foreach (var producto in Model.Productos)
+                {
+                    <div class=" mb-4 d-flex" style="width:20%">
+                        <div class="card product-card flex-fill" >
+                            <img src="@producto.photoUrl" class="card-img-top product-card-img" alt="@producto.nombre">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title text-center">@producto.nombre</h5>
+                                    @if (producto.precio != 0)
+                                    {
+                                        <p class="card-text text-center">$@producto.precio</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="card-text text-center invisible">$0</p> <!-- Invisible mantiene espacio sin mostrar -->
+                                    }
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="@Url.Action("Index", "DetalleProducto", new { id = producto.id })" class="btn btn-primary col-10">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            }
+        </div>
         <br>
         <script>
             // Seleccionamos la imagen

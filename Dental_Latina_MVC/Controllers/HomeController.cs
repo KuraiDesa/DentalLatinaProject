@@ -14,18 +14,24 @@ namespace Dental_Latina_MVC.Controllers
     public class HomeController : Controller
     {
 
-
+        public IListarProductos CUListarProductos { get; set; }
         public ILoginUser CULoginUser { get; set; }
         public IRegistroCliente CURegistroCliente { get; set; }
-        public HomeController(ILoginUser CULoginUser, IRegistroCliente CURegistroCliente)
+        public HomeController(ILoginUser CULoginUser, IRegistroCliente CURegistroCliente, IListarProductos cUListarProductos)
         {
             this.CULoginUser = CULoginUser;
             this.CURegistroCliente = CURegistroCliente;
+            this.CUListarProductos = cUListarProductos;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<ProductoDTO> listaProductos = CUListarProductos.Get4Randoms();
+            GeneralProductosHomeViewModel general = new GeneralProductosHomeViewModel
+            {
+                Productos = listaProductos
+            };
+            return View(general);
         }
         public class LoginRequest
         {
@@ -81,10 +87,10 @@ namespace Dental_Latina_MVC.Controllers
             }
             catch (Exception ex)
             {
-                return Json(new { success = false, message = "Algo salio mal"});
+                return Json(new { success = false, message = "Algo salio mal" });
             }
-           
-           
+
+
         }
 
         [HttpPost]
@@ -93,18 +99,19 @@ namespace Dental_Latina_MVC.Controllers
             try
             {
                 string emailDestino = request.email;
-                if (CURegistroCliente.buscoMail(emailDestino)){
-                    return Json(new { success = false, error = "Ya estas registrado!"});
+                if (CURegistroCliente.buscoMail(emailDestino))
+                {
+                    return Json(new { success = false, error = "Ya estas registrado!" });
                 }
-                
 
-            var servicioCorreo = new ServicioCorreo();
-            string codigo = servicioCorreo.GenerarCodigo();
-           
 
-            
+                var servicioCorreo = new ServicioCorreo();
+                string codigo = servicioCorreo.GenerarCodigo();
+
+
+
                 // Enviar correo
-                servicioCorreo.EnviarCodigoPorCorreo(emailDestino, codigo).Wait(); 
+                servicioCorreo.EnviarCodigoPorCorreo(emailDestino, codigo).Wait();
                 return Json(new { success = true, codigo = codigo });
             }
             catch (Exception ex)
@@ -113,7 +120,11 @@ namespace Dental_Latina_MVC.Controllers
             }
         }
 
-
+        
+    }
+    public class GeneralProductosHomeViewModel
+    {
+        public IEnumerable<ProductoDTO> Productos { get; set; }
 
     }
 }
