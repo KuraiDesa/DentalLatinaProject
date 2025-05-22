@@ -96,18 +96,34 @@
                         <div>
                             <label asp-for="searchByName">Buscar productos</label>
                             <div class="d-flex">
-                                <input asp-for="searchByName" id="searchBar" type="text" class="form-control " placeholder="Buscar productos..." style="width: 90%" />
-                                <div style="width: 10%">
-                                    <button type="submit" class="btn btn-primary col-12 h-100"><i class="fas fa-search"></i></button>
+                                <input asp-for="searchByName" id="searchBar" type="text" class="form-control buscadorInp" placeholder="Buscar productos..."  />
+                                <div  class="buscadorBoton transition">
+                                    <button type="submit" class="btn btn-primary col-12 h-100 fs-1 fs-md-3 fs-lg-5"><i class="fas fa-search"></i></button>
                                 </div>
                             </div>
-                            <ul>
-                                @foreach(var categoria in Model.Categorias)
-                                {
-                                    <li onclick="filtrarAjax(@categoria.id)" id="catI(@categoria.id)" class="categoria-item" data-id="@categoria.id">@categoria.nombre</li>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul>
+                                        <li class=" no_p mb-1">
+                                            <div class="d-flex justify-content-between align-items-center p-1 transition filtroLindo "
+                                                <a onclick="filtrarAjax(-1,-1)"  padding-left:5px">Todos</a>
+                                            </div>
+                                        </li>
+                                        @foreach(var categoria in Model.Categorias)
+                                        {
+                                            <div>
+                                                <li  id="catI(@categoria.id)" class="categoria-item no_p m"  data-id="@categoria.id">
+                                                <div class="d-flex justify-content-between align-items-center p-1 transition filtroLindo "  id="Dcat_@categoria.id">
+                                                    <a onclick="filtrarAjax(@categoria.id),0" style="width:85%; padding-left:5px">@categoria.nombre</a>
+                                                        
+                                                    </div>
+                                                </li>
+                                            </div>
                                         
-                                }
-                            </ul>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>

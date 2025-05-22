@@ -75,3 +75,78 @@
 .aList:hover{
     text-decoration:none;
 }
+
+.no_p{
+    list-style:none;
+}
+
+.extender {
+    background: none;
+    border: none;
+}
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.transition {
+    transition-duration: 400ms;
+}
+
+.subcategorias {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.subcategorias.abierta {
+
+}
+
+.filtroLindo{
+    border-radius:7px;
+    cursor:pointer;
+    user-select:none;
+}
+
+    .filtroLindo:hover {
+        border-radius: 10px;
+        background-color: #007bff;
+        color:white;
+    }
+
+.textoBlanco{
+    color:black;
+}
+.textoBlanco:hover{
+    color:white;
+}
+.buscadorBoton{
+    width:20%;
+}
+.buscadorInp{
+    width:80%;
+}
+
+@media (max-width: 768px) {
+    .buscadorBoton {
+        width: 20%;
+    }
+
+    .buscadorInp {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) and (max-width:992px) {
+    .buscadorBoton {
+        width: 30%;
+    }
+
+    .buscadorInp {
+        width: 70%;
+    }
+}
