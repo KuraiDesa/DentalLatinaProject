@@ -155,6 +155,20 @@ namespace LogicaDatos.Repositorios
               .Where(P => P.categoria.Id == id)
               .ToList();
         }
+        public IEnumerable<Producto> BuscarPorSubcategoria(int id)
+        {
+            return Context.Set<Producto>()
+              .Include(p => p.subcategoria)
+              .Where(P => P.subcategoria.Id == id)
+              .ToList();
+        }
+        public IEnumerable<Producto> BuscarPorCategoriaEspecial(int id)
+        {
+            return Context.Set<Producto>()
+              .Include(p => p.categoriaEspecial)
+              .Where(P => P.categoriaEspecial.id == id)
+              .ToList();
+        }
 
         public IEnumerable<Producto> BuscarPorNombreCategoria(int? id, string nombre)
         {

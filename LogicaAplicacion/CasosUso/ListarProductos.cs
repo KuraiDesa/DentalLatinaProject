@@ -40,7 +40,14 @@ namespace LogicaAplicacion.CasosUso
         {
             return ProductoMapper.ToListaProductoDTO(repoProductos.BuscarPorCategoria(id));
         }
-
+        public IEnumerable<ProductoDTO> ListarProductosSubcategoria(int id)
+        {
+            return ProductoMapper.ToListaProductoDTO(repoProductos.BuscarPorSubcategoria(id));
+        }
+        public IEnumerable<ProductoDTO> ListarProductosCategoriaEspecial(int id)
+        {
+            return ProductoMapper.ToListaProductoDTO(repoProductos.BuscarPorCategoriaEspecial(id));
+        }
         public IEnumerable<ProductoDTO> ListarProductosNombre(string nombre)
         {
             return ProductoMapper.ToListaProductoDTO(repoProductos.BuscarPorNombre(nombre)).OrderBy(p => p.nombre);

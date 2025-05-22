@@ -22,14 +22,31 @@ namespace Dental_Latina_MVC.Controllers
             CUCategoriasEspeciales = cUCategoriasEspeciales;
         }
 
-        public IActionResult Index(int page=1, int filtrando=0, Boolean byName=false, string nombre="")
+        public IActionResult Index(int page = 1, int filtrando = 0, Boolean byName = false, string nombre = "", int tipo =-1, int cat=-1)
         {
-            if (!Request.Query.Any())
-            {
-                return RedirectToAction(nameof(Index), new { page = 1, filtrando = 0, nombre=""});
-            }
+            
 
             IEnumerable<ProductoDTO> listaProductos= CUListarProductos.GetProductos();
+            if (!Request.Query.Any())
+            {
+                return RedirectToAction(nameof(Index), new { page = 1, filtrando = 0, nombre = "" });
+            }
+
+            if (tipo == 0)
+            {
+                listaProductos = CUListarProductos.ListarProductosCategoria(cat);
+
+            }
+            else if (tipo == 1)
+            {
+                listaProductos = CUListarProductos.ListarProductosSubcategoria(cat);
+
+            }
+            else if (tipo == 2)
+            {
+                listaProductos = CUListarProductos.ListarProductosCategoriaEspecial(cat);
+
+            }
             if (filtrando!=0&&byName==false) {
                 listaProductos = CUListarProductos.ListarProductosCategoria(filtrando);                    
             }
@@ -52,7 +69,9 @@ namespace Dental_Latina_MVC.Controllers
                 paginaActual = page,
                 paginador = page - 1,
                 catFilter=filtrando,
-                searchByName=nombre
+                searchByName=nombre,
+                tipo=tipo,
+                cat=cat
             };
 
             return View(general);
@@ -82,11 +101,10 @@ namespace Dental_Latina_MVC.Controllers
         
         }
 
-        [HttpPost]
-        public IActionResult FilterAjax(string nombre, int cat, int sub, int catE)
+        [HttpGet]
+        public IActionResult FilterAjax(int id, int tipo)
         {
-
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { page = 1, tipo = tipo, cat = id });
         }
 
         [HttpGet]
@@ -127,6 +145,8 @@ namespace Dental_Latina_MVC.Controllers
         public int paginaActual {  get; set; }
         public int catFilter {  get; set; }
         public int subFilter { get; set; }
+        public int cat {  get; set; }
+        public int tipo { get; set; }
         public string searchByName { get; set; }
         public int paginador { get; set; }
         public Boolean searchingByName {  get; set; }

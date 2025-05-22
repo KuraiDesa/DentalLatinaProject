@@ -13,7 +13,8 @@ namespace LogicaNegocio.InterfacesRepositorios
         IEnumerable<Producto> BuscarPorNombre(string nombre);
         IEnumerable<Producto> BuscarPorNombreCategoria(int? id, string nombre);
         IEnumerable<Producto> BuscarPorCategoria(int id);
-
+        IEnumerable<Producto> BuscarPorSubcategoria(int id);
+        IEnumerable<Producto> BuscarPorCategoriaEspecial(int id);
         IEnumerable<Producto> GetProductosRelacionados(int productoId);
         void RemoveByCatId(int id);
         void RemoveByScatId(int id);
