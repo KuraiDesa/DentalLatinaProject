@@ -130,6 +130,9 @@ button:focus {
 .buscadorInp{
     width:80%;
 }
+.no_click {
+    pointer-events: none;
+}
 
 @media (max-width: 768px) {
     .buscadorBoton {

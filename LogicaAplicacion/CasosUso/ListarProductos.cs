@@ -35,6 +35,30 @@ namespace LogicaAplicacion.CasosUso
                 throw new Exception("Error al traer productos");
             }
         }
+        public IEnumerable<ProductoDTO> Get4Randoms()
+        {
+            IEnumerable<ProductoDTO> aux = GetProductos();
+            List<ProductoDTO> productos = new List<ProductoDTO>();
+            List<int> numeros = new List<int>();
+            int max = aux.Max(p => p.id);
+            Random rand = new Random();
+            while (numeros.Count()<4)
+            {    
+                var n=rand.Next(max+1);
+                if (!numeros.Any(p => p == n))
+                {
+                    numeros.Add(n);
+                }
+            }
+            foreach (ProductoDTO prod in aux)
+            {
+                if (numeros.Any(p=>p == prod.id))
+                {
+                    productos.Add(prod);
+                }
+            }
+            return productos;
+        }
 
         public IEnumerable<ProductoDTO> ListarProductosCategoria(int id)
         {

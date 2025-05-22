@@ -10,8 +10,10 @@ function mostrarSub(id1, id2) {
         if (!div.classList.contains('abierta')) {
             div.style.maxHeight = div.scrollHeight + 'px';
             div.classList.add('abierta');
+            div.classList.remove('no_click')
         } else {
             div.classList.remove('abierta');
+            div.classList.add('no_click');
             div.style.maxHeight = '0px'
         }
     } else {
@@ -38,8 +40,10 @@ function mostrarSub(id1, id2) {
             let tamaño = parseInt(num1) + parseInt(num2);
             div2.style.maxHeight = tamaño + 'px';
             div.classList.add('abierta');
+            div.classList.remove('no_click')
         } else {
             div.classList.remove('abierta');
+            div.classList.add('no_click');
             div.style.maxHeight = '0px'
         }
     }
@@ -57,16 +61,16 @@ function traerSubcategorias(categoria, categoriaId) {
         data: { cateid: categoria },
         dataType: 'json',
         success: function (data) {
-            html.innerHTML += `<div id="DivScat${categoria}" height:0px;" class="flex-column ml-3 p-1 transition subcategorias " ></div>`
+            html.innerHTML += `<div id="DivScat${categoria}" height:0px;" class="flex-column ml-3 p-1 transition subcategorias no_click" ></div>`
             let ht = document.getElementById(`DivScat${categoria}`)
             data.forEach(prod => {
                 ht.innerHTML += ``
                 ht.innerHTML += `<div  id="Dscat_${prod.id}" class="transition">
                 <li  id="scatI${prod.id}" class="subcategoria-item no_p transition" data-id="${prod.id}" >
                 <div  class="d-flex justify-content-between align-items-center pt-1 pb-1 pl-1 transition filtroLindo" id="DivSubcate${prod.id}">
-                <a onclick="filtrarAjax(${prod.id}), 1" style="width:85%; padding-left:5px">${prod.nombre}</a>
+                <a onclick="filtrarAjax(${prod.id},1)" style="width:85%; padding-left:5px">${prod.nombre}</a>
                 </div>
-                <div id="catEspecial_${prod.id}" class="ml-3 p-1 transition subcategorias ">
+                <div id="catEspecial_${prod.id}" class="ml-3 p-1 transition subcategorias no_click">
                 </div>
                 </li>
                 </div>`;
@@ -75,7 +79,7 @@ function traerSubcategorias(categoria, categoriaId) {
             
             if (!$.isEmptyObject(data)) {
                 document.getElementById(`Dcat_${categoria}`).innerHTML += `<button type="button" onclick="mostrarSub('DivScat${categoria}' , '')"
-                class="d-flex justify-content-end extender textoBlanco transition mr-1" style="width:15%"><a>▼</a></button>`
+                class="d-flex justify-content-center extender textoBlanco transition mr-1" style="width:15%"><a>+</a></button>`
             }
             
             data.forEach(prod => {
@@ -87,7 +91,7 @@ function traerSubcategorias(categoria, categoriaId) {
         }
     });
 }
-
+//▼
 function traerCategoriaEspecial(categoria, categoriaId, idSubCSS) {
     let html = document.getElementById(categoriaId);
 
@@ -100,12 +104,12 @@ function traerCategoriaEspecial(categoria, categoriaId, idSubCSS) {
             
             data.forEach(prod => {
                 html.innerHTML += `<div class="p-1 filtroLindo textoBlanco"><li  id="catEI${prod.id}" class="subcategoria-item no_p ">
-                <a onclick="filtrarAjax(${prod.id}), 2" style="width:85%; padding-left:5px">${prod.nombre}</a>
+                <a onclick="filtrarAjax(${prod.id},2)" style="width:85%; padding-left:5px">${prod.nombre}</a>
                 </li><div>`;
             });
             if (!$.isEmptyObject(data)) {
                 document.getElementById(`DivSubcate${categoria}`).innerHTML += `<button type="button" style="width:15%" onclick="mostrarSub('catEspecial_${categoria}', '${idSubCSS}')"
-                class="d-flex justify-content-end extender textoBlanco transition mr-1  "><a>▼</a></button>`
+                class="d-flex justify-content-center extender textoBlanco transition mr-1  "><a>+</a></button>`
             }
             
         },
