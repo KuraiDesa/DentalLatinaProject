@@ -23,10 +23,11 @@ namespace Dental_Latina_MVC.Controllers
         public IAltaCategoriaEspecial CUAltaCategoriaEspecial { get; set; }
         public IEliminarCategoriaSub CUEliminarCategoriaSub { get; set; }
         public IListarCategoriasEspeciales CUListarCategoriaEspecial {  get; set; }
+        public IDetalleZona CUZONAS { get; set; }
         public AdminController(IListarCategorias CUC, IlistarSubcategorias CUS, IAltaProducto altaProd, IListarClientes CUListarClientes,
                                 IListarProductos CUListarProductos, IEliminarProducto CUEliminarProductro, IAltaCategoria AltaCategoria,
                                 IAltaSubcategoria AltaSubcategoria, IEliminarCategoriaSub eliminarCategoriaSub, IListarCategoriasEspeciales CUCS,
-                                IAltaCategoriaEspecial AltaCategoriaEspecial)
+                                IAltaCategoriaEspecial AltaCategoriaEspecial, IDetalleZona d)
         {
             this.CUListarCategorias = CUC;
             this.CUSubcategorias = CUS;
@@ -39,6 +40,7 @@ namespace Dental_Latina_MVC.Controllers
             this.CUAltaSubcategoria = AltaSubcategoria;
             this.CUEliminarCategoriaSub = eliminarCategoriaSub;
             this.CUAltaCategoriaEspecial = AltaCategoriaEspecial;
+            this.CUZONAS = d;
         }
         
         public IActionResult VerificarSesion()
@@ -66,6 +68,7 @@ namespace Dental_Latina_MVC.Controllers
                 IEnumerable<CategoriaEspecialDTO> listaCategoriaEspeciales = CUListarCategoriaEspecial.GetCategoriaespecial();
                 IEnumerable<ClienteDTO> clientesDTO = CUListarClientes.GetClientes();
                 IEnumerable<ProductoDTO> productosDTO = CUListarProductos.GetProductos();
+                IEnumerable<ZonaDTO> zonasDTO = CUZONAS.getZonas();
                 ProductoCategoriaViewModel prodviewModel = new ProductoCategoriaViewModel
                 {
                     Subcategoria = listaSubcategoria,
@@ -78,7 +81,8 @@ namespace Dental_Latina_MVC.Controllers
                 {
                     productocategoriaview = prodviewModel,
                     productos = productosDTO,
-                    clientes = clientesDTO
+                    clientes = clientesDTO,
+                    zonas = zonasDTO
                 };
                 return View(viewModel);
             }
@@ -423,6 +427,7 @@ namespace Dental_Latina_MVC.Controllers
         public IEnumerable<ClienteDTO> clientes { get; set; }
         
         public IEnumerable<ProductoDTO> productos { get; set; }
+        public IEnumerable<ZonaDTO> zonas { get; set; }
     }
     public class ProductoCategoriaViewModel
     {

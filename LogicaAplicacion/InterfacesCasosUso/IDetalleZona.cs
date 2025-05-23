@@ -10,5 +10,6 @@ namespace LogicaAplicacion.InterfacesCasosUso
     public interface IDetalleZona
     {
         ZonaDTO ZonabyId(int id);
+        IEnumerable<ZonaDTO> getZonas();
     }
 }

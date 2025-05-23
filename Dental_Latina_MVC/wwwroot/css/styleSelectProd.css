@@ -1,0 +1,45 @@
+﻿
+
+
+/* Solo para escritorio */
+@media (min-width: 768px) {
+    .producto-destacado .card {
+        transition: transform 0.4s;
+    }
+
+        .producto-destacado .card:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 6px 8px rgba(8, 247, 255, 0.1));
+        }
+
+    .producto-destacado img {
+        max-height: 300px !important;
+        min-height: 300px !important;
+        min-width: 150px;
+        object-fit: contain;
+    }
+
+    .producto-destacado .card-body {
+        padding: 2rem !important;
+    }
+}
+
+.btn-details {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #4a5568;
+    padding: 6px 18px;
+    font-size: 0.85rem;
+    border-radius: 18px !important;
+    transition: all 0.3s;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+    .btn-details:hover {
+        background-color: #00acc1 !important;
+        border-color: #00acc1;
+        color: white !important;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0,172,193,0.2);
+    }
