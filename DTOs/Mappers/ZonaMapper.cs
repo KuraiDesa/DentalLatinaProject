@@ -19,5 +19,25 @@ namespace DTOs.Mappers
             zoDTO.minimoDeEnvio = zo.minimoDeEnvio;
             return zoDTO;
         }
+        public static IEnumerable<ZonaDTO> ToDTOListZona(IEnumerable<Zona> zos)
+        {
+            List<ZonaDTO> zdto = new List<ZonaDTO>();
+            foreach (Zona zo in zos)
+            {
+
+                zdto.Add(ToDTOZona2(zo));
+            }
+            return zdto;
+        }
+        public static ZonaDTO ToDTOZona2(Zona zo)
+        {
+            ZonaDTO zoDTO = new ZonaDTO();
+            zoDTO.id = zo.Id;
+            zoDTO.nombre = zo.zona;
+            zoDTO.horario = zo.horario;
+            zoDTO.precio = zo.precio;
+            zoDTO.minimoDeEnvio = zo.minimoDeEnvio;
+            return zoDTO;
+        }
     }
 }

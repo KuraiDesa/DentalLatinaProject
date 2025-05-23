@@ -38,26 +38,13 @@ namespace LogicaAplicacion.CasosUso
         public IEnumerable<ProductoDTO> Get4Randoms()
         {
             IEnumerable<ProductoDTO> aux = GetProductos();
-            List<ProductoDTO> productos = new List<ProductoDTO>();
-            List<int> numeros = new List<int>();
-            int max = aux.Max(p => p.id);
-            Random rand = new Random();
-            while (numeros.Count()<4)
-            {    
-                var n=rand.Next(max+1);
-                if (!numeros.Any(p => p == n))
-                {
-                    numeros.Add(n);
-                }
-            }
-            foreach (ProductoDTO prod in aux)
-            {
-                if (numeros.Any(p=>p == prod.id))
-                {
-                    productos.Add(prod);
-                }
-            }
-            return productos;
+
+            // Si hay menos de 4 productos, devolvé todos
+            if (aux.Count() <= 4)
+                return aux;
+
+            // Mezcla aleatoriamente y toma los primeros 4
+            return aux.OrderBy(p => Guid.NewGuid()).Take(4);
         }
 
         public IEnumerable<ProductoDTO> ListarProductosCategoria(int id)

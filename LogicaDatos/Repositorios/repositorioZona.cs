@@ -30,8 +30,7 @@ namespace LogicaDatos.Repositorios
 
         public IEnumerable<Zona> FindAll()
         {
-            // Devuelve todas las zonas
-            throw new NotImplementedException();
+            return _zonas.Zonas.ToList();
         }
 
         public Zona FindById(int id)

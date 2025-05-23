@@ -18,6 +18,23 @@ namespace LogicaAplicacion.CasosUso
         {
             this.rep = rep;
         }
+        public IEnumerable<ZonaDTO> getZonas()
+        {
+            try
+            {
+                IEnumerable<Zona> zonas = rep.FindAll();
+                if (zonas == null)
+                {
+                    return null;
+                }
+                IEnumerable<ZonaDTO> zD = ZonaMapper.ToDTOListZona(zonas);
+                return zD;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Algo salio mal");
+            }
+        }
         public ZonaDTO ZonabyId(int id)
         {
             try

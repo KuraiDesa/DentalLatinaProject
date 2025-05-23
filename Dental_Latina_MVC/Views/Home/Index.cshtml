@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/css/envios.css">
     <link rel="stylesheet" href="/css/styleSectionRegistro.css">
     <link rel="stylesheet" href="/css/styleModalAuth.css">
+    <link rel="stylesheet" href="/css/styleSelectProd.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,37 +150,77 @@
         </section>
 
         <br>
-        <div class="d-flex justify-content-evenly">
-            @if (Model.Productos.Any())
-            {
-                foreach (var producto in Model.Productos)
-                {
-                    <div class=" mb-4 d-flex" style="width:20%">
-                        <div class="card product-card flex-fill" >
-                            <img src="@producto.photoUrl" class="card-img-top product-card-img" alt="@producto.nombre">
-                            <div class="card-body d-flex flex-column justify-content-between">
-                                <div>
-                                    <h5 class="card-title text-center">@producto.nombre</h5>
-                                    @if (producto.precio != 0)
-                                    {
-                                        <p class="card-text text-center">$@producto.precio</p>
-                                    }
-                                    else
-                                    {
-                                        <p class="card-text text-center invisible">$0</p> <!-- Invisible mantiene espacio sin mostrar -->
-                                    }
-                                </div>
-                                <div class="text-center mt-3">
-                                    <a href="@Url.Action("Index", "DetalleProducto", new { id = producto.id })" class="btn btn-primary col-10">Ver detalles</a>
+        <section class="py-5 bg-white producto-destacado shadow">
+            <div class="container">
+                <!--<h2 class="text-center mb-4" style="color:#003fc8;">Productos destacados</h2>-->
+                <!-- Versión para escritorio -->
+      
+                <div class="d-none d-md-block ">
+                    
+                    <div class="row justify-content-between g-4">
+                        @foreach (var producto in Model.Productos)
+                        {
+                            <div class="col-md-2 col-6">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body text-center p-3">
+                                        <img src="@producto.photoUrl" alt="@producto.nombre" class="img-fluid" style="max-height: 150px;">
+                                        <h4 class="mt-3 mb-2">@producto.nombre</h4>
+                                        @if (producto.precio != 0)
+                                        {
+                                            <p class="text-muted small">$@producto.precio</p>
+                                        }
+                                        else
+                                        {
+                                            <p class="text-muted small invisible">$0</p>
+                                        }
+                                        <a href="@Url.Action("Index", "DetalleProducto", new { id = producto.id })" class="btn btn-details">Ver más</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        }
                     </div>
-
-                }
-            }
-        </div>
-        <br>
+                </div>
+                <!-- Versión para móvil (carrusel) -->
+                <div class="d-block d-md-none">
+                    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            @{
+                                bool isFirst = true;
+                                foreach (var producto in Model.Productos)
+                                {
+                                    <div class="carousel-item @(isFirst ? "active" : "")">
+                                        <div class="card border-0 shadow-sm mx-2">
+                                            <div class="card-body text-center p-3">
+                                                <img src="@producto.photoUrl" alt="@producto.nombre" class="img-fluid" style="max-height: 150px;">
+                                                <h4 class="mt-3 mb-2">@producto.nombre</h4>
+                                                @if (producto.precio != 0)
+                                                {
+                                                    <p class="text-muted small">$@producto.precio</p>
+                                                }
+                                                else
+                                                {
+                                                    <p class="text-muted small invisible">$0</p>
+                                                }
+                                                <a href="@Url.Action("Index", "DetalleProducto", new { id = producto.id })" class="btn btn-sm btn-outline-primary">Ver más</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    isFirst = false;
+                                }
+                            }
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" style="filter: brightness(0);" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" style="filter: brightness(0);" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
         <script>
             // Seleccionamos la imagen
             const img = document.querySelector('.img-fluid');
