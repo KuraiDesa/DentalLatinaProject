@@ -412,9 +412,18 @@ namespace Dental_Latina_MVC.Controllers
                 .ToList();
             return Json(productos);
         }
+
+
+        [HttpPost]
+        public IActionResult GuardarZona([FromBody] ZonaDTO zona)
+        {
+    
+
+            return Json(new { exito = true, mensaje = "Zona guardada" });
+        }
     }
 
-    
+ 
 
 
     public class GeneralViewModel
