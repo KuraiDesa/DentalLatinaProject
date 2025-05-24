@@ -120,6 +120,7 @@
         }
     </style>
     <main>
+        <!--CARRUSEL-->
         <section id="carruselSec">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -148,11 +149,23 @@
                 </button>
             </div>
         </section>
+        <!--TEXTO INSPIRACIONAL MOVIL-->
+        <section>
+            <div class="d-block d-md-none p-4 mx-3 mt-4 mb-4">
+                <h2 class="text-center fs-4 fw-bold text-primary mb-3">
+                    Transformamos sonrisas,<br>impulsamos la excelencia.
+                </h2>
+                <p class="text-center text-muted mb-0">
+                    En <strong>Dental Latina</strong>, acompañamos a los profesionales de la odontología con productos de calidad, innovación constante y pasión por lo que hacemos.
+                    Más que insumos, ofrecemos confianza, experiencia y compromiso con tu crecimiento.
+                </p>
+            </div>
+        </section>
 
-        <br>
-        <section class="py-5 bg-white producto-destacado shadow">
+        <!--PRODUCTOS-->
+        <section class="py-5 bg-white producto-destacado shadow mt-4 mb-4">
             <div class="container">
-                <!--<h2 class="text-center mb-4" style="color:#003fc8;">Productos destacados</h2>-->
+               <h2 class="text-center mb-4" style="color:#003fc8;">Productos destacados</h2>
                 <!-- Versión para escritorio -->
       
                 <div class="d-none d-md-block ">
@@ -230,44 +243,8 @@
                 img.style.animation = 'giroCompleto 1s forwards';
             });
         </script>
-        <section id="productos" class="container" style="display:none;">
-            <div class="row justify-content-center align-items-center">
-
-                <article class="col-12 col-md-12 d-md-flex flex-md-row justify-content-md-start align-items-md-center catProducto col-lg-4 hidden">
-                    <div class="col-12 d-flex flex-column flex-md-row flex-lg-column align-items-md-center align-items-lg-center justify-content-center align-items-center">
-                        <img src="/img/logoClini.png" alt="" class="flip-vertical-right agrando order-1 order-lg-1 col-md-4 col-lg-12 max-size lg-center" style="max-width:30vh">
-                        <div class="order-2 col-md-8 col-lg-12 text-md-left text-lg-center">
-                            <h3 class="text-center text-md-start text-lg-center col-12 p-0">Clínica</h3>
-                            <p class="d-none d-md-block text-md-left text-lg-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore quisquam modi asperiores facilis maiores enim necessitatibus odit.</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="col-12 col-md-12 d-md-flex flex-md-row justify-content-md-start align-items-md-center catProducto col-lg-4 hidden">
-                    <div class="col-12 d-flex flex-column flex-md-row flex-lg-column align-items-md-center align-items-lg-center justify-content-center align-items-center">
-                        <img src="/img/logoLab.png" alt="" class="flip-vertical-right agrando order-1 order-lg-1 col-md-4 col-lg-12 max-size lg-center" style="max-width:30vh">
-                        <div class="order-2 col-md-8 col-lg-12 text-md-left text-lg-center">
-                            <h3 class="text-center text-md-start text-lg-center col-12 p-0">Laboratorio</h3>
-                            <p class="d-none d-md-block text-md-left text-lg-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore quisquam modi asperiores facilis maiores enim necessitatibus odit.</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="col-12 col-md-12 d-md-flex flex-md-row justify-content-md-start align-items-md-center catProducto col-lg-4 hidden">
-                    <div class="col-12 d-flex flex-column flex-md-row flex-lg-column align-items-md-center align-items-lg-center justify-content-center align-items-center">
-                        <img src="/img/logoImpla.png" alt="" class="flip-vertical-right agrando order-1 order-lg-1 col-md-4 col-lg-12 max-size lg-center" style="max-width:30vh;">
-                        <div class="order-2 col-md-8 col-lg-12 text-md-left text-lg-center">
-                            <h3 class="text-center text-md-start text-lg-center col-12 p-0">Implantologia</h3>
-                            <p class="d-none d-md-block text-md-left text-lg-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore quisquam modi asperiores facilis maiores enim necessitatibus odit.</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-        </section>
-        <br>
-        <br>
-        <br>
-        <br>
-
+      
+        <!--ENVIOS-->
         <section id="Envios" class="enviosBanner container-fluid d-flex justify-content-center align-items-center py-5">
             <div class="row justify-content-center align-items-center w-100">
                 <div class="col-12 col-md-6 text-center">
@@ -296,7 +273,7 @@
                 <div class="row">
                     <!-- Mapa -->
                     <div class="col-12 col-md-8 mb-4">
-                        <div id="map" style="width: 100%; height: 300px;" class="rounded shadow-sm"></div>
+                        <div id="map" style="width: 100%; height: 100%;" class="rounded shadow-sm"></div>
                     </div>
 
                     <!-- Información -->
@@ -348,13 +325,16 @@
             </div>
         </div>
 
-        <section class="newsletter-section">
+        <!--REGISTRO-->
+        <section class="newsletter-section mt-4 mb-4">
             <div class="newsletter-container">
                 <div class="newsletter-content">
                     <div class="newsletter-text">
                         <h2 class="newsletter-title">¡No te pierdas nuestras ofertas exclusivas!</h2>
-                        <p class="newsletter-subtitle">Suscríbete para recibir lo último en lanzamientos, promociones y novedades.</p>
-
+                        <div class="d-none d-md-block">
+                            <p class="newsletter-subtitle">Suscríbete para recibir lo último en lanzamientos, promociones y novedades.</p>
+                        </div>
+                       
                         <form id="clienteForm" class="newsletter-form">
                             <div class="form-row">
                                 <div class="form-group half-width">
@@ -399,31 +379,15 @@
                 </div>
             </div>
         </section>
-        <div id="Empresa"></div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+
+        <!--EMPRESA-->
+        <section id="Empresa" class="mt-4 mb-4">
+        
         <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1YIy8w-Ir-XrJP-R-PRZ9PGMCK023NFaU11EkB6o2vwU&font=Default&lang=es&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 
-        </div>
-        <br>
-        <br>
+        </section>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      
+        
         <div class="modal fade" id="codigoModal" tabindex="-1" aria-labelledby="codigoModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg d-flex justify-content-center align-items-center">
                 <div class="modal-content">

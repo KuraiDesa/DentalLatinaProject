@@ -687,6 +687,74 @@
 
                     <div class="card-body">
                         <!-- Formulario para modificar zonas de envío -->
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const zonaSelect = document.getElementById('zonaSeleccionada');
+                                const btnGuardar = document.getElementById('btnGuardar');
+                                const formulario = document.getElementById('formularioEnvio');
+
+                                // Verificar si el formulario es válido
+                                function verificarEstadoFormulario() {
+                                    const esZonaValida = zonaSelect.value !== "";
+                                    const esFormularioValido = formulario.checkValidity();
+                                    btnGuardar.disabled = !(esZonaValida && esFormularioValido);
+                                }
+
+                                // Validar al cambiar el select
+                                zonaSelect.addEventListener('change', verificarEstadoFormulario);
+
+                                // Validar en tiempo real los demás campos
+                                const inputs = formulario.querySelectorAll('input, select');
+                                inputs.forEach(input => {
+                                    input.addEventListener('input', verificarEstadoFormulario);
+                                });
+
+                                // Evitar que se envíe si no es válido
+                                formulario.addEventListener('submit', function (event) {
+                                    if (!formulario.checkValidity()) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    formulario.classList.add('was-validated');
+                                });
+                            });
+                            async function guardarCambios() {
+                                const id = document.getElementById('zonaSeleccionada').value || 0;
+                                const nombre = document.getElementById('zonaNombre').value;
+                                const precio = parseInt(document.getElementById('costoEnvio').value) || 0;
+                                const horario = document.getElementById('horarioEnvio').value;
+                                const minimoDeEnvio = document.getElementById('minimoEnvio').value;
+
+                                const datos = {
+                                    id: parseInt(id),
+                                    nombre: nombre,
+                                    precio: precio,
+                                    horario: horario,
+                                    minimoDeEnvio: minimoDeEnvio
+                                };
+
+                                try {
+                                    const respuesta = await fetch('/Admin/GuardarZona', {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify(datos)
+                                    });
+
+                                    if (respuesta.ok) {
+                                        const resultado = await respuesta.json();
+                                        alert('Zona guardada correctamente');
+                                    } else {
+                                        alert('Error al guardar la zona');
+                                    }
+                                } catch (error) {
+                                    console.error(error);
+                                    alert('Error en la solicitud');
+                                }
+                            }
+                        </script>
+
                         <form id="formularioEnvio" class="needs-validation" novalidate>
                             <div class="row g-3">
                                 <!-- Selector de zona -->
@@ -756,7 +824,7 @@
 
                             <!-- Botones de acción -->
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
-                                <button type="button" class="btn btn-primary" onclick="guardarCambios()">
+                                <button type="button" class="btn btn-primary" id="btnGuardar" onclick="guardarCambios()" disabled>
                                     <i class="fas fa-save me-1"></i> Guardar Cambios
                                 </button>
                             </div>
