@@ -15,11 +15,11 @@ namespace DTOs.Mappers
 
         public static ProductoDTO ToDTOProducto(Producto prod)
         {
-            ProductoDTO productoDTO = crearDTO(prod.Id,prod.nombre, prod.photoUrl, prod.documentacion, prod.descripcion, prod.precio);
+            ProductoDTO productoDTO = crearDTO(prod.Id,prod.nombre, prod.photoUrl, prod.documentacion, prod.descripcion, prod.precio, prod.categoria?.Id, prod.subcategoria?.Id, prod.categoriaEspecial?.id);
             return productoDTO;
         }
 
-        public static ProductoDTO crearDTO(int id, string nombre, string photoUrl, string documentacion, string descripcion, int precio)
+        public static ProductoDTO crearDTO(int id, string nombre, string photoUrl, string documentacion, string descripcion, int precio, int? categoid, int? scatid, int? cateid)
         {
             ProductoDTO productoDTO = new ProductoDTO();
             productoDTO.id = id;
@@ -28,6 +28,9 @@ namespace DTOs.Mappers
             productoDTO.descripcion = descripcion;
             productoDTO.documentacion = documentacion;
             productoDTO.precio = precio;
+            productoDTO.catId = categoid;
+            productoDTO.cateId = cateid;
+            productoDTO.scatId = scatid;
             return productoDTO;
         }
         public static IEnumerable<ProductoDTO> ToListaProductoDTO(IEnumerable<Producto> prod)

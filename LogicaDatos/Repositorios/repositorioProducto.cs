@@ -78,7 +78,13 @@ namespace LogicaDatos.Repositorios
         }
         public Producto FindById(int id)
         {
-            return Context.Productos.FirstOrDefault(p => p.Id == id);
+           return Context.Productos
+                    .Include(p => p.categoria)
+                    .Include(p => p.subcategoria)
+                    .Include(p => p.categoriaEspecial)
+                    .FirstOrDefault(p => p.Id == id);
+
+
         }
 
         public void Remove(int id)

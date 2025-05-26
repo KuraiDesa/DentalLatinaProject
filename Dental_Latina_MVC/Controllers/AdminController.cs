@@ -419,6 +419,18 @@ namespace Dental_Latina_MVC.Controllers
             return Json(productos);
         }
 
+        [HttpGet]
+        public IActionResult GetAllCategorias()
+        {
+            var categorias = CUListarCategorias.GetCategoria()
+                .Select(s=> new
+                {
+                    id = s.id,
+                    nombre= s.nombre,
+                }).ToList();    
+            return Json(categorias);
+        }
+
 
         [HttpPost]
         public IActionResult GuardarZona([FromBody] ZonaDTO zona)
@@ -428,10 +440,101 @@ namespace Dental_Latina_MVC.Controllers
             return Json(new { exito = true, mensaje = "Zona guardada" });
         }
 
+
+        [HttpGet]
+        public IActionResult ProductoModify(int id)
+        {
+            var producto = CUListarProductos.GetProducto(id);
+            return Json(producto);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ModifyProducto(GeneralViewModel generalViewModel)
+        {
+            VerificarSesion();
+
+            // Preparar carpetas
+            var wwwroot = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+            var carpetaImagenes = Path.Combine(wwwroot, "imagenes", "productos");
+            var carpetaDocs = Path.Combine(wwwroot, "documentos");
+
+            Directory.CreateDirectory(carpetaImagenes);
+            Directory.CreateDirectory(carpetaDocs);
+
+            // Guardar imagen si se cargó
+            if (generalViewModel.modifyproducto.ImagenArchivo != null && generalViewModel.modifyproducto.ImagenArchivo.Length > 0)
+            {
+                var nombreImagen = Path.GetFileName(generalViewModel.modifyproducto.ImagenArchivo.FileName);
+                var rutaImagen = Path.Combine(carpetaImagenes, nombreImagen);
+
+                // Si el archivo ya existe, agregar un sufijo para evitar sobrescritura
+                if (System.IO.File.Exists(rutaImagen))  // Uso explícito de System.IO.File
+                {
+                    var extension = Path.GetExtension(nombreImagen);
+                    var nombreBase = Path.GetFileNameWithoutExtension(nombreImagen);
+                    var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+                    nombreImagen = $"{nombreBase}_{timestamp}{extension}";
+                    rutaImagen = Path.Combine(carpetaImagenes, nombreImagen);
+                }
+
+                using (var stream = new FileStream(rutaImagen, FileMode.Create))
+                {
+                    await generalViewModel.modifyproducto.ImagenArchivo.CopyToAsync(stream);
+                }
+
+                generalViewModel.modifyproducto.PhotoUrl = "/imagenes/productos/" + nombreImagen;
+            }
+
+            // Guardar documentación si se cargó
+            if (generalViewModel.modifyproducto.DocumentacionArchivo != null && generalViewModel.modifyproducto.DocumentacionArchivo.Length > 0)
+            {
+                var nombreDoc = Path.GetFileName(generalViewModel.modifyproducto.DocumentacionArchivo.FileName);
+                var rutaDoc = Path.Combine(carpetaDocs, nombreDoc);
+
+                // Si el archivo ya existe, agregar un sufijo para evitar sobrescritura
+                if (System.IO.File.Exists(rutaDoc))  // Uso explícito de System.IO.File
+                {
+                    var extension = Path.GetExtension(nombreDoc);
+                    var nombreBase = Path.GetFileNameWithoutExtension(nombreDoc);
+                    var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+                    nombreDoc = $"{nombreBase}_{timestamp}{extension}";
+                    rutaDoc = Path.Combine(carpetaDocs, nombreDoc);
+                }
+
+                using (var stream = new FileStream(rutaDoc, FileMode.Create))
+                {
+                    await generalViewModel.modifyproducto.DocumentacionArchivo.CopyToAsync(stream);
+                }
+
+                generalViewModel.modifyproducto.DocumentacionUrl = "/documentos/" + nombreDoc;
+            }
+            else if(generalViewModel.modifyproducto.DocumentacionUrl.Equals(""))
+            {
+                generalViewModel.modifyproducto.DocumentacionUrl = "Sin Documentacion";
+            }
+
+
+                CUAltaProd.ModifyProd(
+                generalViewModel.modifyproducto.id,
+                generalViewModel.modifyproducto.Nombre,
+                generalViewModel.modifyproducto.PhotoUrl,
+                generalViewModel.modifyproducto.Descripcion,
+                generalViewModel.modifyproducto.CategoriaId,
+                generalViewModel.modifyproducto.SubcategoriaId,
+                generalViewModel.modifyproducto.CategoriaEspecial ?? 0,
+                generalViewModel.modifyproducto.DocumentacionUrl,
+                generalViewModel.modifyproducto.Precio ?? 0
+                );
+
+
+
+            return RedirectToAction("Index");
+        }
+
         public async Task<IActionResult> salir()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Home");
+
         }
     }
 
@@ -442,13 +545,14 @@ namespace Dental_Latina_MVC.Controllers
     {
         public ProductoCategoriaViewModel productocategoriaview { get; set; }
         public ProductoViewModel productoview { get; set; }
+        public ModifyProductoViewModel modifyproducto { get; set; }
         public CategoriaViewModel categoria { get; set; }
         public SubcategoriaViewModel subcategoria { get; set; }
         public CategoriaEspecialViewModel categoriaEspecial { get; set; }
-        public IEnumerable<ClienteDTO> clientes { get; set; }
-        
+        public IEnumerable<ClienteDTO> clientes { get; set; }      
         public IEnumerable<ProductoDTO> productos { get; set; }
         public IEnumerable<ZonaDTO> zonas { get; set; }
+        public ProductoDTO productoModificar {  get; set; }
     }
     public class ProductoCategoriaViewModel
     {
@@ -475,6 +579,22 @@ namespace Dental_Latina_MVC.Controllers
         public string nombre { get; set; }
         public int id { get; set; }
         public int idscat { get; set; }
+    }
+    public class ModifyProductoViewModel
+    {
+        [Required(ErrorMessage = "El nombre es obligatorio.")]
+        public int id { get; set; }
+        public string Nombre { get; set; }
+        public string? PhotoUrl { get; set; } // lo vamos a llenar nosotros después
+        public string Descripcion { get; set; }
+        public int CategoriaId { get; set; }
+        public int SubcategoriaId { get; set; }
+        public int? CategoriaEspecial { get; set; }
+        public string? DocumentacionUrl { get; set; } // opcional, para guardar la ruta
+        public int? Precio { get; set; }
+
+        public IFormFile ImagenArchivo { get; set; } // ⬅️ Imagen subida
+        public IFormFile DocumentacionArchivo { get; set; } // ⬅️ Documento opcional
     }
     public class ProductoViewModel
     {

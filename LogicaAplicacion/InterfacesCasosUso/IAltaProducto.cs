@@ -12,6 +12,7 @@ namespace LogicaAplicacion.InterfacesCasosUso
     {
         void AltaProd(string nombre, string url, string descripcion, int categoria, int subcategoria, string documentacion, int precio);
         void AltaProdCatEspecial(string nombre, string url, string descripcion, int categoria, int subcategoria, int categroiaEspecial, string documentacion, int precio);
+        void ModifyProd(int id, string nombre, string url, string descripcion, int categoria, int subcategoria, int? cateEspecial, string documentacion, int precio);
         bool verificarCategoria(int categoria);
     }
 }

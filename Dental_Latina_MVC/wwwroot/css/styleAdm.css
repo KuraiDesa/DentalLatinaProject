@@ -250,3 +250,11 @@ header {
     transition-duration: 1000ms;
 }
 
+
+
+@media (min-width: 992px) {
+    .lg-w50{
+        width:50%;
+    }
+}
+

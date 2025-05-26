@@ -50,6 +50,20 @@ namespace LogicaAplicacion.CasosUso
             repoProd.Add(prod);
         }
 
+        public void ModifyProd(int id, string nombre, string url, string descripcion, int categoria, int subcategoria, int? cateEspecial, string documentacion, int precio)
+        {
+            Categoria cate = repositorioCategoria.FindById(categoria);
+            Subcategoria scate = repositorioSubcategoria.FindById(subcategoria);           
+            Producto prod = new Producto(nombre, url, cate, scate, documentacion, descripcion, precio);
+            if (cateEspecial != null)
+            {
+                CEspecial categEspecial = repositorioCEspecial.FindById(cateEspecial.Value);
+                prod.agregarCategoriaEspecial(categEspecial);
+            }
+            //Tenes la id del producto ahi, hace magia soto
+            repoProd.Update(prod);
+        }
+
         public bool verificarCategoria(int categoria)
         {
             Categoria cate = repositorioCategoria.FindById(categoria);
