@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using LogicaAplicacion.InterfacesCasoUso;
 using Microsoft.EntityFrameworkCore;
 using FluentAssertions.Common;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
@@ -15,6 +16,12 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 builder.Services.AddSession();
 builder.Services.AddControllersWithViews();
 
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Home";
+    });
 
 builder.Services.AddScoped<ILoginUser, LoginUser>();
 builder.Services.AddScoped<IRegistroCliente, RegistroCliente>();
@@ -56,8 +63,10 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 app.UsePathBase("/plesk-site-preview/prueba.uy");
 app.UseStaticFiles();
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseSession();
+
 
 // Configuración de las rutas
 app.MapControllerRoute(
