@@ -4,10 +4,13 @@ using DTOs.DTOs.UsuarioDTOs;
 using LogicaAplicacion.InterfacesCasosUso;
 using LogicaAplicacion.InterfacesCasoUso;
 using LogicaAplicacion.ServicioCorreo;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using System.Diagnostics;
+using System.Security.Claims;
 
 namespace Dental_Latina_MVC.Controllers
 {
@@ -40,7 +43,7 @@ namespace Dental_Latina_MVC.Controllers
         }
 
         [HttpPost]
-        public JsonResult Login([FromBody] LoginRequest request)
+        public async Task<JsonResult> Login([FromBody] LoginRequest request)
         {
             if (request == null)
             {
@@ -56,9 +59,29 @@ namespace Dental_Latina_MVC.Controllers
             loguinUsuarioDTO.mail = request.Email;
             loguinUsuarioDTO.contraseña = request.Password;
 
-            if (CULoginUser.Login(loguinUsuarioDTO) != null)
+            var usuarioValido = CULoginUser.Login(loguinUsuarioDTO); // tu validación
+            if (usuarioValido != null)
             {
-                HttpContext.Session.SetString("Usuario", loguinUsuarioDTO.mail);
+                // Crear lista de Claims
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, loguinUsuarioDTO.mail),
+            new Claim(ClaimTypes.Role, "Admin") // solo si querés usar roles
+        };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var authProperties = new AuthenticationProperties
+                {
+                    IsPersistent = true,
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddHours(1)
+                };
+
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
+                    authProperties
+                );
+
                 return Json(new { success = true, redirectUrl = "/Admin/Index" });
             }
 
