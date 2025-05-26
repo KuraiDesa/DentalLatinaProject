@@ -15,7 +15,9 @@ namespace DTOs.DTOs
         public string descripcion { get; set; }
         public string documentacion { get; set; }
         public int precio { get; set; }
-
+        public int? catId {  get; set; }
+        public int? scatId {  get; set; }
+        public int? cateId { get; set; }
 
     }
 }

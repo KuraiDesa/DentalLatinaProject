@@ -20,6 +20,7 @@ const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
 
+
 abrir.addEventListener("click", () => {
     nav.classList.add("visible");
 })
@@ -76,6 +77,23 @@ function vistaPreviaImagen(event) {
     if (archivo) {
         const lector = new FileReader();
         lector.onload = function(e) {
+            vistaPrevia.src = e.target.result;
+            vistaPrevia.style.display = 'block';
+        };
+        lector.readAsDataURL(archivo);
+    } else {
+        vistaPrevia.src = '';
+        vistaPrevia.style.display = 'none';
+    }
+}
+
+function vistaPreviaImagenModify(event) {
+    const archivo = event.target.files[0];
+    const vistaPrevia = document.getElementById('vistaPreviaModify');
+
+    if (archivo) {
+        const lector = new FileReader();
+        lector.onload = function (e) {
             vistaPrevia.src = e.target.result;
             vistaPrevia.style.display = 'block';
         };
@@ -307,28 +325,29 @@ function alternarActiveRemove(idtexto, idbotonCambiar, idcolorTxt) {
     }
 }
 
-function verificarCategoria(){
-    let cat = document.getElementById('categoriaProducto');
-    let label = document.getElementById('catEspLabel');
-    let select = document.getElementById('categoriaEspecialProducto')
-
-    let magic = document.getElementById('magia')
+function verificarCategoria(cate, labelI, selectI, ilDiv,ildivdiv){
+    let cat = document.getElementById(cate);
+    let label = document.getElementById(labelI);
+    let select = document.getElementById(selectI)
+    let divdiv = document.getElementById(ildivdiv)
+    let magic = document.getElementById(ilDiv)
     if (cat.options[cat.selectedIndex].text == 'Implantologia') {
         magic.style.height = '70px'
         setTimeout(() => {
-            document.getElementById('catEspecial').style.width = '100%';
+            divdiv.style.width = '100%';
             label.style.display = 'flex';
-            select.style.display = 'flex';
+            
             setTimeout(() => {
+                select.style.display = 'flex';
                 label.style.display = 'flex';
                 label.style.opacity = '100%'
 
             }, 210);
-        }, 200);
+        }, 300);
         
     } else {
         magic.style.height = '0px'
-        document.getElementById('catEspecial').style.width = '0%';
+        divdiv.style.width = '0%';
         label.style.opacity = '0%'
 
         setTimeout(() => {
@@ -339,4 +358,11 @@ function verificarCategoria(){
 
     }
 }
+
+function mostrarModal() {
+    const modal = new bootstrap.Modal(document.getElementById('ModalMostrarProducto'));
+    modal.show();
+}
+
+
 

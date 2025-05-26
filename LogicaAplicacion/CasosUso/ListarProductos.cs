@@ -46,7 +46,11 @@ namespace LogicaAplicacion.CasosUso
             // Mezcla aleatoriamente y toma los primeros 4
             return aux.OrderBy(p => Guid.NewGuid()).Take(4);
         }
-
+        public ProductoDTO GetProducto(int id)
+        {
+            var producto = repoProductos.FindById(id);
+            return ProductoMapper.ToDTOProducto(producto);
+        }
         public IEnumerable<ProductoDTO> ListarProductosCategoria(int id)
         {
             return ProductoMapper.ToListaProductoDTO(repoProductos.BuscarPorCategoria(id));

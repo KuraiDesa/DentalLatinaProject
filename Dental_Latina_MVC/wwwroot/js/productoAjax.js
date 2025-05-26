@@ -1,6 +1,5 @@
 ﻿function filtrarAjax(id, tipo) {
     window.location.href = `/Producto/FilterAjax?id=${id}&tipo=${tipo}`;
-
 }
 
 function mostrarSub(id1, id2) {

@@ -212,7 +212,7 @@
                     <!-- Selección de categoría -->
                     <div class="mb-3">
                         <label asp-for="productoview.CategoriaId" class="form-label">Categoría del Producto</label>
-                        <select asp-for="productoview.CategoriaId" id="categoriaProducto" class="form-select" required onclick="verificarCategoria()">
+                        <select asp-for="productoview.CategoriaId" id="categoriaProducto" class="form-select" required onclick="verificarCategoria('categoriaProducto', 'catEspLabel', 'categoriaEspecialProducto', 'magia', 'catEspecial')">
                             <option value="">Selecciona una categoría</option>
                             @foreach (var categoria in Model.productocategoriaview.Categorias)
                             {
@@ -282,8 +282,8 @@
                                         }else{
                                             <p class="card-text" style="height: 24px;"> </p>
                                         }
-                                        
-                                        <div class="text-center">
+
+                                        <div class="text-center" onclick="modificar(@producto.id), mostrarModal()" data-toggle="modal" data-target="#ModalMostrarProducto">
                                             <a href="#" class="btn btn-warning col-10">Modificar</a>
                                         </div>
                                     </div>
@@ -292,65 +292,7 @@
                         }
                     </div>
                 </div>
-                
-                <div id="descripcionProducto" style="display: none;">
-                    <h2>Modificar Producto</h2>
-                    <form enctype="multipart/form-data">
-                        <!-- Zona para arrastrar o seleccionar imagen -->
-                        <div class="mb-3">
-                            <label for="imagenProducto" class="form-label">Imagen del Producto</label>
-                            <div class="border border-secondary p-3 text-center" id="dropZone" style="border-style: dashed;">
-                                Arrastra la imagen aquí o <br>
-                                 <!-- Vista previa de la imagen -->
-                            <div class="mt-3 justify-content-center align-items-center"style="display:flex;">
-                                <img id="vistaPrevia" src="" alt="Vista previa de la imagen" style="width: 30vh;height: 30vh; display: none;">
-                            </div>
-                                <input type="file" id="imagenProducto" class="form-control mt-2" accept="image/*" style="display: inline;" onchange="vistaPreviaImagen(event)">
-                            </div>
-                           
-                        </div>
-                
-                        <!-- Nombre del producto -->
-                        <div class="mb-3">
-                            <label for="nombreProducto" class="form-label">Nombre del Producto</label>
-                            <input type="text" id="nombreProducto" class="form-control" required>
-                        </div>
-                
-                        <!-- Descripción del producto -->
-                        <div class="mb-3">
-                            <label for="descripcionProducto" class="form-label">Descripción del Producto</label>
-                            <textarea id="descripcionProducto" class="form-control" rows="3" required></textarea>
-                        </div>
-                
-                        <!-- Subir documentación opcional -->
-                        <div class="mb-3">
-                            <label for="documentacionProducto" class="form-label">Documentación del Producto (opcional)</label>
-                            <input type="file" id="documentacionProducto" class="form-control" accept=".pdf,.doc,.docx">
-                        </div>
-                
-                        <!-- Costo opcional -->
-                        <div class="mb-3">
-                            <label for="costoProducto" class="form-label">Costo del Producto (opcional)</label>
-                            <input type="number" id="costoProducto" class="form-control" step="0.01" min="0">
-                        </div>
-                
-                        <!-- Selección de categoría -->
-                        <div class="mb-3">
-                            <label asp-for="productoview.CategoriaId" class="form-label">Categoría del Producto</label>
-                            <select asp-for="productoview.CategoriaId" id="categoriaProducto" class="form-select" required onclick="verificarCategoria()">
-                                <option value="">Selecciona una categoría</option>
-                                @foreach (var categoria in Model.productocategoriaview.Categorias)
-                                {
-                                    <option value=@categoria.id>@categoria.nombre</option>
-                                }
-
-                            </select>
-                        </div>
-                
-                        <!-- Botón de envío -->
-                        <button type="submit" class="btn btn-primary col-12">Modificar producto</button>
-                    </form>
-                </div>         
+                   
             </div>
 
             <!--Eliminar Producto-->
@@ -937,6 +879,29 @@
                             <button type="submit" class="btn btn-danger">Eliminar</button>
                         </form>
                     </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Modal para modificar producto-->
+        <div class="modal fade" id="ModalMostrarProducto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered m-auto " style="max-width:75% !important" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modificar Producto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <form asp-action="ModifyProducto" method="post" enctype="multipart/form-data">
+                    <div class="modal-body" id="modalModificarProducto">
+                        
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Confirmar Cambio</button>
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>

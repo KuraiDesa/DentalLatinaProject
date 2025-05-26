@@ -16,5 +16,6 @@ namespace LogicaAplicacion.InterfacesCasosUso
         IEnumerable<ProductoDTO> ListarProductosCategoriaEspecial(int id);
         IEnumerable<ProductoDTO> ListarProductosNombre(string nombre);
         IEnumerable<ProductoDTO> ListarPorCateNombre(int id, string nombre);
+        public ProductoDTO GetProducto(int id);
     }
 }
