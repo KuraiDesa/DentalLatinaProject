@@ -7,9 +7,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
-
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 namespace Dental_Latina_MVC.Controllers
 {
+    
+
+    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         public IListarCategorias CUListarCategorias { get; set; }
@@ -420,6 +426,12 @@ namespace Dental_Latina_MVC.Controllers
     
 
             return Json(new { exito = true, mensaje = "Zona guardada" });
+        }
+
+        public async Task<IActionResult> salir()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Home");
         }
     }
 

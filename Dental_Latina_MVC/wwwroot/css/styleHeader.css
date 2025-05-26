@@ -217,11 +217,11 @@ nav ul li {
 }
 
 #menu figure img {
-  max-width: 100%; /* Ajustar la imagen al ancho del contenedor */
+  max-width: 250px; /* Ajustar la imagen al ancho del contenedor */
   max-height: 100%; /* Ajustar la imagen a la altura del contenedor */
   width: auto;
   height: auto;
-  max-height: 97px;
+
 }
 
 #menu nav ul {
