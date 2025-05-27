@@ -21,9 +21,7 @@ namespace LogicaDatos.EntityFramework
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Subcategoria> Subcategorias { get; set; }
         public DbSet<CEspecial> CEspecial { get; set; }
-
         public DbSet<Admin> Admins { get; set; }
-
         public LibreriaContext(DbContextOptions<LibreriaContext> options) : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

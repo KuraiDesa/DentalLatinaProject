@@ -12,6 +12,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/css/styleAdm.css">
     <link rel="stylesheet" href="/css/styleHeader.css">
     <link rel="stylesheet" href="/css/styleCorreo.css">
@@ -438,7 +439,7 @@
                             <div style="width:95%; display:flex;" class="transition" id="agregarcategoria">
                                 <input asp-for="categoria.nombre" type="text" id="nuevaCategoriaInput" class="form-control" placeholder="Nombre de la nueva categoría" required oninput="alternarActive('nuevaCategoriaInput', 'c_add_cat_btn', 'simboloBotonCrearCat')">
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style=" width:5%; cursor:pointer;" id="c_add_cat_btn">
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style=" width:15%; cursor:pointer;" id="c_add_cat_btn">
                                 <button type="submit" id="crearCat" style=" background-color:transparent; border-color:transparent;">
                                     <a id="simboloBotonCrearCat">✓</a>
                                 </button>
@@ -467,7 +468,7 @@
                             <div style="width:0%; display:flex;" class="transition" id="agregarscategoria">
                                 <input asp-for="subcategoria.nombre" type="text" id="nuevaSCategoriaInput" class="form-control" style="display:none;" placeholder="Nombre de la nueva subcategoría" required oninput="alternarActive('nuevaSCategoriaInput', 'sc_add_cat_btn', 'txtBtnSC')">
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="opacity:0; width:5%; cursor:pointer;" id="sc_add_cat_btn">
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="sc_add_cat_btn">
                                 <button type="submit" id="crearSCat" style="background-color:transparent; border-color:transparent;">
                                     <a id="txtBtnSC">✓</a>
                                 </button>
@@ -496,7 +497,7 @@
                             <div style="width:0%; display:flex;" class="transition" id="agregarscespecial">
                                 <input asp-for="categoriaEspecial.nombre" type="text" id="nuevaCEspecialInput" class="form-control" style="display:none;" placeholder="Nombre de la nueva categoria especial" required required oninput="alternarActive('nuevaCEspecialInput', 'add_cate_btn', 'txtBtnCE')">
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="opacity:0; width:5%; cursor:pointer;" id="add_cate_btn">
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="add_cate_btn">
                                 <button type="submit" id="crearCEsp" style="background-color:transparent; border-color:transparent;">
                                     <a id="txtBtnCE">✓</a>
                                 </button>
@@ -521,7 +522,7 @@
 
                             </select>
                         
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="width:5%; cursor:pointer;" id="remove_cate_btn">
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="width:15%; cursor:pointer;" id="remove_cate_btn">
                                 <button type="submit" id="eliminarCatB" style="background-color:transparent; border-color:transparent;">
                                     <a id="txtBtnAC">
                                         &times;
@@ -555,7 +556,7 @@
                                 
                                 </select>
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="opacity:0; width:5%; cursor:pointer;" id="remove_subcate_btn">
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="remove_subcate_btn">
                                 <button type="submit" id="eliminarSubcate" style="background-color:transparent; border-color:transparent;">
                                     <a id="txtBtnAS">
                                         &times;
@@ -591,7 +592,7 @@
 
                                 </select>
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex" style="opacity:0; width:5%; cursor:pointer;" id="remove_ce_btn">
+                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="remove_ce_btn">
                                 <button type="submit" id="eliminarCEsp" style="background-color:transparent; border-color:transparent;">
                                     <a id="txtBtnCE">
                                         &times;
@@ -624,39 +625,46 @@
             <div class="container my-4">
                 <!-- Barra de búsqueda -->
                 <div class="mb-3">
-                    <label for="buscarClientes" class="form-label">Buscar Cliente</label>
-                    <input type="text" id="buscarClientes" class="form-control" placeholder="Ingresa el nombre, apellido o mail del cliente...">
+                    <form>
+                        <label for="buscarClientes" class="form-label">Buscar Cliente</label>
+                        <div class="d-flex h-50">
+                            <input type="text" id="buscarClientes" class="form-control" placeholder="Ingresa el nombre, apellido o mail del cliente...">
+                            <button class="btn btn-primary lg-w15 d-flex align-items-center justify-content-center" style="width:10%" onclick="filtrarClientes(event)"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
                 </div>
                 
                 <!-- Tabla de clientes -->
-                <table id="tablaClientes" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Correo Electrónico</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (Model.clientes != null && Model.clientes.Any())
-                        {
-                            foreach (var cliente in Model.clientes)
+                <div style="max-height: 400px; overflow: auto;" >
+                    <table id="tablaClientes" class="table table-striped " >
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Correo Electrónico</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaUsuarios">
+                            @if (Model.clientes != null && Model.clientes.Any())
+                            {
+                                foreach (var cliente in Model.clientes)
+                                {
+                                    <tr>
+                                        <td>@cliente.nombre</td>
+                                        <td>@cliente.apellido</td>
+                                        <td>@cliente.mail</td>
+                                    </tr>
+                                }
+                            }
+                            else
                             {
                                 <tr>
-                                    <td>@cliente.nombre</td>
-                                    <td>@cliente.apellido</td>
-                                    <td>@cliente.mail</td>
+                                    <td colspan="3" class="text-center">No hay clientes disponibles</td>
                                 </tr>
                             }
-                        }
-                        else
-                        {
-                            <tr>
-                                <td colspan="3" class="text-center">No hay clientes disponibles</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
         <section id="cambioBanner" style="display: none;">
@@ -674,17 +682,6 @@
                        </div>
                         
                     </div>  
-                </div>
-                <div class="row mb-3">
-                    <div class="my-3">
-                        <img src="img/banner.jpeg" alt="Banner 1" style="height: 80vh;width: 100%;" class="img-fluid" id="previewBanner1">
-                       <div class="justify-content-center align-items-center row" style="display: flex;">
-                        <button class="btn btn-primary mt-2 col-11 col-md-10" onclick="cambiarImagen(1)">Cambiar Imagen 1</button>
-                        <div class="col-md-1 d-md-none"></div>
-                        <button class="btn btn-danger mt-2 col-11 col-md-10" onclick="eliminarImagen(1)">Eliminar Imagen 1</button>
-                       </div>
-                        
-                    </div>
                 </div>
                 <div class="row mb-3">
                     <div class="my-3">

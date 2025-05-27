@@ -70,27 +70,6 @@
         <div class="row">
             <!-- Filtros -->
             <div class="col-md-3 pt-3">
-                <!--<div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Filtros</h5>
-                        <form asp-action="Filter" method="post">
-                            <div class="form-group">
-                                <label asp-for="searchByName">Buscar productos</label>
-                                <input asp-for="searchByName" type="text" class="form-control mb-2" placeholder="Buscar productos..." />
-
-                                <label asp-for="catFilter">Categorías</label>
-                                <select asp-for="catFilter" class="form-control">
-                                    <option value="-1">Todas</option>
-                                    @foreach (var categoria in Model.Categorias)
-                                    {
-                                        <option value="@categoria.id">@categoria.nombre</option>
-                                    }
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary col-12">Filtrar</button>
-                        </form>
-                    </div>
-                </div>-->
                 <div>
                     <form asp-action="Filter" method="post">
                         <div>

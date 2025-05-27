@@ -10,5 +10,6 @@ namespace LogicaAplicacion.InterfacesCasosUso
     public interface IListarClientes
     {
         public IEnumerable<ClienteDTO> GetClientes();
+        public IEnumerable<ClienteDTO> FilterClientes(string str);
     }
 }

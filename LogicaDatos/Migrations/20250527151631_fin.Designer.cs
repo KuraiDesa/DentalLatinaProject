@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LogicaDatos.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250518224132_Banana")]
-    partial class Banana
+    [Migration("20250527151631_fin")]
+    partial class fin
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -173,6 +173,25 @@ namespace LogicaDatos.Migrations
                     b.ToTable("Zonas");
                 });
 
+            modelBuilder.Entity("LogicaNegocio.Entidades.Admin", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("usmail")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("usmail");
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("LogicaNegocio.Entidades.CEspecial", b =>
                 {
                     b.Property<int>("id")
@@ -257,6 +276,17 @@ namespace LogicaDatos.Migrations
                     b.Navigation("categoriaEspecial");
 
                     b.Navigation("subcategoria");
+                });
+
+            modelBuilder.Entity("LogicaNegocio.Entidades.Admin", b =>
+                {
+                    b.HasOne("DentalLatina.Usuario", "us")
+                        .WithMany()
+                        .HasForeignKey("usmail")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("us");
                 });
 
             modelBuilder.Entity("LogicaNegocio.Entidades.CEspecial", b =>

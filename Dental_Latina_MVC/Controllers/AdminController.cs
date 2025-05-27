@@ -99,7 +99,26 @@ namespace Dental_Latina_MVC.Controllers
             }
         }
 
+
         [HttpPost]
+        public async Task<IActionResult> ChangeBanner(GeneralViewModel generalViewModel)
+        {
+            VerificarSesion();
+
+            // Preparar carpetas
+            var wwwroot = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+            var carpetaImagenes = Path.Combine(wwwroot, "imag");
+            Directory.CreateDirectory(carpetaImagenes);
+            if (generalViewModel.productoview.ImagenArchivo != null && generalViewModel.productoview.ImagenArchivo.Length > 0)
+            {
+
+            }
+            return RedirectToAction("Index");
+        }
+
+
+
+            [HttpPost]
         [ActionName("Create")]
         public async Task<IActionResult> Create(GeneralViewModel generalViewModel)
         {
@@ -432,6 +451,34 @@ namespace Dental_Latina_MVC.Controllers
             return Json(categorias);
         }
 
+        [HttpGet]
+        public IActionResult FilterUsuarios(string str)
+        {
+            if (str!=null)
+            {
+                var usuarios = CUListarClientes.FilterClientes(str)
+                .Select(s => new
+                {
+                    nombre = s.nombre,
+                    apellido = s.apellido,
+                    mail = s.mail,
+                }).ToList();
+                return Json(usuarios);
+            }
+            else
+            {
+                var usuarios = CUListarClientes.GetClientes()
+                                .Select(s => new
+                                {
+                                    nombre = s.nombre,
+                                    apellido = s.apellido,
+                                    mail = s.mail,
+                                }).ToList();
+                return Json(usuarios);
+            }
+            
+        }
+
 
         [HttpPost]
         public IActionResult GuardarZona([FromBody] ZonaDTO zona)
@@ -630,6 +677,7 @@ namespace Dental_Latina_MVC.Controllers
         public CategoriaViewModel categoria { get; set; }
         public SubcategoriaViewModel subcategoria { get; set; }
         public CategoriaEspecialViewModel categoriaEspecial { get; set; }
+        public BannerViewModel bannerView { get; set; }
         public IEnumerable<ClienteDTO> clientes { get; set; }      
         public IEnumerable<ProductoDTO> productos { get; set; }
         public IEnumerable<ZonaDTO> zonas { get; set; }
@@ -693,6 +741,15 @@ namespace Dental_Latina_MVC.Controllers
 
         public IFormFile ImagenArchivo { get; set; } // ⬅️ Imagen subida
         public IFormFile DocumentacionArchivo { get; set; } // ⬅️ Documento opcional
+    }
+    public class BannerViewModel
+    {
+        public string? BannerUrl1 { get; set; }
+        public string? BannerUrl2 { get; set; }
+        public string? BannerUrl3 { get; set; }
+        public IFormFile BannerArchivo1 { get; set; }
+        public IFormFile BannerArchivo2 { get; set; }
+        public IFormFile BannerArchivo3 { get; set; }
     }
 
 }
