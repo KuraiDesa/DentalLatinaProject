@@ -76,5 +76,41 @@ namespace LogicaDatos.Repositorios
             }
            
         }
+
+        public IEnumerable<Usuario> BuscarPorNombre(string nombre)
+        {
+            if (string.IsNullOrEmpty(nombre))
+            {
+                return FindAll();
+            }
+
+            return Context.Set<Usuario>()
+                          .Where(p => p.nombre.ToLower().Contains(nombre.ToLower()))
+                          .ToList();
+        }
+
+        public IEnumerable<Usuario> BuscarPorApellido(string apellido)
+        {
+            if (string.IsNullOrEmpty(apellido))
+            {
+                return FindAll();
+            }
+
+            return Context.Set<Usuario>()
+                          .Where(p => p.apellido.ToLower().Contains(apellido.ToLower()))
+                          .ToList();
+        }
+
+        public IEnumerable<Usuario> BuscarPorEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+            {
+                return FindAll();
+            }
+
+            return Context.Set<Usuario>()
+                          .Where(p => p.mail.ToLower().Contains(email.ToLower()))
+                          .ToList();
+        }
     }
 }

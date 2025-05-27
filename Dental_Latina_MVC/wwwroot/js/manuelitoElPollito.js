@@ -245,7 +245,40 @@ function cargarPorScatModify(idS, idCE) {
     } 
 }
 
+function filtrarClientes(e) {
+    e.preventDefault();
+    let str = document.getElementById('buscarClientes').value;
+    let html = document.getElementById('listaUsuarios')
+    $.ajax({
+        url: '/Admin/FilterUsuarios',
+        method: 'GET',
+        data: { str: str },
+        dataType: 'json',
+        success: function (data) {
+            console.log(data)
+            html.innerHTML = ''; 
+            data.forEach(function (item) {
+                html.innerHTML += ` <tr>
+                            <td>${item.nombre}</td>
+                            <td>${item.apellido}</td>
+                            <td>${item.mail}</td>
+                        </tr>`
+            });
+            if (data.length == 0) {
+                html.innerHTML = `<tr>
+                                     <td colspan = "3" class="text-center"> No hay clientes disponibles</td >
+                                 </tr> `;
+            }
 
+        },
+        error: function (xhr, status, error) {
+            console.error('AJAX error:', status, error);
+            $('#subcategoriaProductoModify')
+                .html('<option value="">Error cargando categoria especiales</option>');
+        }
+    });
+
+}
 
 
 

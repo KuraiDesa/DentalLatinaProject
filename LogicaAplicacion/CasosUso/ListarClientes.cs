@@ -34,5 +34,18 @@ namespace LogicaAplicacion.CasosUso
                 throw new Exception("Error al traer categoria");
             }
         }
+
+        public IEnumerable<ClienteDTO> FilterClientes(string str)
+        {
+            if (str.Contains('@'))
+            {
+                return UsuarioMapper.ToListaClientesDTO(repoUsuarios.BuscarPorEmail(str));
+            }
+            List<ClienteDTO> ListaUsuarios = new List<ClienteDTO>();
+            ListaUsuarios.AddRange(UsuarioMapper.ToListaClientesDTO(repoUsuarios.BuscarPorNombre(str)));
+            ListaUsuarios.AddRange(UsuarioMapper.ToListaClientesDTO(repoUsuarios.BuscarPorApellido(str)));
+            ListaUsuarios = ListaUsuarios.Distinct().ToList();
+            return ListaUsuarios;
+        }
     }
 }
