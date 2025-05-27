@@ -10,6 +10,7 @@ using LogicaNegocio;
 using DentalLatina;
 using DTOs.DTOs.UsuarioDTOs;
 using LogicaAplicacion.InterfacesCasoUso;
+using LogicaNegocio.Entidades;
 
 
 namespace LogicaAplicacion.CasosUso
@@ -17,14 +18,14 @@ namespace LogicaAplicacion.CasosUso
     public class LoginUser : ILoginUser
     {
 
-        public IRepositorioUsuario Repo { get; set; }
-        public LoginUser(IRepositorioUsuario repo)
+        public IRepositorioAdmins Repo { get; set; }
+        public LoginUser(IRepositorioAdmins repo)
         {
             this.Repo = repo;
         }
-        public Usuario Login(LoguinUsuarioDTO loguinUsuarioDTO)
+        public Admin Login(LoguinUsuarioDTO loguinUsuarioDTO)
         {
-            Usuario usEncontrado = Repo.BuscarPorEmail(loguinUsuarioDTO.mail, loguinUsuarioDTO.contraseña);
+            Admin usEncontrado = Repo.BuscarPorEmail(loguinUsuarioDTO.mail, loguinUsuarioDTO.contraseña);
             if (usEncontrado != null)
             {
                 return usEncontrado;

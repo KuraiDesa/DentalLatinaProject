@@ -46,7 +46,22 @@ namespace LogicaDatos.Repositorios
 
         public void Update(Zona obj)
         {
-            throw new NotImplementedException();
+            var zonaExistente = _zonas.Zonas.Find(obj.Id);
+            if (zonaExistente != null)
+            {
+                zonaExistente.zona = obj.zona;
+                zonaExistente.precio = obj.precio;
+                zonaExistente.horario = obj.horario;
+                zonaExistente.minimoDeEnvio = obj.minimoDeEnvio;
+
+                _zonas.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("No se encontró la zona con el ID especificado.");
+            }
         }
+
+
     }
 }

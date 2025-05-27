@@ -54,5 +54,20 @@ namespace LogicaAplicacion.CasosUso
            
         }
 
+        public bool actualizarZona(ZonaDTO z)
+        {
+            try
+            {
+                Zona zE = ZonaMapper.ToZona(z);
+                rep.Update(zE);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            
+            
+        }
     }
 }

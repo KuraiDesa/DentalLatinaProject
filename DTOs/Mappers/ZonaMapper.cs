@@ -39,5 +39,13 @@ namespace DTOs.Mappers
             zoDTO.minimoDeEnvio = zo.minimoDeEnvio;
             return zoDTO;
         }
+        public static Zona ToZona(ZonaDTO zo)
+        {
+            Zona zoE = new Zona(zo.nombre, zo.horario, zo.precio);
+            zoE.Id = zo.id;
+            zoE.minimoDeEnvio = zo.minimoDeEnvio;
+            return zoE;
+        }
     }
 }
+

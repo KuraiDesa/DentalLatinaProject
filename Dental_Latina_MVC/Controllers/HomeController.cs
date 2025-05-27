@@ -59,14 +59,14 @@ namespace Dental_Latina_MVC.Controllers
             loguinUsuarioDTO.mail = request.Email;
             loguinUsuarioDTO.contraseña = request.Password;
 
-            var usuarioValido = CULoginUser.Login(loguinUsuarioDTO); // tu validación
+            var usuarioValido = CULoginUser.Login(loguinUsuarioDTO); 
             if (usuarioValido != null)
             {
-                // Crear lista de Claims
+
                 var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, loguinUsuarioDTO.mail),
-            new Claim(ClaimTypes.Role, "Admin") // solo si querés usar roles
+            new Claim(ClaimTypes.Role, "Admin") 
         };
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
