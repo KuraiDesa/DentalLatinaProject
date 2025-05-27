@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styleAdm.css">
     <link rel="stylesheet" href="/css/styleHeader.css">
-
+    <link rel="stylesheet" href="/css/styleCorreo.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         .container-flex {
@@ -187,16 +187,16 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="#" id="crearProductoB">Crear Producto</a>
+                                <a class=" text-dark" href="#" id="crearProductoB">Crear Producto</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="#" id="modificarProductoB">Modificar Producto</a>
+                                <a class=" text-dark" href="#" id="modificarProductoB">Modificar Producto</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="#" id="eliminarProductoB">Eliminar Producto</a>
+                                <a class=" text-dark" href="#" id="eliminarProductoB">Eliminar Producto</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" href="#" id="gestionCategoriaB">Gestionar Categorías</a>
+                                <a class=" text-dark" href="#" style="text-decoration:none;"id="gestionCategoriaB">Gestionar Categorías</a>
                             </li>
                         </ul>
                     </div>
@@ -606,6 +606,21 @@
             
         </section>
         <section id="clientes"style="display: none;">
+            <div class="form-mail mt-4 mb-2" >
+                <h2>Enviar correo a clientes</h2>
+                <form id="formEnvioCorreo" method="post" enctype="multipart/form-data">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Asunto del correo" required>
+
+                    <label for="mensajez">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe el contenido del mensaje..." ></textarea>
+
+                    <label for="adjunto">Archivo adjunto (opcional)</label>
+                    <input type="file" id="adjunto" name="adjunto" accept=".pdf,.jpg,.png,.doc,.docx">
+
+                    <button type="submit" class="btn-enviar">Enviar correo</button>
+                </form>
+            </div>
             <div class="container my-4">
                 <!-- Barra de búsqueda -->
                 <div class="mb-3">
@@ -768,6 +783,16 @@
 
                                     if (respuesta.ok) {
                                         const resultado = await respuesta.json();
+
+                                        // Buscar la zona en el array por ID y actualizar
+                                        const zona = zonas.find(z => z.id === datos.id);
+                                        if (zona) {
+                                            zona.zona = datos.nombre;
+                                            zona.precio = datos.precio;
+                                            zona.horario = datos.horario;
+                                            zona.minimoDeEnvio = datos.minimoDeEnvio;
+                                        }
+
                                         alert('Zona guardada correctamente');
                                     } else {
                                         alert('Error al guardar la zona');
@@ -989,6 +1014,9 @@
         </div>
 
     </main>
+   
+
+    <!--SCRIPT DESPLIEGUE DE MODAL CONFIRMACION DE ELIMINACION DE PRODUCTO-->
     <script>
         var confirmarEliminarModal = document.getElementById('confirmarEliminarModal');
         confirmarEliminarModal.addEventListener('show.bs.modal', function (event) {
@@ -998,12 +1026,14 @@
             inputProductoId.value = productoId;
         });
     </script>
+    <!--SCRIPT MOSTRARCATEGORIA-->
     <script>
         function muestroAgregarC() {
             document.getElementById("agregarcategoria").style.display = "block";
             document.getElementById("c_add_cat_btn").style.display = "flex";
         }
     </script>
+    <!--SCRIPT NUEVA CATEGORIA-->
     <script>
         async function agregarNuevaCategoria() {
             const nuevaCategoria = document.getElementById("nuevaCategoriaInput").value.trim();
@@ -1043,11 +1073,106 @@
             }
         }
     </script>
+    <!--SCRIPT MANDAR MAILS-->
+    <script>
+        document.getElementById('formEnvioCorreo').addEventListener('submit', function (e) {
+            e.preventDefault();
+            let isValid = true;
+
+            // Validar campo asunto
+            const asunto = document.getElementById('asunto');
+            if (!asunto.value.trim()) {
+                isValid = false;
+                alert('Por favor ingrese un asunto');
+                asunto.focus();
+                return;
+            }
+
+            // Validar campo mensaje (usando TinyMCE)
+            const mensajeContent = tinymce.get('mensaje').getContent({ format: 'text' });
+            if (!mensajeContent.trim()) {
+                isValid = false;
+                alert('Por favor ingrese un mensaje');
+                tinymce.get('mensaje').focus();
+                return;
+            }
+
+            if (isValid) {
+                // Obtener el HTML del editor TinyMCE
+                let mensajeHTML = tinymce.get('mensaje').getContent();
+
+                // Reemplazar imágenes con URLs absolutas si es necesario
+                mensajeHTML = mensajeHTML.replace(/src="([^"]*)"/g, function (match, p1) {
+                    if (!p1.startsWith('http') && !p1.startsWith('cid:')) {
+                        // Si es una ruta relativa, convertir a absoluta o manejarla como adjunto
+                        return `src="https://tusitio.com${p1.startsWith('/') ? p1 : '/' + p1}"`;
+                    }
+                    return match;
+                });
+
+                // Crear FormData y agregar el contenido del editor
+                const formData = new FormData(this);
+                formData.set('mensaje', mensajeHTML); // Reemplazar el valor del textarea
+
+                fetch('/Admin/enviarCorreos', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert('Correo enviado con éxito');
+                            this.reset();
+                            tinymce.get('mensaje').setContent(''); // Limpiar el editor
+                        } else {
+                            alert('Error: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Error al enviar el formulario');
+                    });
+            }
+        });
+        </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="/js/manuelitoElPollito.js">
     
 </script>
+    <script src="https://cdn.tiny.cloud/1/bm5vxvfld8ghl79b2gqf2vrjeuiry6chyy34osxcckvcxnf6/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mensaje',
+            height: 300,
+            plugins: 'image link lists code paste',
+            toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright | bullist numlist | image link | code',
+            menubar: false,
+            branding: false,
+            automatic_uploads: true,
+            images_upload_handler: function (blobInfo) {
+                return new Promise((resolve, reject) => {
+                    try {
+                        const blob = blobInfo.blob();
+                        const reader = new FileReader();
+
+                        reader.onload = function () {
+                            resolve(reader.result);
+                        };
+
+                        reader.onerror = function () {
+                            reject('Error al leer el archivo');
+                        };
+
+                        reader.readAsDataURL(blob);
+                    } catch (err) {
+                        reject('Error al procesar la imagen: ' + err.message);
+                    }
+                });
+            }
+        });
+       
+    </script>
     <script src="/js/scriptAdm.js"></script>
     <script src="/js/graficas.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>

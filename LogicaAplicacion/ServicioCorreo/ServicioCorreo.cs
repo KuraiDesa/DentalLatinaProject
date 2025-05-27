@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using MailKit.Net.Smtp;
 using MimeKit;
 using MailKit.Security;
+using MimeKit.Utils;
 namespace LogicaAplicacion.ServicioCorreo
 {
     public class ServicioCorreo
@@ -51,7 +52,95 @@ namespace LogicaAplicacion.ServicioCorreo
                 Console.WriteLine($"Error al enviar correo: {ex.Message}");
             }
         }
+        public async Task EnviarCorreoMasivo(
+    List<string> destinatarios,
+    string asunto,
+    string mensajeHtml,
+    string? rutaAdjunto = null)
+        {
+            var message = new MimeMessage();
 
+            // Configurar remitente
+            message.From.Add(new MailboxAddress("Dental Latina", "DentalLatina@sotosantiago.xyz"));
+
+            // Configurar destinatarios (puede ser una lista)
+            foreach (var email in destinatarios)
+            {
+                message.To.Add(MailboxAddress.Parse(email));
+            }
+
+            message.Subject = asunto;
+
+            // Pie de página profesional
+            string pieDePagina = @"
+        <div style='margin-top: 30px; padding-top: 20px; border-top: 1px solid #e0e0e0; font-family: Arial, sans-serif; color: #555555; font-size: 12px;'>
+            <table width='100%'>
+                <tr>
+                    <td>
+                        <p style='margin: 5px 0;'><strong>Dental Latina</strong></p>
+                        <p style='margin: 5px 0;'>Email: info@dentallatina.com.uy</p>
+                        <p style='margin: 5px 0;'>Dirección: Mercedes 1541</p>
+                    </td>
+                    <td style='text-align: right;'>
+                        <img src='wwwroot/img/logopng.png' alt='Logo Dental Latina' style='max-height: 80px;' />
+                    </td>
+                </tr>
+            </table>
+            <p style='margin-top: 15px; font-size: 10px; color: #999999;'>
+                Este mensaje es confidencial y está dirigido únicamente al destinatario. 
+                Si ha recibido este mensaje por error, por favor notifíquelo al remitente 
+                y elimínelo de su sistema.
+            </p>
+        </div>";
+
+            // Combinar mensaje con pie de página
+            string mensajeCompleto = mensajeHtml + pieDePagina;
+
+            var bodyBuilder = new BodyBuilder
+            {
+                HtmlBody = mensajeCompleto,
+                TextBody = ConvertirHtmlATexto(mensajeCompleto) // Función auxiliar para versión texto
+            };
+
+            // Adjuntar archivo si existe
+            if (!string.IsNullOrEmpty(rutaAdjunto) && File.Exists(rutaAdjunto))
+            {
+                bodyBuilder.Attachments.Add(rutaAdjunto);
+            }
+
+
+            message.Body = bodyBuilder.ToMessageBody();
+
+            using var client = new MailKit.Net.Smtp.SmtpClient();
+            client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+
+            try
+            {
+                await client.ConnectAsync("mail.sotosantiago.xyz", 587, SecureSocketOptions.StartTls);
+                await client.AuthenticateAsync("DentalLatina@sotosantiago.xyz", "4&L0en31k");
+                await client.SendAsync(message);
+                await client.DisconnectAsync(true);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al enviar correo: {ex.Message}");
+                throw;
+            }
+        }
+        // Método auxiliar para convertir HTML a texto plano
+        private string ConvertirHtmlATexto(string html)
+        {
+            try
+            {
+                var doc = new HtmlAgilityPack.HtmlDocument();
+                doc.LoadHtml(html);
+                return doc.DocumentNode.InnerText;
+            }
+            catch
+            {
+                return "Contenido del correo electrónico (HTML no convertible)";
+            }
+        }
         public string GenerarCodigo()
         {
             return new Random().Next(100000, 999999).ToString();

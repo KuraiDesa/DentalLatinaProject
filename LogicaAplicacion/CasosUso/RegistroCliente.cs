@@ -32,7 +32,7 @@ namespace LogicaAplicacion.CasosUso
         }
         public Usuario RegistroClientes(RegistroUsuarioDTO registroUsuario)
         {
-            Usuario usEncontrado = Repo.BuscarPorEmail(registroUsuario.email,null);
+            Usuario usEncontrado = Repo.BuscarSoloEmail(registroUsuario.email);
             if (usEncontrado == null)
             {
                 try

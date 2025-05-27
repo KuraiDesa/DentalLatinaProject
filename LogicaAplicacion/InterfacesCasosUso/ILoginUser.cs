@@ -6,11 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTOs.DTOs.UsuarioDTOs;
+using LogicaNegocio.Entidades;
 
 namespace LogicaAplicacion.InterfacesCasoUso
 {
     public interface ILoginUser
     {
-        public Usuario Login (LoguinUsuarioDTO loguinUsuarioDTO);
+        public Admin Login (LoguinUsuarioDTO loguinUsuarioDTO);
+
     }
 }

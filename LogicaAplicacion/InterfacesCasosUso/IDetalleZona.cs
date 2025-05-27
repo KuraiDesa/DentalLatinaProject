@@ -11,5 +11,6 @@ namespace LogicaAplicacion.InterfacesCasosUso
     {
         ZonaDTO ZonabyId(int id);
         IEnumerable<ZonaDTO> getZonas();
+        bool actualizarZona(ZonaDTO z);
     }
 }

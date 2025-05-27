@@ -10,6 +10,7 @@ using System.IO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
+using LogicaAplicacion.ServicioCorreo;
 namespace Dental_Latina_MVC.Controllers
 {
     
@@ -435,11 +436,26 @@ namespace Dental_Latina_MVC.Controllers
         [HttpPost]
         public IActionResult GuardarZona([FromBody] ZonaDTO zona)
         {
-    
+            try
+            {
+                if (CUZONAS.actualizarZona(zona))
+                {
+                    return Json(new { exito = true, mensaje = "Zona actualizada" });
+                }
+                else
+                {
+                    return Json(new { exito = false, mensaje = "La zona no se pudo actualizar" });
+                }
+                
+                
+            }
+            catch (Exception ex)
+            {
+                return Json(new { exito = false, mensaje = "La zona no se pudo actualizar" });
+            }
 
-            return Json(new { exito = true, mensaje = "Zona guardada" });
+            
         }
-
 
         [HttpGet]
         public IActionResult ProductoModify(int id)
@@ -530,6 +546,71 @@ namespace Dental_Latina_MVC.Controllers
             return RedirectToAction("Index");
         }
 
+
+        [HttpPost]
+        public async Task<IActionResult> enviarCorreos(
+    string asunto,
+    string mensaje,
+    IFormFile adjunto = null)
+        {
+            try
+            {
+                // 1. Procesar archivo adjunto
+                string? rutaAdjunto = null;
+                if (adjunto != null && adjunto.Length > 0)
+                {
+                    rutaAdjunto = Path.Combine(
+                        Directory.GetCurrentDirectory(),
+                        "wwwroot/archivos",
+                        Path.GetFileName(adjunto.FileName));
+
+                    using (var stream = new FileStream(rutaAdjunto, FileMode.Create))
+                    {
+                        await adjunto.CopyToAsync(stream);
+                    }
+                }
+
+                // 2. Obtener lista de destinatarios (deberías cargarla de tu base de datos)
+                IEnumerable<ClienteDTO> destinatarios2 = CUListarClientes.GetClientes();
+                IEnumerable<string> destinatarios = ExtraerEmails(destinatarios2);
+
+                // Si necesitas convertirlo a List:
+                List<string> listaDestinatarios = destinatarios.ToList();
+                // 3. Enviar correos usando el servicio
+                var servicioCorreo = new ServicioCorreo();
+                await servicioCorreo.EnviarCorreoMasivo(
+                    listaDestinatarios,
+                    asunto,
+                    mensaje,
+                    rutaAdjunto);
+
+                return Json(new
+                {
+                    success = true,
+                    mensaje = $"Correos enviados a {listaDestinatarios.Count} destinatarios"
+                });
+            }
+            catch (Exception ex)
+            {
+                return Json(new
+                {
+                    success = false,
+                    mensaje = $"Error: {ex.Message}"
+                });
+            }
+        }
+        public IEnumerable<string> ExtraerEmails(IEnumerable<ClienteDTO> clientes)
+        {
+            if (clientes == null)
+            {
+                return Enumerable.Empty<string>(); // Correcta forma de retornar IEnumerable vacío
+            }
+
+            return clientes
+                .Where(c => c != null && !string.IsNullOrWhiteSpace(c.mail))
+                .Select(c => c.mail.Trim())
+                .Distinct();
+        }
         public async Task<IActionResult> salir()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
