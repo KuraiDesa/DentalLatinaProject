@@ -439,7 +439,7 @@
                             <div style="width:95%; display:flex;" class="transition" id="agregarcategoria">
                                 <input asp-for="categoria.nombre" type="text" id="nuevaCategoriaInput" class="form-control" placeholder="Nombre de la nueva categoría" required oninput="alternarActive('nuevaCategoriaInput', 'c_add_cat_btn', 'simboloBotonCrearCat')">
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style=" width:15%; cursor:pointer;" id="c_add_cat_btn">
+                            <div onclick="document.getElementById('crearCat').click()" class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style=" width:15%; cursor:pointer;" id="c_add_cat_btn">
                                 <button type="submit" id="crearCat" style=" background-color:transparent; border-color:transparent;">
                                     <a id="simboloBotonCrearCat">✓</a>
                                 </button>
@@ -468,7 +468,7 @@
                             <div style="width:0%; display:flex;" class="transition" id="agregarscategoria">
                                 <input asp-for="subcategoria.nombre" type="text" id="nuevaSCategoriaInput" class="form-control" style="display:none;" placeholder="Nombre de la nueva subcategoría" required oninput="alternarActive('nuevaSCategoriaInput', 'sc_add_cat_btn', 'txtBtnSC')">
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="sc_add_cat_btn">
+                            <div onclick="document.getElementById('crearSCat').click()" class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="sc_add_cat_btn">
                                 <button type="submit" id="crearSCat" style="background-color:transparent; border-color:transparent;">
                                     <a id="txtBtnSC">✓</a>
                                 </button>
@@ -497,7 +497,7 @@
                             <div style="width:0%; display:flex;" class="transition" id="agregarscespecial">
                                 <input asp-for="categoriaEspecial.nombre" type="text" id="nuevaCEspecialInput" class="form-control" style="display:none;" placeholder="Nombre de la nueva categoria especial" required required oninput="alternarActive('nuevaCEspecialInput', 'add_cate_btn', 'txtBtnCE')">
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="add_cate_btn">
+                            <div onclick="document.getElementById('crearCEsp').click()" class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="add_cate_btn">
                                 <button type="submit" id="crearCEsp" style="background-color:transparent; border-color:transparent;">
                                     <a id="txtBtnCE">✓</a>
                                 </button>
@@ -522,7 +522,7 @@
 
                             </select>
                         
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="width:15%; cursor:pointer;" id="remove_cate_btn">
+                            <div onclick="document.getElementById('eliminarCatB').click()" class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="width:15%; cursor:pointer;" id="remove_cate_btn">
                                 <button type="submit" id="eliminarCatB" style="background-color:transparent; border-color:transparent;">
                                     <a id="txtBtnAC">
                                         &times;
@@ -556,7 +556,7 @@
                                 
                                 </select>
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="remove_subcate_btn">
+                            <div onclick="document.getElementById('eliminarSubcate').click()" class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="remove_subcate_btn">
                                 <button type="submit" id="eliminarSubcate" style="background-color:transparent; border-color:transparent;">
                                     <a id="txtBtnAS">
                                         &times;
@@ -592,7 +592,7 @@
 
                                 </select>
                             </div>
-                            <div class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="remove_ce_btn">
+                            <div onclick="document.getElementById('eliminarCEsp').click()" class="c_add_cat_btn_inactive justify-content-center align-items-center d-flex lg-w10" style="opacity:0; width:15%; cursor:pointer;" id="remove_ce_btn">
                                 <button type="submit" id="eliminarCEsp" style="background-color:transparent; border-color:transparent;">
                                     <a id="txtBtnCE">
                                         &times;
