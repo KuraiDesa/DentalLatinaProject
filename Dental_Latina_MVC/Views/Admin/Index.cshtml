@@ -616,9 +616,6 @@
                     <label for="mensajez">Mensaje</label>
                     <textarea id="mensaje" name="mensaje" placeholder="Escribe el contenido del mensaje..." ></textarea>
 
-                    <label for="adjunto">Archivo adjunto (opcional)</label>
-                    <input type="file" id="adjunto" name="adjunto" accept=".pdf,.jpg,.png,.doc,.docx">
-
                     <button type="submit" class="btn-enviar">Enviar correo</button>
                 </form>
             </div>
@@ -1102,7 +1099,7 @@
                 mensajeHTML = mensajeHTML.replace(/src="([^"]*)"/g, function (match, p1) {
                     if (!p1.startsWith('http') && !p1.startsWith('cid:')) {
                         // Si es una ruta relativa, convertir a absoluta o manejarla como adjunto
-                        return `src="https://tusitio.com${p1.startsWith('/') ? p1 : '/' + p1}"`;
+                        return `src="https://sotosantiago.xyz${p1.startsWith('/') ? p1 : '/' + p1}"`;
                     }
                     return match;
                 });
@@ -1138,38 +1135,7 @@
     
 </script>
     <script src="https://cdn.tiny.cloud/1/bm5vxvfld8ghl79b2gqf2vrjeuiry6chyy34osxcckvcxnf6/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    <script>
-        tinymce.init({
-            selector: '#mensaje',
-            height: 300,
-            plugins: 'image link lists code paste',
-            toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright | bullist numlist | image link | code',
-            menubar: false,
-            branding: false,
-            automatic_uploads: true,
-            images_upload_handler: function (blobInfo) {
-                return new Promise((resolve, reject) => {
-                    try {
-                        const blob = blobInfo.blob();
-                        const reader = new FileReader();
-
-                        reader.onload = function () {
-                            resolve(reader.result);
-                        };
-
-                        reader.onerror = function () {
-                            reject('Error al leer el archivo');
-                        };
-
-                        reader.readAsDataURL(blob);
-                    } catch (err) {
-                        reject('Error al procesar la imagen: ' + err.message);
-                    }
-                });
-            }
-        });
-       
-    </script>
+    <script src="/js/tinymce.js"></script>
     <script src="/js/scriptAdm.js"></script>
     <script src="/js/graficas.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>

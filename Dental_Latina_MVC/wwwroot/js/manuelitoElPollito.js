@@ -255,7 +255,6 @@ function filtrarClientes(e) {
         data: { str: str },
         dataType: 'json',
         success: function (data) {
-            console.log(data)
             html.innerHTML = ''; 
             data.forEach(function (item) {
                 html.innerHTML += ` <tr>

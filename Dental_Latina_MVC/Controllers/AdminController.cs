@@ -592,7 +592,28 @@ namespace Dental_Latina_MVC.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        public async Task<IActionResult> UploadImagen(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("Archivo no válido");
 
+            var uploadsPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+
+            if (!Directory.Exists(uploadsPath))
+                Directory.CreateDirectory(uploadsPath);
+
+            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+            var filePath = Path.Combine(uploadsPath, fileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            var imageUrl = $"{Request.Scheme}://{Request.Host}/uploads/{fileName}";
+            return Json(new { location = imageUrl });
+        }
 
         [HttpPost]
         public async Task<IActionResult> enviarCorreos(
