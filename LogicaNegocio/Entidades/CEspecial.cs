@@ -14,6 +14,8 @@ namespace LogicaNegocio.Entidades
         public string nombre { get; set; }
         public Subcategoria subcategoria { get; set; }
 
+        public CEspecial() { }
+
         public CEspecial(string nombre)
         {
             this.nombre = nombre;

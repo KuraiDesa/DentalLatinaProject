@@ -151,7 +151,58 @@ namespace LogicaDatos.Repositorios
 
         public void Update(Producto obj)
         {
-            throw new NotImplementedException();
+            // Obtenemos el producto original desde el contexto, incluyendo las relaciones necesarias
+            var productoExistente = Context.Productos
+                .Include(p => p.categoria)
+                .Include(p => p.subcategoria)
+                .Include(p => p.categoriaEspecial)
+                .FirstOrDefault(p => p.Id == obj.Id);
+
+            if (productoExistente == null)
+            {
+                throw new Exception("Producto no encontrado.");
+            }
+
+            // Asignar nuevas relaciones usando solo IDs y marcar como Unchanged para evitar conflictos
+            if (obj.categoria != null)
+            {
+                productoExistente.categoria = Context.Categorias.Local
+                    .FirstOrDefault(c => c.Id == obj.categoria.Id) ??
+                    new Categoria { Id = obj.categoria.Id };
+
+                Context.Entry(productoExistente.categoria).State = EntityState.Unchanged;
+            }
+
+            if (obj.subcategoria != null)
+            {
+                productoExistente.subcategoria = Context.Subcategorias.Local
+                    .FirstOrDefault(s => s.Id == obj.subcategoria.Id) ??
+                    new Subcategoria { Id = obj.subcategoria.Id };
+
+                Context.Entry(productoExistente.subcategoria).State = EntityState.Unchanged;
+            }
+
+            if (obj.categoriaEspecial != null)
+            {
+                productoExistente.categoriaEspecial = Context.CEspecial.Local
+                    .FirstOrDefault(ce => ce.id == obj.categoriaEspecial.id) ??
+                    new CEspecial { id = obj.categoriaEspecial.id };
+
+                Context.Entry(productoExistente.categoriaEspecial).State = EntityState.Unchanged;
+            }
+            else
+            {
+                productoExistente.categoriaEspecial = null;
+            }
+
+            // Actualizar propiedades simples
+            productoExistente.nombre = obj.nombre;
+            productoExistente.descripcion = obj.descripcion;
+            productoExistente.photoUrl = obj.photoUrl;
+            productoExistente.documentacion = obj.documentacion;
+            productoExistente.precio = obj.precio;
+
+            Context.SaveChanges();
         }
 
         public IEnumerable<Producto> BuscarPorCategoria(int id)

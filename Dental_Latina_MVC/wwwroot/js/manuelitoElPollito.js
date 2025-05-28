@@ -196,7 +196,7 @@ function cargarPorCateModify(id, idS, idCE) {
                 return;
             }
 
-            var html = '<option value="">Selecciona una subcategoría</option>';
+            var html = '<option value="0">Selecciona una subcategoría</option>';
             data.forEach(function (item) {
                 html += `<option value="${item.id}">${item.nombre}</option>`;
             });
@@ -229,12 +229,21 @@ function cargarPorScatModify(idS, idCE) {
                 }
 
                 // Construye las opciones
-                var html = '<option value="">Selecciona una subcategoría</option>';
+                var html = '<option value="0">Selecciona una subcategoría</option>';
+                if (idS != null && idS != 0) {
+                    var html = '<option value="0">Selecciona una Categoria especial</option>';
+                }
+
                 data.forEach(function (item) {
                     html += '<option value="' + item.id + '">' + item.nombre + '</option>';
                 });
                 $sub.html(html);
-                document.getElementById('categoriaEspecialProductoModify').value = idCE;
+                if (idCE != null) {
+                    document.getElementById('categoriaEspecialProductoModify').value = idCE;
+                } else {
+                    document.getElementById('categoriaEspecialProductoModify').value = 0;
+                }
+                
             },
             error: function (xhr, status, error) {
                 console.error('AJAX error:', status, error);
@@ -394,9 +403,9 @@ $(function () {
 
     $(document).on('change', '#subcategoriaProductoModify', function () {
         var subcategoriaId = $(this).val();
-        if (!subcategoriaId) {
+        if (subcategoriaId==0) {
             $('#categoriaEspecialProductoModify')
-                .html('<option value="">Selecciona primero una subcategoria</option>');
+                .html('<option value="0">Selecciona primero una subcategoria</option>');
             return;
         }
 
@@ -415,6 +424,10 @@ $(function () {
 
                 // Construye las opciones
                 var html = '<option value="">Selecciona una subcategoría</option>';
+                if (subcategoriaId != null && subcategoriaId != 0) {
+                    var html = '<option value="0">Selecciona una Categoria especial</option>';
+                }
+
                 data.forEach(function (item) {
                     html += '<option value="' + item.id + '">' + item.nombre + '</option>';
                 });

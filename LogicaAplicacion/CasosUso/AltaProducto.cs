@@ -61,6 +61,7 @@ namespace LogicaAplicacion.CasosUso
                 prod.agregarCategoriaEspecial(categEspecial);
             }
             //Tenes la id del producto ahi, hace magia soto
+            prod.Id = id;
             repoProd.Update(prod);
         }
 
